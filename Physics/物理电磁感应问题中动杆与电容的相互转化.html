@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物理电磁感应问题中动杆与电容的相互转化</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main title="物理电磁感应问题中动杆与电容的相互转化" updated="20210710193127" data-type="NodeDocument" data-n-id="20210710192016-fgfty6l" updated="2147483647" data-n-id="20210710192016-fgfty6l"><h1 title="物理电磁感应问题中动杆与电容的相互转化" updated="20210710193127" data-type="NodeDocument" data-n-id="20210710192016-fgfty6l" updated="2147483647" data-n-id="20210710192016-fgfty6l">物理电磁感应问题中动杆与电容的相互转化</h1>
+<h3 id="电磁感应问题中动杆与电容的相互转化" updated="20210619171250" data-type="NodeHeading" data-n-id="20210710192017-lbvz96y">电磁感应问题中动杆与电容的相互转化<a id="vditorAnchor-电磁感应问题中动杆与电容的相互转化" class="vditor-anchor" href="#电磁感应问题中动杆与电容的相互转化"><img src="./../assets/icon/alink.png" /></a></h3>
+<p updated="20210619171836" data-type="NodeParagraph" data-n-id="20210710192017-oeqoilg">原文：<a href="https://zhuanlan.zhihu.com/p/108494777">电磁感应问题中动杆与电容的相互转化 - 知乎 (zhihu.com)</a>，此为笔记。</p>
+<p updated="20210619171338" data-type="NodeParagraph" data-n-id="20210710192017-ivaio0b">电磁感应问题中，动杆与接入电容器的电容都有一种性质：<strong data-type="NodeStrong">电动势变化量与流经的电荷量成正比</strong>。</p>
+<p updated="20210619171637" data-type="NodeParagraph" data-n-id="20210710192017-ttibcxp">对于动杆：<span data-subtype="math" data-content="m \mathrm{d}v = BLI\mathrm{d}t"></span>，积分得 <span data-subtype="math" data-content="m\Delta v = BL\Delta Q"></span>.
+而对于动杆电动势，原电动势为 <span data-subtype="math" data-content="BLv"></span>，新电动势为 <span data-subtype="math" data-content="BL(v-\Delta v)"></span>，不难有：
+​<span data-subtype="math" data-content="\Delta E = \dfrac{B^2L^2}{m} \Delta Q"></span>
+这一点在 <oceanpress-block-ref src="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e5%be%ae%e7%a7%af%e5%88%86%e5%ba%94%e7%94%a8.html#20210426215911-gp12j4u" title="物理电磁感应微积分应用"><a href="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e5%be%ae%e7%a7%af%e5%88%86%e5%ba%94%e7%94%a8.html#20210426215911-gp12j4u">物理电磁感应微积分应用</a></oceanpress-block-ref > 中有所提及。</p>
+<p updated="20210619172222" data-type="NodeParagraph" data-n-id="20210710192017-2gvfrr2">对于电容，有：<span data-subtype="math" data-content="\Delta E = \dfrac{\Delta Q}{C}"></span>.</p>
+<p updated="20210619171752" data-type="NodeParagraph" data-n-id="20210710192017-717nyhq">则该动杆的等效电容为：<span data-subtype="math" data-content="C = \dfrac{m}{B^2L^2}"></span>
+</p>
+<blockquote updated="20210619171809" data-type="NodeBlockquote" data-n-id="20210710192017-4vnrjfa">
+<p updated="20210619171809" data-type="NodeParagraph" data-n-id="20210710192017-vqpedwr">我们已经看到动杆与电容器在简单的电学性质上有明显的相似性，若究其原因，我倾向于将他归结在能量方面。容易看出，杆与电容器都将电能转化为其他形式的能量储存了起来，对于杆来说是动能，对于电容器则为电场能。因而本质上它们都是储存电能的元件。</p>
+</blockquote>
+<h4 id="单杆电容初速度问题与双杆初速度问题的转换" updated="20210619171847" data-type="NodeHeading" data-n-id="20210710192017-1enrx8q"><strong data-type="NodeStrong">单杆电容初速度问题与双杆初速度问题的转换</strong><a id="vditorAnchor-单杆电容初速度问题与双杆初速度问题的转换" class="vditor-anchor" href="#单杆电容初速度问题与双杆初速度问题的转换"><img src="./../assets/icon/alink.png" /></a></h4>
+<p updated="20210619172014" data-type="NodeParagraph" data-n-id="20210710192017-uzfkyfi">单杆电容初速度问题：
+电容器电容为 <span data-subtype="math" data-content="C"></span>，轨道间隔 <span data-subtype="math" data-content="L"></span>，杆的初速度为 <span data-subtype="math" data-content="v_0"></span>，质量为 <span data-subtype="math" data-content="m"></span>，给出某时刻杆的速度 <span data-subtype="math" data-content="v"></span>，求此时电容器的电压 <span data-subtype="math" data-content="U"></span>.</p>
+<p updated="20210619172437" data-type="NodeParagraph" data-n-id="20210710192017-zz66kh9">考虑到 <span data-subtype="math" data-content="m \Delta v = BL \Delta Q"></span>，即 <span data-subtype="math" data-content="m (v - v_0) = BL \Delta Q"></span>,结合 <span data-subtype="math" data-content="U = \dfrac{Q}{C}"></span>，可以解得：<span data-subtype="math" data-content="U = \dfrac{m(v_0-v)}{BLC}"></span>
+</p>
+<p updated="20210710192631" data-type="NodeParagraph" data-n-id="20210710192017-7kms1z7">若未知末速度，则通过 <span data-subtype="math" data-content="BLv = U"></span>，可以化简为：<span data-subtype="math" data-content="U = \dfrac{BLmv_0}{B^2L^2C + m}"></span></p>
+<hr />
+<p updated="20210710192146" data-type="NodeParagraph" data-n-id="20210710192017-4suyqjl">考虑使用一质量为 <span data-subtype="math" data-content="B^2L^2C"></span> 的杆代替电容，在最终另一杆速度为 <span data-subtype="math" data-content="v"></span> 时，其速度由动量守恒给出：
+<span data-subtype="math" data-content="mv_0 = B^2L^2C v_1 + mv \implies v_1 = \dfrac{m(v_0-v)}{B^2L^2C}"></span>
+则其电动势为 <span data-subtype="math" data-content="E = BLv_1 = \dfrac{m(v_0-v)}{BLC}"></span>，与<oceanpress-block-ref src="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e9%97%ae%e9%a2%98%e4%b8%ad%e5%8a%a8%e6%9d%86%e4%b8%8e%e7%94%b5%e5%ae%b9%e7%9a%84%e7%9b%b8%e4%ba%92%e8%bd%ac%e5%8c%96.html#20210710192017-zz66kh9" title="上文"><a href="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e9%97%ae%e9%a2%98%e4%b8%ad%e5%8a%a8%e6%9d%86%e4%b8%8e%e7%94%b5%e5%ae%b9%e7%9a%84%e7%9b%b8%e4%ba%92%e8%bd%ac%e5%8c%96.html#20210710192017-zz66kh9">上文</a></oceanpress-block-ref >一致。
+考虑到末态，两杆共速，有：<span data-subtype="math" data-content="mv_0 = (m + B^2L^2C)v"></span>，解得 <span data-subtype="math" data-content="v = \dfrac{mv_0}{m + B^2L^2C}"></span>，
+得到电动势为： <span data-subtype="math" data-content="E = BLv = \dfrac{BLmv_0}{B^2L^2C + m}"></span>，同样与<oceanpress-block-ref src="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e9%97%ae%e9%a2%98%e4%b8%ad%e5%8a%a8%e6%9d%86%e4%b8%8e%e7%94%b5%e5%ae%b9%e7%9a%84%e7%9b%b8%e4%ba%92%e8%bd%ac%e5%8c%96.html#20210710192017-7kms1z7" title="上文"><a href="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e9%97%ae%e9%a2%98%e4%b8%ad%e5%8a%a8%e6%9d%86%e4%b8%8e%e7%94%b5%e5%ae%b9%e7%9a%84%e7%9b%b8%e4%ba%92%e8%bd%ac%e5%8c%96.html#20210710192017-7kms1z7">上文</a></oceanpress-block-ref >一致。</p>
+<h4 id="单杆电容拉力问题与双杆拉力问题的转换" updated="20210619173416" data-type="NodeHeading" data-n-id="20210710192017-h9yvps6"><strong data-type="NodeStrong">单杆电容拉力问题与双杆拉力问题的转换</strong><a id="vditorAnchor-单杆电容拉力问题与双杆拉力问题的转换" class="vditor-anchor" href="#单杆电容拉力问题与双杆拉力问题的转换"><img src="./../assets/icon/alink.png" /></a></h4>
+<p updated="20210619173725" data-type="NodeParagraph" data-n-id="20210710192017-8g7y00p">首先讨论单杆电容拉力问题，作用在杆上拉力大小为 <span data-subtype="math" data-content="F"></span>，末态杆做匀加速运动，产生恒定电流 <span data-subtype="math" data-content="I"></span>，求解 <span data-subtype="math" data-content="I"></span> 的大小。</p>
+<p updated="20210619173808" data-type="NodeParagraph" data-n-id="20210710192017-4hz5kiv">对于电容器的电压：<span data-subtype="math" data-content="\mathrm{d}U = BL\mathrm{d}v"></span>，电流：<span data-subtype="math" data-content="I = \dfrac{\mathrm{d}Q}{\mathrm{d}t}  = C \dfrac{\mathrm{d} U}{\mathrm{d}t} = BLC\dfrac{\mathrm{d}v}{\mathrm{d}t} = BLCa"></span>
+</p>
+<p updated="20210619174255" data-type="NodeParagraph" data-n-id="20210710192017-vvjk5bb">对于杆运用牛顿第二定律，有：<span data-subtype="math" data-content="ma = F - BIL"></span>，联立解得：<span data-subtype="math" data-content="a = \dfrac{F}{m + B^2L^2C}"></span>
+则有：<span data-subtype="math" data-content="I = \dfrac{BLCF}{B^2L^2C + m}"></span>
+</p>
+<p updated="20210619174617" data-type="NodeParagraph" data-n-id="20210710192017-ahhzh79">接下来考虑两杆问题，用 <span data-subtype="math" data-content="m_0 = B^2L^2C"></span> 的杆代替电容器，稳定时两杆做加速度相同的匀加速直线运动，有：
+​<span data-subtype="math" data-content="F = (m+B^2L^2C)a"></span>
+对从动杆隔离分析，有：<span data-subtype="math" data-content="B^2L^2Ca = BIL"></span>，解得 <span data-subtype="math" data-content="I = \dfrac{BLCF}{B^2L^2C + m}"></span>，与上文一致。</p>
+<h2 id="习题" id="20210710192156-5qwq1a3" data-type="NodeHeading" data-n-id="20210710192156-5qwq1a3">习题<a id="vditorAnchor-习题" class="vditor-anchor" href="#习题"><img src="./../assets/icon/alink.png" /></a></h2>
+<p updated="20210710192251" data-type="NodeParagraph" data-n-id="20210710192212-gal4hdp">电磁感应问题中，动杆与接入电容器的电容都有哪一种性质？
+<strong data-type="NodeStrong">电动势变化量与流经的电荷量成正比</strong>。
+​<span data-subtype="math" data-content="\Delta E = \dfrac{B^2L^2}{m} \Delta Q"></span> </p>
+<p updated="20210710192307" data-type="NodeParagraph" data-n-id="20210710192251-vcmzt81">电磁感应问题中，动杆电动势变化量用电荷量变化量表示公式？
+<span data-subtype="math" data-content="\Delta E = \dfrac{B^2L^2}{m} \Delta Q"></span></p>
+<p updated="20210710192200" data-type="NodeParagraph" data-n-id="20210710192200-a18rfww"></p>
+<p updated="20210710192326" data-type="NodeParagraph" data-n-id="20210710192309-vm2m9fs">电磁感应问题中，电容电动势变化量用电荷量变化量表示公式？
+<span data-subtype="math" data-content="\Delta E = \dfrac{B^2L^2}{m} \Delta Q"></span></p>
+<p updated="20210710192352" data-type="NodeParagraph" data-n-id="20210710192326-vwex3d5">电磁感应问题中，动杆的等效电容？
+​<span data-subtype="math" data-content="C = \dfrac{m}{B^2L^2}"></span></p>
+<p updated="20210710192412" data-type="NodeParagraph" data-n-id="20210710192353-i2ux804">电磁感应问题中，电容的等效动杆质量？
+​<span data-subtype="math" data-content="m = B^2L^2C"></span></p>
+<p updated="20210710192604" data-type="NodeParagraph" data-n-id="20210710192413-2pkhe5t">电容器电容为 <span data-subtype="math" data-content="C"></span>，轨道间隔 <span data-subtype="math" data-content="L"></span>，杆的初速度为 <span data-subtype="math" data-content="v_0"></span>，质量为 <span data-subtype="math" data-content="m"></span>，给出某时刻杆的速度 <span data-subtype="math" data-content="v"></span>，求此时电容器的电压 <span data-subtype="math" data-content="U"></span>.
+考虑到 <span data-subtype="math" data-content="m \Delta v = BL \Delta Q"></span>，即 <span data-subtype="math" data-content="m (v - v_0) = BL \Delta Q"></span>,结合 <span data-subtype="math" data-content="U = \dfrac{Q}{C}"></span>，可以解得：
+<span data-subtype="math" data-content="U = \dfrac{m(v_0-v)}{BLC}"></span></p>
+<p updated="20210710192723" data-type="NodeParagraph" data-n-id="20210710192606-qlotu9b">电容器电容为 <span data-subtype="math" data-content="C"></span>，轨道间隔 <span data-subtype="math" data-content="L"></span>，杆的初速度为 <span data-subtype="math" data-content="v_0"></span>，质量为 <span data-subtype="math" data-content="m"></span>，求此时电容器稳定时的电压 <span data-subtype="math" data-content="U"></span>.
+考虑到 <span data-subtype="math" data-content="m \Delta v = BL \Delta Q"></span>，即 <span data-subtype="math" data-content="m (v - v_0) = BL \Delta Q"></span>,结合 <span data-subtype="math" data-content="U = \dfrac{Q}{C}"></span>，可以解得：<span data-subtype="math" data-content="U = \dfrac{m(v_0-v)}{BLC}"></span>
+若未知末速度，则通过 <span data-subtype="math" data-content="BLv = U"></span>，可以化简为：
+​<span data-subtype="math" data-content="U = \dfrac{BLmv_0}{B^2L^2C + m}"></span>
+</p>
+<p updated="20210710192803" data-type="NodeParagraph" data-n-id="20210710192740-1wwke2l">电磁感应问题，单杆电容，施加固定拉力，末态？
+单杆做匀加速运动。</p>
+<p updated="20210710192830" data-type="NodeParagraph" data-n-id="20210710192804-681q1d7">电磁感应问题，双杆，对某杆施加固定拉力，末态？
+双杆做加速度相同的匀加速运动。</p>
+<p updated="20210710192938" data-type="NodeParagraph" data-n-id="20210710192830-enukf4l">电磁感应问题，单杆电容，施加固定拉力，末态加速度？
+对于电容器的电压：<span data-subtype="math" data-content="\mathrm{d}U = BL\mathrm{d}v"></span>，电流：<span data-subtype="math" data-content="I = \dfrac{\mathrm{d}Q}{\mathrm{d}t}  = C \dfrac{\mathrm{d} U}{\mathrm{d}t} = BLC\dfrac{\mathrm{d}v}{\mathrm{d}t} = BLCa"></span>
+对于杆运用牛顿第二定律，有：<span data-subtype="math" data-content="ma = F - BIL"></span>，联立解得：
+​<span data-subtype="math" data-content="a = \dfrac{F}{m + B^2L^2C}"></span></p>
+<p updated="20210710193014" data-type="NodeParagraph" data-n-id="20210710193013-b3zb9el">电磁感应问题，单杆电容，施加固定拉力，末态电流？
+对于电容器的电压：<span data-subtype="math" data-content="\mathrm{d}U = BL\mathrm{d}v"></span>，电流：<span data-subtype="math" data-content="I = \dfrac{\mathrm{d}Q}{\mathrm{d}t}  = C \dfrac{\mathrm{d} U}{\mathrm{d}t} = BLC\dfrac{\mathrm{d}v}{\mathrm{d}t} = BLCa"></span>
+对于杆运用牛顿第二定律，有：<span data-subtype="math" data-content="ma = F - BIL"></span>，联立解得：<span data-subtype="math" data-content="a = \dfrac{F}{m + B^2L^2C}"></span>
+则有：<span data-subtype="math" data-content="I = \dfrac{BLCF}{B^2L^2C + m}"></span></p>
+<p updated="20210710193127" data-type="NodeParagraph" data-n-id="20210710193007-ynn1nxm">电磁感应问题，双杆，施加固定拉力，末态电流？
+将从动杆等效为电容 <span data-subtype="math" data-content="C = \dfrac{m_1}{B^2L^2}"></span>
+对于电容器的电压：<span data-subtype="math" data-content="\mathrm{d}U = BL\mathrm{d}v"></span>，电流：<span data-subtype="math" data-content="I = \dfrac{\mathrm{d}Q}{\mathrm{d}t}  = C \dfrac{\mathrm{d} U}{\mathrm{d}t} = BLC\dfrac{\mathrm{d}v}{\mathrm{d}t} = BLCa"></span>
+对于杆运用牛顿第二定律，有：<span data-subtype="math" data-content="ma = F - BIL"></span>，联立解得：<span data-subtype="math" data-content="a = \dfrac{F}{m + B^2L^2C}"></span>
+则有：<span data-subtype="math" data-content="I = \dfrac{BLCF}{B^2L^2C + m}"></span>
+</p>
+<p updated="20210710193022" data-type="NodeParagraph" data-n-id="20210710193022-otgauf1"></p>
+</main><div class="oceanpress-backLink"></div>
+</main>

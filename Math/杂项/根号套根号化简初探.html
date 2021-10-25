@@ -1,0 +1,79 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>根号套根号化简初探</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main custom-yuque-id="53593026" title="根号套根号化简初探" updated="20210829224005" data-type="NodeDocument" data-n-id="20210806234859-5pn5f57" updated="2147483647" data-n-id="20210806234859-5pn5f57"><h1 custom-yuque-id="53593026" title="根号套根号化简初探" updated="20210829224005" data-type="NodeDocument" data-n-id="20210806234859-5pn5f57" updated="2147483647" data-n-id="20210806234859-5pn5f57">根号套根号化简初探</h1>
+<p fold="0" updated="20210807093117" data-type="NodeParagraph" data-n-id="20210806234859-qb57nt2">有时候，我们会遇到这样的式子：<span data-subtype="math" data-content="\sqrt{4+2\sqrt{3}}"></span>
+</p>
+<p updated="20210806234949" data-type="NodeParagraph" data-n-id="20210806234927-aehbdmp">我们很容易观察出来：<span data-subtype="math" data-content="\sqrt{4+2\sqrt{3}} = \sqrt{(\sqrt{3}+1)^2} = \sqrt{3} + 1"></span></p>
+<p updated="20210807093129" data-type="NodeParagraph" data-n-id="20210806234949-spw8nsz">但这不禁让人思考：如果配方更难观察出来怎么办？有没有什么通用的方法来解决这个问题？
+其实这就是一个配方问题。</p>
+<hr />
+<p updated="20210807092547" data-type="NodeParagraph" data-n-id="20210806235840-i4caerc">我们直接考虑配方的最终可能形式，可以发现 <span data-subtype="math" data-content="(\sqrt{m} \pm \sqrt{n})^2"></span> 囊括了所有可能。注意 <span data-subtype="math" data-content="m,n"></span> 都是有理数。
+配方最终形式有两种可能：两个无理数，一个无理数一个实数。
+即 <span data-subtype="math" data-content="(\sqrt{p} + q)^2"></span> 或 <span data-subtype="math" data-content="(\sqrt{m} + \sqrt{n})^2"></span>，为了方便，将 <span data-subtype="math" data-content="\sqrt{p}+q"></span> 化为 <span data-subtype="math" data-content="\sqrt{p} + \sqrt{q^2}"></span>
+在只含一个根号的情况下，不可能配方成多于二项的多项式的平方，因为实数相加后始终只占一项，若出现 <span data-subtype="math" data-content="(a+\sqrt{m}+\sqrt{n})^2"></span> 且 <span data-subtype="math" data-content="m \neq n"></span> 则一定有超过一种的根号。</p>
+<p updated="20210807084555" data-type="NodeParagraph" data-n-id="20210807084233-g0zsuey"><span data-subtype="math" data-content="(\sqrt{m} \pm \sqrt{n })^2 = m + n \pm \sqrt{4mn}"></span>
+</p>
+<p updated="20210807085202" data-type="NodeParagraph" data-n-id="20210807084256-rbgqtr9">对于 <span data-subtype="math" data-content="a + \sqrt{b}"></span>，有 <span data-subtype="math" data-content="a = m + n"></span>，<span data-subtype="math" data-content="b = 4mn"></span>，代入消元有<span data-subtype="math" data-content="b = 4m(a-m) "></span>
+</p>
+<p updated="20210807085243" data-type="NodeParagraph" data-n-id="20210807084623-2ynop4h">稍微整理一下，得到 <span data-subtype="math" data-content="m^2 -am + \dfrac{b}{4} = 0"></span>，要解出对应的有理数 <span data-subtype="math" data-content="m"></span>，<span data-subtype="math" data-content="\Delta = a^2 - b \ge 0"></span>
+由求根公式有 <span data-subtype="math" data-content="m = \dfrac{a \pm \sqrt{a^2 - b}}{2}"></span>，不难发现 <span data-subtype="math" data-content="m,n"></span> 是对称的，因此这里的两个解就分别对应了 <span data-subtype="math" data-content="m,n"></span>.
+其实通过和、积的关系，由韦达定理也能进行类似的自然联想。</p>
+<p updated="20210807090352" data-type="NodeParagraph" data-n-id="20210807084943-s0ko4ka">例如对于 <span data-subtype="math" data-content="\sqrt{8 + 3\sqrt{7}}"></span>，可以得到 <span data-subtype="math" data-content="a = 8,b = 63"></span>，则有 <span data-subtype="math" data-content="m^2 - 8m + \dfrac{63}{4} = 0"></span>，解得 <span data-subtype="math" data-content="m=\dfrac{7}{2},n=\dfrac{9}{2}"></span>，则<span data-subtype="math" data-content="\sqrt{8 +3\sqrt{7}} = \sqrt{(\sqrt{\dfrac{7}{2}} + \sqrt{\dfrac{9}{2}})^2} = \dfrac{\sqrt{7}+3}{\sqrt{2}}"></span>
+</p>
+<p updated="20210807234802" data-type="NodeParagraph" data-n-id="20210807085420-cytrdz1">这隐含了一个条件：<span data-subtype="math" data-content="a^2 - b"></span> 必须是完全平方数，否则我们在化简的过程中又会出现根号套根号的结构。
+事实上，我们可以用 <span data-subtype="math" data-content="m,n"></span> 将 <span data-subtype="math" data-content="a^2-b"></span> 表示出来：<span data-subtype="math" data-content="a^2-b = (m+n)^2 - 4mn = (m-n)^2"></span>，而 <span data-subtype="math" data-content="m,n"></span> 为有理数，因此若能求出对应的 <span data-subtype="math" data-content="m,n"></span>，则 <span data-subtype="math" data-content="a^2-b"></span> 一定是一个有理数的平方。</p>
+<p updated="20210819225115" data-type="NodeParagraph" data-n-id="20210807085732-2cz0qgk">那么对于 <span data-subtype="math" data-content="\sqrt{a+\sqrt{b}}"></span>，我们可以将其配凑成 <span data-subtype="math" data-content="\sqrt{(\sqrt{\dfrac{a+\sqrt{a^2-b}}{2}} + \sqrt{\dfrac{a-\sqrt{a^2-b}}{2})^2}}"></span> 的条件是：<span data-subtype="math" data-content="a^2-b=k^2,k \in \mathbf{Q}"></span>.</p>
+<p updated="20210807085919" data-type="NodeParagraph" data-n-id="20210807085858-xj55gmg">另一种 <span data-subtype="math" data-content="\sqrt{a-\sqrt{b}}"></span> 的情况也是相当类似的，这里就不赘述了。</p>
+<h2 id="结论" updated="20210807093136" data-type="NodeHeading" data-n-id="20210807090328-yp3keg3">结论<a id="vditorAnchor-结论" class="vditor-anchor" href="#结论"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210807234735" data-type="NodeParagraph" data-n-id="20210807093236-ntectbf">根号套根号化简公式：
+对于 <span data-subtype="math" data-content="\sqrt{a + \sqrt{b}}"></span>，若 <span data-subtype="math" data-content="a^2 -b = k^2,k \in \mathbf{Q}"></span>，则 <span data-subtype="math" data-content="\sqrt{a+\sqrt{b}} = \sqrt{\dfrac{a+\sqrt{a^2-b}}{2}} + \sqrt{\dfrac{a-\sqrt{a^2-b}}{2}}"></span>
+对于 <span data-subtype="math" data-content="\sqrt{a - \sqrt{b}}"></span>，若 <span data-subtype="math" data-content="a^2 -b = k^2,k \in \mathbf{Q}"></span>，则 <span data-subtype="math" data-content="\sqrt{a-\sqrt{b}} = \sqrt{\dfrac{a+\sqrt{a^2-b}}{2}} - \sqrt{\dfrac{a-\sqrt{a^2-b}}{2}}"></span>
+</p>
+<p updated="20210807093843" data-type="NodeParagraph" data-n-id="20210807093733-w50onhr">对于 <span data-subtype="math" data-content="\sqrt{\sqrt{b} - a}"></span>，是无法化简的，因为 <span data-subtype="math" data-content="\sqrt{b} = 2\sqrt{mn} &gt; a = m+n"></span>，而由均值不等式有 <span data-subtype="math" data-content="m+n \ge 2\sqrt{mn}"></span>，矛盾。</p>
+<h2 id="背诵内容-同步-Anki-" updated="20210820134128" data-type="NodeHeading" data-n-id="20210819224644-why87hv">背诵内容(同步 Anki)<a id="vditorAnchor-背诵内容-同步-Anki-" class="vditor-anchor" href="#背诵内容-同步-Anki-"><img src="./../../assets/icon/alink.png" /></a></h2>
+<div custom-ankilink="deck_name=&quot;Math&quot;" updated="20210829224005" data-type="NodeSuperBlock" data-n-id="20210829223924-ttd0z3e" data-sb-layout="row"><p updated="20210829224005" data-type="NodeParagraph" data-n-id="20210819224715-eywjuaj">根号套根号化简公式：<span data-subtype="math" data-content="\sqrt{a+\sqrt{b}}"></span>
+记 <span data-subtype="math" data-content="k  =\sqrt{a^2-b}"></span>
+<span data-subtype="math" data-content="\sqrt{a+\sqrt{b}} = \sqrt{\dfrac{a+k}{2}} + \sqrt{\dfrac{a-k}{2}}"></span>   </p><p updated="20210829224004" data-type="NodeParagraph" data-n-id="20210819224825-17txm43">根号套根号化简公式：<span data-subtype="math" data-content="\sqrt{a-\sqrt{b}}"></span>
+记 <span data-subtype="math" data-content="k  =\sqrt{a^2-b}"></span>
+<span data-subtype="math" data-content="\sqrt{a-\sqrt{b}} = \sqrt{\dfrac{a+k}{2}} - \sqrt{\dfrac{a-k}{2}}"></span>   </p><p updated="20210829224003" data-type="NodeParagraph" data-n-id="20210819224906-i9n0il4">根号套根号化简公式：<span data-subtype="math" data-content="\sqrt{\sqrt{b}-a}"></span>
+无法化简。   </p></div>
+<p updated="20210820134129" data-type="NodeParagraph" data-n-id="20210820134129-37wfacd"></p>
+</main><div class="oceanpress-backLink"><h2>链接到此文档的相关文档</h2>
+<oceanpress-embedded-block src="../../Math.html#20210829150231-9l6j9cz" title="../../Math.html#20210829150231-9l6j9cz">
+    <p data-type="NodeParagraph" data-n-id="20210829150231-9l6j9cz"><oceanpress-block-ref src="../../Math/%e6%9d%82%e9%a1%b9/%e6%a0%b9%e5%8f%b7%e5%a5%97%e6%a0%b9%e5%8f%b7%e5%8c%96%e7%ae%80%e5%88%9d%e6%8e%a2.html#20210806234859-5pn5f57" title="根号套根号化简初探"><a href="../../Math/%e6%9d%82%e9%a1%b9/%e6%a0%b9%e5%8f%b7%e5%a5%97%e6%a0%b9%e5%8f%b7%e5%8c%96%e7%ae%80%e5%88%9d%e6%8e%a2.html#20210806234859-5pn5f57">根号套根号化简初探</a></oceanpress-block-ref ></p>
+</oceanpress-embedded-block>
+</div>
+</main>

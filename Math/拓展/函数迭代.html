@@ -1,0 +1,203 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>函数迭代</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main title="函数迭代" updated="20210830215522" custom-yuque-id="53593035" data-type="NodeDocument" data-n-id="20210830215107-97vmv74" updated="2147483647" data-n-id="20210830215107-97vmv74"><h1 title="函数迭代" updated="20210830215522" custom-yuque-id="53593035" data-type="NodeDocument" data-n-id="20210830215107-97vmv74" updated="2147483647" data-n-id="20210830215107-97vmv74">函数迭代</h1>
+<h2 id="函数迭代与函数方程" updated="20210829155126" data-type="NodeHeading" data-n-id="20210829155117-bq0spat">函数迭代与函数方程<a id="vditorAnchor-函数迭代与函数方程" class="vditor-anchor" href="#函数迭代与函数方程"><img src="./../../assets/icon/alink.png" /></a></h2>
+<ul start="0" updated="20210830215342" data-type="NodeList" data-n-id="20210829155126-3wypdco">
+<li data-type="NodeListItem" data-n-id="20210829155204-dx5wsbt"><span class="ListItemDot"></span>
+<p updated="20210829155253" data-type="NodeParagraph" data-n-id="20210829155204-mpv6jrv">函数迭代：<span data-subtype="math" data-content="f(x)"></span> 为定义在 <span data-subtype="math" data-content="\mathbf{D}"></span> 上且取值于 <span data-subtype="math" data-content="\mathbf{D}"></span> 上的函数，记 <span data-subtype="math" data-content="f^0(x) = x,f^1(x) = f(x),f^2(x) = f(f(x))"></span>，则称 <span data-subtype="math" data-content="f^n(x)"></span> 是 <span data-subtype="math" data-content="f(x)"></span> 在 <span data-subtype="math" data-content="\mathbf{D}"></span> 上的 <span data-subtype="math" data-content="n"></span> 次迭代。</p>
+</li>
+<li updated="20210829160031" data-type="NodeListItem" data-n-id="20210829155248-5fxmofq"><span class="ListItemDot"></span>
+<p updated="20210829160031" data-type="NodeParagraph" data-n-id="20210829155248-p0maz7n">迭代周期：若存在自然数 <span data-subtype="math" data-content="f^n(x) = x"></span>，则称 <span data-subtype="math" data-content="f(x)"></span> 为迭代周期函数，其迭代周期为 <span data-subtype="math" data-content="n"></span>，其中最小的自然数 <span data-subtype="math" data-content="n_0"></span> 称为 <span data-subtype="math" data-content="f(x)"></span> 的基本迭代周期。<span data-subtype="math" data-content="n_0 | n"></span> 为 <span data-subtype="math" data-content="n"></span> 为 <span data-subtype="math" data-content="f(x)"></span> 迭代周期的充要条件。</p>
+</li>
+<li updated="20210829155801" data-type="NodeListItem" data-n-id="20210829155739-8a68z6c"><span class="ListItemDot"></span>
+<p updated="20210829155801" data-type="NodeParagraph" data-n-id="20210829155739-cd7yvf4">基本运算规律：<span data-subtype="math" data-content="f^n(x) = f^m(f^{n-m}(x))"></span>，即满足结合律。</p>
+</li>
+<li updated="20210830215342" data-type="NodeListItem" data-n-id="20210829155339-fft18gn"><span class="ListItemDot"></span>
+<p updated="20210829155407" data-type="NodeParagraph" data-n-id="20210829155339-luq3c3u">常用函数迭代解法</p>
+<ul start="0" updated="20210830215342" data-type="NodeList" data-n-id="20210829155408-w6itt03">
+<li data-type="NodeListItem" data-n-id="20210829155407-sgxy1t1"><span class="ListItemDot"></span>
+<p updated="20210829155410" data-type="NodeParagraph" data-n-id="20210829155407-ikss5yn">直接公式法</p>
+<ul start="0" data-type="NodeList" data-n-id="20210829155411-kldhljy">
+<li data-type="NodeListItem" data-n-id="20210829155411-9x3g1wx"><span class="ListItemDot"></span>
+<p updated="20210829155423" data-type="NodeParagraph" data-n-id="20210829155411-923a7i5">若 <span data-subtype="math" data-content="f(x) = x+a"></span>，则 <span data-subtype="math" data-content="f^n(x) = x+na"></span>
+</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210829155423-8eso9yc"><span class="ListItemDot"></span>
+<p updated="20210829155431" data-type="NodeParagraph" data-n-id="20210829155423-qgag0i5">若 <span data-subtype="math" data-content="f(x)=ax"></span>，则 <span data-subtype="math" data-content="f^n(x) = a^nx"></span>
+</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210829155431-ia9glqp"><span class="ListItemDot"></span>
+<p updated="20210829155446" data-type="NodeParagraph" data-n-id="20210829155431-n5ecit9">若 <span data-subtype="math" data-content="f(x)=ax^2"></span>，则 <span data-subtype="math" data-content="f^n(x) = a^{2n-1}x^{2n}"></span>
+</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210829155447-h5p9hun"><span class="ListItemDot"></span>
+<p updated="20210829155502" data-type="NodeParagraph" data-n-id="20210829155447-lrc5ig1">若 <span data-subtype="math" data-content="f(x)=\dfrac{x}{x+1}"></span>，则 <span data-subtype="math" data-content="f^n(x) = \dfrac{x}{nx+1}"></span>
+</p>
+</li>
+</ul>
+</li>
+<li data-type="NodeListItem" data-n-id="20210829155509-123wmh8"><span class="ListItemDot"></span>
+<p updated="20210829155523" data-type="NodeParagraph" data-n-id="20210829155509-rwdp7l9">数学归纳法：先迭代几次，观察规律，猜想表达式再用数学归纳法证明。</p>
+</li>
+<li updated="20210830215342" data-type="NodeListItem" data-n-id="20210829155524-06gl5q3"><span class="ListItemDot"></span>
+<p updated="20210829155530" data-type="NodeParagraph" data-n-id="20210829155524-gswq9d3">桥函数相似法</p>
+<ul start="0" updated="20210830215342" data-type="NodeList" data-n-id="20210829155532-ouowafl">
+<li data-type="NodeListItem" data-n-id="20210829155532-t95lxyw"><span class="ListItemDot"></span>
+<p updated="20210829155735" data-type="NodeParagraph" data-n-id="20210829155532-sk7sxrd">对于给定的函数 <span data-subtype="math" data-content="f(x)"></span> 与 <span data-subtype="math" data-content="g(x)"></span>，若存在一个可逆函数 <span data-subtype="math" data-content="\varphi(x)"></span> 使得 <span data-subtype="math" data-content="f(x) = \varphi ^{-1}(g(\varphi(x)))"></span>，则称 <span data-subtype="math" data-content="f(x)"></span> 和 <span data-subtype="math" data-content="g(x)"></span> 关于 <span data-subtype="math" data-content="\varphi(x)"></span> 相似，记作 <span data-subtype="math" data-content="f \sim g"></span>，其中 <span data-subtype="math" data-content="\varphi(x)"></span> 成为桥函数。</p>
+</li>
+<li updated="20210830215342" data-type="NodeListItem" data-n-id="20210829163638-cf6le39"><span class="ListItemDot"></span>
+<p updated="20210830215342" data-type="NodeParagraph" data-n-id="20210829163638-21i2dls">若 <span data-subtype="math" data-content="f(x) = \varphi^{-1}(g(\varphi(x)))"></span>，则 <span data-subtype="math" data-content="f^n(x) = \varphi^{-1}(g^n(\varphi(x)))"></span> </p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="例题" updated="20210829155900" data-type="NodeHeading" data-n-id="20210829155506-9txyqfu">例题<a id="vditorAnchor-例题" class="vditor-anchor" href="#例题"><img src="./../../assets/icon/alink.png" /></a></h2>
+<h3 id="1" updated="20210829155900" data-type="NodeHeading" data-n-id="20210829155900-felkdoj">1<a id="vditorAnchor-1" class="vditor-anchor" href="#1"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829155937" data-type="NodeParagraph" data-n-id="20210829155901-8cj0x88">已知 <span data-subtype="math" data-content="f(x)"></span> 是实系数一次函数，且 <span data-subtype="math" data-content="f^8(x) = 256x + 255"></span>，求 <span data-subtype="math" data-content="f(x)"></span>
+</p>
+<p updated="20210829160348" data-type="NodeParagraph" data-n-id="20210829155938-8pgm5xo">不妨设 <span data-subtype="math" data-content="f(x) = ax + b"></span>
+</p>
+<p updated="20210829160411" data-type="NodeParagraph" data-n-id="20210829160348-qs4k9m6">迭代一次得到 <span data-subtype="math" data-content="f^2(x) = a(ax+b) + b = a^2x + ab + b"></span>
+</p>
+<p updated="20210829160426" data-type="NodeParagraph" data-n-id="20210829160411-r7a7wbh"><span data-subtype="math" data-content="f^3(x) = a(a^2x+ab+b)+b = a^3x + a^2b + ab + b"></span>
+</p>
+<p updated="20210829160510" data-type="NodeParagraph" data-n-id="20210829160428-fswq9se">数学归纳得到 <span data-subtype="math" data-content="f^n(x) = a^nx + a^{n-1}b + a^{n-2}b + \ldots + b"></span>
+</p>
+<p updated="20210829161155" data-type="NodeParagraph" data-n-id="20210829160511-ndrj2b5">则 <span data-subtype="math" data-content="a^8 = 256"></span>，即得 <span data-subtype="math" data-content="a = \pm2"></span>，从而解得 <span data-subtype="math" data-content="b=1,-3"></span> </p>
+<p updated="20210829161202" data-type="NodeParagraph" data-n-id="20210829161156-l8nzv84"><span data-subtype="math" data-content="f(x) = 2x + 1 或 -2x - 3"></span>
+</p>
+<h3 id="2" updated="20210829160958" data-type="NodeHeading" data-n-id="20210829160559-qgsz91j">2<a id="vditorAnchor-2" class="vditor-anchor" href="#2"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829161036" data-type="NodeParagraph" data-n-id="20210829160958-lmihj3r"><span data-subtype="math" data-content="f(x) = \begin{cases}1,|x| \le 1 \\ 0,|x| &gt; 1\end{cases}"></span>，求 <span data-subtype="math" data-content="f^n(x),n \ge 2"></span>
+</p>
+<p updated="20210829161043" data-type="NodeParagraph" data-n-id="20210829160344-xxd6uam">不难发现，<span data-subtype="math" data-content="|x| \le 1"></span> 时收敛于 <span data-subtype="math" data-content="f(x) = 1"></span>
+</p>
+<p updated="20210829161239" data-type="NodeParagraph" data-n-id="20210829161044-4gjzerc">迭代两次，一定得到 <span data-subtype="math" data-content="f^2(x) = 1"></span>，而 <span data-subtype="math" data-content="f^n(x)=1"></span> 即成立。</p>
+<h3 id="3" updated="20210829161241" data-type="NodeHeading" data-n-id="20210829161239-8huso2y">3<a id="vditorAnchor-3" class="vditor-anchor" href="#3"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829161507" data-type="NodeParagraph" data-n-id="20210829161241-4xhug5f"><span data-subtype="math" data-content="f(x) = \dfrac{x-3}{x+1},x \neq \pm 1"></span>，求 <span data-subtype="math" data-content="f^n(x)"></span>
+</p>
+<p updated="20210829163105" data-type="NodeParagraph" data-n-id="20210829161508-7a8qaox">不难想到这是一个<oceanpress-block-ref src="../../Math/%e6%8b%93%e5%b1%95/%e5%87%bd%e6%95%b0%e8%bf%ad%e4%bb%a3.html#20210829155248-p0maz7n" title="迭代周期函数"><a href="../../Math/%e6%8b%93%e5%b1%95/%e5%87%bd%e6%95%b0%e8%bf%ad%e4%bb%a3.html#20210829155248-p0maz7n">迭代周期函数</a></oceanpress-block-ref >，因此直接手动计算。
+这里是考虑到求出<oceanpress-block-ref src="../../Math/%e6%95%b0%e5%88%97/%e4%b8%8d%e5%8a%a8%e7%82%b9.html#20210824232839-j8qc1tf" title="不动点"><a href="../../Math/%e6%95%b0%e5%88%97/%e4%b8%8d%e5%8a%a8%e7%82%b9.html#20210824232839-j8qc1tf">不动点</a></oceanpress-block-ref >无实根，因此必定是周期函数。</p>
+<p updated="20210829161635" data-type="NodeParagraph" data-n-id="20210829161557-qkr4ajf"><span data-subtype="math" data-content="f^2(x) = \dfrac{x+3}{1-x}"></span>
+</p>
+<p updated="20210829161702" data-type="NodeParagraph" data-n-id="20210829161636-xjqf5sy"><span data-subtype="math" data-content="f^3(x) = x"></span>
+</p>
+<p updated="20210829161718" data-type="NodeParagraph" data-n-id="20210829161709-rsv6sot">最小迭代周期为 <span data-subtype="math" data-content="3"></span>，因此：</p>
+<p updated="20210829161831" data-type="NodeParagraph" data-n-id="20210829161719-o4sbjfd"><span data-subtype="math" data-content="f^n(x) = \begin{cases}x,n \equiv 0 \pmod 3 \\ \dfrac{x-3}{x+1},n\equiv 1 \pmod 3 \\ \dfrac{x+3}{1-x},n \equiv 2 \pmod 3\end{cases}"></span>
+</p>
+<h3 id="4" updated="20210829161833" data-type="NodeHeading" data-n-id="20210829161831-1tcdm6c">4<a id="vditorAnchor-4" class="vditor-anchor" href="#4"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829161946" data-type="NodeParagraph" data-n-id="20210829161833-tvf4dgk"><span data-subtype="math" data-content="f(x) = \dfrac{x}{\sqrt{1+x^2}}"></span>，<span data-subtype="math" data-content="g(x) = \dfrac{x}{\sqrt{1-x^2}}"></span>，求 <span data-subtype="math" data-content="f^n(x)"></span> 和 <span data-subtype="math" data-content="g^n(x)"></span>
+</p>
+<p updated="20210829162235" data-type="NodeParagraph" data-n-id="20210829161209-ru9b1jc"><span data-subtype="math" data-content="(f(x))^2 = \dfrac{x^2}{1+x^2}"></span>，因此有：<span data-subtype="math" data-content="(f^{n+1}(x))^2 = \dfrac{(f^n(x))^2}{1+(f^n(x))^2}"></span>，取个倒数就能写出通项。</p>
+<p updated="20210829162329" data-type="NodeParagraph" data-n-id="20210829162235-dbkxtqs"><span data-subtype="math" data-content="f^n(x) = \dfrac{1}{\sqrt{nx^2 + 1}}"></span>
+</p>
+<p updated="20210829162429" data-type="NodeParagraph" data-n-id="20210829162419-t3paj5g">另一边也是同理的。</p>
+<p updated="20210829162508" data-type="NodeParagraph" data-n-id="20210829162429-84ogbr2"><span data-subtype="math" data-content="g^n(x) = \dfrac{1}{\sqrt{1-nx^2}}"></span>
+</p>
+<h3 id="5" updated="20210829162624" data-type="NodeHeading" data-n-id="20210829162526-7jyxlnv">5<a id="vditorAnchor-5" class="vditor-anchor" href="#5"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829162637" data-type="NodeParagraph" data-n-id="20210829162626-ykhssl6"><span data-subtype="math" data-content="f(x) = \dfrac{x}{a+bx}"></span>，求 <span data-subtype="math" data-content="f^n(x)"></span>
+</p>
+<p updated="20210829162831" data-type="NodeParagraph" data-n-id="20210829162637-3t35avz">不难考虑取倒数，<span data-subtype="math" data-content="\dfrac{1}{f(x)} = \dfrac{a}{x} + b"></span>，既有：
+​<span data-subtype="math" data-content="\dfrac{1}{f^{n+1}(x)} = \dfrac{a}{f^n(x)} + b"></span>，构造等比数列。</p>
+<p updated="20210829162915" data-type="NodeParagraph" data-n-id="20210829162831-mjbry02"><span data-subtype="math" data-content="\dfrac{1}{f^{n+1}(x)}  + \dfrac{b}{a-1} = a \times (\dfrac{1}{f^n(x)} + \dfrac{b}{a-1})"></span>
+</p>
+<p updated="20210829163544" data-type="NodeParagraph" data-n-id="20210829162917-c268lcb">因此：<span data-subtype="math" data-content="\dfrac{1}{f^n(x)} + \dfrac{b}{a-1} = a^n(\dfrac{1}{x}+\dfrac{b}{a-1})"></span>
+</p>
+<p updated="20210829163558" data-type="NodeParagraph" data-n-id="20210829162955-ceilemj">整理得到 <span data-subtype="math" data-content="f^n(x) = \dfrac{x}{a^n + (a^n - 1) \times \dfrac{b}{a-1}x}"></span>
+</p>
+<hr />
+<p updated="20210829163849" data-type="NodeParagraph" data-n-id="20210829163845-lwrjvow">还可以使用桥函数相似法。</p>
+<p updated="20210829164149" data-type="NodeParagraph" data-n-id="20210829164047-h68tdrl"><span data-subtype="math" data-content="\dfrac{1}{f(x)} = a \times \dfrac{1}{x} + b"></span> 与 <span data-subtype="math" data-content="g(x) = ax+b"></span> 相似。
+​<span data-subtype="math" data-content="\varphi(x) = \dfrac{1}{x}"></span>，即 <span data-subtype="math" data-content="\varphi(f(x)) = g(\varphi(x))"></span> </p>
+<p updated="20210830215332" data-type="NodeParagraph" data-n-id="20210829163945-km1xnbv">因此 <span data-subtype="math" data-content="f^n(x) = \varphi ^{-1}(g^n(\varphi(x)))"></span>，即可求解。</p>
+<h3 id="6" updated="20210829164339" data-type="NodeHeading" data-n-id="20210829164243-5c3smhd">6<a id="vditorAnchor-6" class="vditor-anchor" href="#6"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210830215329" data-type="NodeParagraph" data-n-id="20210829164340-qujyuax">证明桥函数的性质：若 <span data-subtype="math" data-content="f(x) = \varphi^{-1}(g(\varphi(x)))"></span>，则 <span data-subtype="math" data-content="f^n(x) = \varphi^{-1}(g^n(\varphi(x)))"></span> </p>
+<p updated="20210829164358" data-type="NodeParagraph" data-n-id="20210829164104-77xylil">运用数学归纳法。</p>
+<p updated="20210829164630" data-type="NodeParagraph" data-n-id="20210829164358-y7d6muc"><span data-subtype="math" data-content="n=1"></span> 时显然成立。
+​<span data-subtype="math" data-content="\forall n \le k"></span> 时成立，先证 <span data-subtype="math" data-content="n=k+1"></span> 时成立，即证：<span data-subtype="math" data-content="f^{k+1}(x) = \varphi^{-1}(g^{k+1}(\varphi(x)))"></span>
+由 <span data-subtype="math" data-content="f^k(x) = \varphi^{-1}(g^k(\varphi(x)))"></span>，即得 <span data-subtype="math" data-content="f^{k+1}(x) = f(f^k(x)) = f(\varphi^{-1}(g^k(\varphi(x))))"></span>
+</p>
+<p updated="20210829164803" data-type="NodeParagraph" data-n-id="20210829164648-vteq0se">由桥函数定义，有 <span data-subtype="math" data-content="f(\varphi^{-1}(g^k(\varphi(x)))) = \varphi^{-1}(g(\varphi(\varphi^{-1}(g^k(\varphi(x)))))) = \varphi^{-1}(g^{k+1}(\varphi(x)))"></span>，证毕。</p>
+<h3 id="7" id="20210829164807-0w2chxh" data-type="NodeHeading" data-n-id="20210829164807-0w2chxh">7<a id="vditorAnchor-7" class="vditor-anchor" href="#7"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829165016" data-type="NodeParagraph" data-n-id="20210829165009-4izwxbm"><span data-subtype="math" data-content="f(x) = x^2 + 2x"></span>，求 <span data-subtype="math" data-content="f^n(x)"></span>
+</p>
+<p updated="20210829165539" data-type="NodeParagraph" data-n-id="20210829165016-2tjc1id">这个如果等价于求 <span data-subtype="math" data-content="a_{n+1} = a_n^2 + 2a_n"></span> 的通项公式，看起来也很有难度。
+一阶常系数二次递推，难以求通项。但其实可以这样：<span data-subtype="math" data-content="(a_{n+1} + 1) = (a_n + 1)^2"></span>
+</p>
+<p updated="20210829165257" data-type="NodeParagraph" data-n-id="20210829165107-nr9u1re">可以考虑配方，<span data-subtype="math" data-content="f(x) = (x+1)^2 - 1"></span>，有趣的是可以写成 <span data-subtype="math" data-content="f(x) + 1 = (x+1)^2"></span>，<span data-subtype="math" data-content="\varphi(x) = x+1"></span>
+</p>
+<p updated="20210829165345" data-type="NodeParagraph" data-n-id="20210829165300-4kels0j"><span data-subtype="math" data-content="f(x) = \varphi^{-1}(g(\varphi(x)))"></span>，其中 <span data-subtype="math" data-content="g(x) = x^2"></span>，而 <span data-subtype="math" data-content="g^n(x) = x^{2^n}"></span> </p>
+<p updated="20210829165407" data-type="NodeParagraph" data-n-id="20210829165344-ucoegzu">因此 <span data-subtype="math" data-content="f^n(x) = (x+1)^{2^n} - 1"></span>
+</p>
+<blockquote updated="20210830215522" data-type="NodeBlockquote" data-n-id="20210829165410-9hhw0gf">
+<p updated="20210830215522" data-type="NodeParagraph" data-n-id="20210829165428-ojpf9mi">桥函数可以看作一个换元的中介函数，类似于数列中的令 <span data-subtype="math" data-content="b_n = \varphi(a_n)"></span>。</p>
+</blockquote>
+<h2 id="函数方程" updated="20210829165604" data-type="NodeHeading" data-n-id="20210829165518-smoj6dv">函数方程<a id="vditorAnchor-函数方程" class="vditor-anchor" href="#函数方程"><img src="./../../assets/icon/alink.png" /></a></h2>
+<h3 id="8" updated="20210829165618" data-type="NodeHeading" data-n-id="20210829165604-j4inkga">8<a id="vditorAnchor-8" class="vditor-anchor" href="#8"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829165647" data-type="NodeParagraph" data-n-id="20210829165618-9sdnlv6">解函数方程：<span data-subtype="math" data-content="f(x) + f(\dfrac{x-1}{x}) = 1+x"></span>
+</p>
+<p updated="20210829165659" data-type="NodeParagraph" data-n-id="20210829165647-derfg4m">稍微化简一下，<span data-subtype="math" data-content="f(x) + f(1-\dfrac{1}{x}) = 1 + x"></span>
+</p>
+<p updated="20210829170448" data-type="NodeParagraph" data-n-id="20210829165659-h6krt3l">令 <span data-subtype="math" data-content="x = 1 - \dfrac{1}{t}"></span> 代入，<span data-subtype="math" data-content="f(1-\dfrac{1}{t}) + f(\dfrac{1}{1-t}) = 2-\dfrac{1}{t}"></span> </p>
+<p updated="20210829170047" data-type="NodeParagraph" data-n-id="20210829170034-qxcuqrz">周期并不为二，继续代入。</p>
+<p updated="20210829170703" data-type="NodeParagraph" data-n-id="20210829170047-cknycgz">令 <span data-subtype="math" data-content="x = \dfrac{1}{1-t}"></span>，代入有 <span data-subtype="math" data-content="f(\dfrac{1}{1-t}) + f(t) = 1 + \dfrac{1}{1-t}"></span> </p>
+<p updated="20210830215217" data-type="NodeParagraph" data-n-id="20210829170704-wbf3mhp">因此我们得到了三个式子：
+​<span data-subtype="math" data-content="f(x) + f(1-\dfrac{1}{x}) = 1 + x"></span>
+​<span data-subtype="math" data-content="f(1-\dfrac{1}{x}) + f(\dfrac{1}{1-x}) = 2-\dfrac{1}{x}"></span>
+​<span data-subtype="math" data-content="f(\dfrac{1}{1-x}) + f(x) = 1 + \dfrac{1}{1-x}"></span>
+稍微配凑一下就能得到 <span data-subtype="math" data-content="f(x) = \dfrac{1 + x  +1 + \dfrac{1}{1-x} - 2 + \dfrac{1}{x}}{2} = \dfrac{x}{2} + \dfrac{1}{2(1-x)} + \dfrac{1}{2x}"></span>
+</p>
+<p updated="20210829165801" data-type="NodeParagraph" data-n-id="20210829165801-o15q8e6"></p>
+<h3 id="9" updated="20210830215302" data-type="NodeHeading" data-n-id="20210829165851-u41i04v">9<a id="vditorAnchor-9" class="vditor-anchor" href="#9"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210829171017" data-type="NodeParagraph" data-n-id="20210829170938-6nk7vnv"><span data-subtype="math" data-content="f(x)"></span> 对于任意非负实数 <span data-subtype="math" data-content="x,y"></span> 都有 <span data-subtype="math" data-content="f(x+y^2) = f(x) + 2[f(y)]^2"></span>，且 <span data-subtype="math" data-content="f(x) \ge 0,f(1) \neq 0"></span>，求 <span data-subtype="math" data-content="f(2+\sqrt{3})"></span>
+</p>
+<p updated="20210829171257" data-type="NodeParagraph" data-n-id="20210829171018-g07wsxr">首先考虑特殊值，<span data-subtype="math" data-content="f(0+0) = f(0) + 2[f(0)]^2 \implies f(0) = 0"></span>
+</p>
+<p updated="20210829171441" data-type="NodeParagraph" data-n-id="20210829171428-9o1yutp"><span data-subtype="math" data-content="f(1) = 2[f(1)]^2 \implies f(1) = \dfrac{1}{2}"></span>
+</p>
+<p updated="20210829171517" data-type="NodeParagraph" data-n-id="20210829171136-soeyej8"><span data-subtype="math" data-content="f(2) = f(1) + 2[f(1)]^2 = 1"></span>，<span data-subtype="math" data-content="f(3) = f(2) + 2[f(1)]^2 = f(1) + 4[f(1)]^2 = \dfrac{3}{2}"></span>
+</p>
+<p updated="20210829171541" data-type="NodeParagraph" data-n-id="20210829171318-dj2781x"><span data-subtype="math" data-content="f((\sqrt{3})^2) = 2[f(\sqrt{3})]^2 \implies f(\sqrt{3}) = \dfrac{\sqrt{3}}{2}"></span>
+</p>
+<p updated="20210829171633" data-type="NodeParagraph" data-n-id="20210829171602-enq3v9p"><span data-subtype="math" data-content="f((\sqrt{2})^2) = 2[f(\sqrt{2})] \implies f(\sqrt{2}) = \dfrac{\sqrt{2}}{2}"></span>
+</p>
+<p updated="20210829171706" data-type="NodeParagraph" data-n-id="20210829171355-fwhd8y5"><span data-subtype="math" data-content="f(\sqrt{3} + 2) = f(\sqrt{3}) + 2[f(\sqrt{2})]^2 = 1 + \dfrac{\sqrt{3}}{2}"></span>
+</p>
+<p updated="20210829171721" data-type="NodeParagraph" data-n-id="20210829171707-fca7u4j">可以猜想 <span data-subtype="math" data-content="f(x) = \dfrac{x}{2}"></span>、、、</p>
+<p updated="20210829171722" data-type="NodeParagraph" data-n-id="20210829171722-z20fuvl"></p>
+</main><div class="oceanpress-backLink"></div>
+</main>

@@ -1,0 +1,97 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆锥曲线齐次化联立</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main updated="20210826134528" custom-yuque-id="53593029" title="圆锥曲线齐次化联立" data-type="NodeDocument" data-n-id="20210219212856-1zm8cbo" type="doc" updated="2147483647" data-n-id="20210219212856-1zm8cbo"><h1 updated="20210826134528" custom-yuque-id="53593029" title="圆锥曲线齐次化联立" data-type="NodeDocument" data-n-id="20210219212856-1zm8cbo" type="doc" updated="2147483647" data-n-id="20210219212856-1zm8cbo">圆锥曲线齐次化联立</h1>
+<p updated="20210826134528" data-type="NodeParagraph" data-n-id="20210826134347-wppy1fu">这部分笔记是我在高二初学齐次化联立时所写，不代表最终质量，后续将有调整。<em data-type="NodeTag">#TODO#</em></p>
+<h2 id="简介" data-type="NodeHeading" data-n-id="20210219213649-ptbxs9p">简介<a id="vditorAnchor-简介" class="vditor-anchor" href="#简介"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210219212859-4fq3z4o">齐次化联立是处理与斜率有关问题时的有力工具。</p>
+<p data-type="NodeParagraph" data-n-id="20210219215724-rzt15d5">当题目涉及某点到圆锥曲线上两点的斜率和、斜率积时，有很大的概率可以用齐次化联立解题。</p>
+<p data-type="NodeParagraph" data-n-id="20210219215903-q7zf2l5">齐次化联立在某些题目中可以加速计算，但在某些题目中反而会减慢计算，需要谨慎使用。</p>
+<p updated="20210820134536" data-type="NodeParagraph" data-n-id="20210219215924-wk8l5hp">齐次化联立的核心思想，就是设一条直线 <span data-subtype="math" data-content="mx + ny = 1"></span> 交圆锥曲线，然后以 <span data-subtype="math" data-content=" 1"></span> 进行齐次化变换。
+需要注意的是，这样设出的直线<strong data-type="NodeStrong">不过原点</strong>，因此必须特殊说明。
+下面以椭圆的齐次化联立为例。</p>
+<h2 id="椭圆齐次化联立" data-type="NodeHeading" data-n-id="20210219215854-1joxz12">椭圆齐次化联立<a id="vditorAnchor-椭圆齐次化联立" class="vditor-anchor" href="#椭圆齐次化联立"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210219212909-3vvqyj4">设椭圆 <span data-subtype="math" data-content="\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1"></span>，直线 <span data-subtype="math" data-content="mx + ny = 1"></span>.</p>
+<div data-content="\begin{aligned}
+&amp; \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = (mx+ny)^2 \\
+\iff &amp;  \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = m^2x^2 + n^2y^2 + 2mnxy\\ 
+\iff &amp; (\dfrac{1}{a^2} - m^2)x^2 + (\dfrac{1}{b^2} - n^2)y^2 - 2mnxy = 0\\
+\iff &amp; (\dfrac{1}{b^2} - n^2)\times \dfrac{y^2}{x^2} - 2mn\times\dfrac{y}{x} + \dfrac{1}{a^2} - m^2 = 0\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210219213336-96vki1z">我们得到了一个关于 <span data-subtype="math" data-content="\dfrac{y}{x}"></span> 的二次函数。<br />
+通过韦达定理，就可以方便地获取斜率相关的信息，从而灵活解题了。</p>
+<p updated="20210401202241" data-type="NodeParagraph" data-n-id="20210219213543-grl47ce">这种方法，现场推导有一定的复杂度，不一定比联立计算更快，但如果记下来化简后的式子， 就可以加速解题。</p>
+<p data-type="NodeParagraph" data-n-id="20210219215647-453zd9i">但是需要注意，在某些题目中，使用齐次化联立反而会加大计算量。</p>
+<h2 id="例题" data-type="NodeHeading" data-n-id="20210219213636-lvadj3p">例题<a id="vditorAnchor-例题" class="vditor-anchor" href="#例题"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210219213647-wq5v5k6">抛物线 <span data-subtype="math" data-content="y^2 = 2px"></span>，其中 <span data-subtype="math" data-content="O"></span> 为坐标原点，<span data-subtype="math" data-content="A"></span> 与 <span data-subtype="math" data-content="B"></span> 为抛物线上的点，且 <span data-subtype="math" data-content="\overrightarrow{OA} \cdot \overrightarrow{OB} = 0"></span>，证明直线 <span data-subtype="math" data-content="AB"></span> 过定点。</p>
+<p data-type="NodeParagraph" data-n-id="20210219220443-m8cqsjk">这道题目可以用传统方法联立计算，也并不复杂，但我们使用齐次化联立来解决它。<br />
+显然直线 <span data-subtype="math" data-content="AB"></span> 不过原点。<br />
+设直线 <span data-subtype="math" data-content="AB"></span> 为 <span data-subtype="math" data-content="mx + ny = 1"></span>，对抛物线方程进行变换：</p>
+<div data-content="\begin{aligned}
+&amp; y^2 - 2px = 0 \\
+\iff &amp; y^2 - 2px(mx+ny) = 0\\
+\iff &amp; y^2 - 2pmx^2 - 2pnxy  = 0\\
+\iff &amp; \dfrac{y^2}{x^2} - 2pn\dfrac{y}{x} - 2pm = 0
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210219220356-c9jih9c">根据韦达定理，<span data-subtype="math" data-content="k_1 \times k_2 = -2pm"></span>，由题意知 <span data-subtype="math" data-content="-2pm = -1"></span>，即 <span data-subtype="math" data-content="pm = \dfrac{1}{2}"></span>.<br />
+直线 <span data-subtype="math" data-content="mx + ny = 1"></span> 恒过定点 <span data-subtype="math" data-content="(2p,0)"></span>.</p>
+<p updated="20210821134154" data-type="NodeParagraph" data-n-id="20210219220918-qcv0tfd">在这一题中，我们利用直线方程，将抛物线方程中一次项乘上了 <span data-subtype="math" data-content="1 "></span>，实现齐次化，随后同时除以 <span data-subtype="math" data-content="x^2"></span> 构造出关于 <span data-subtype="math" data-content="\dfrac{y}{x}"></span> 的二次函数，进而通过韦达定理获得两直线斜率乘积，获得变量关系后找到定点。</p>
+<hr />
+<p updated="20210821134220" data-type="NodeParagraph" data-n-id="20210219221302-f90jpn1">椭圆 <span data-subtype="math" data-content="\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1(a &gt; b &gt; 0)"></span> 过点 <span data-subtype="math" data-content="A(0,-1)"></span>，离心率为 <span data-subtype="math" data-content="\dfrac{\sqrt{2}}{2}"></span>，经过点 <span data-subtype="math" data-content="(1,1)"></span> 且斜率为 <span data-subtype="math" data-content="k"></span> 的直线与椭圆交于不同的 <span data-subtype="math" data-content="P,Q"></span> 两点，证明 <span data-subtype="math" data-content="AP"></span> 与 <span data-subtype="math" data-content="AQ"></span> 斜率之和为 <span data-subtype="math" data-content=" 2"></span>.
+为了方便，给出椭圆方程 <span data-subtype="math" data-content="\dfrac{x^2}{2} + y^2 = 1"></span>.</p>
+<p data-type="NodeParagraph" data-n-id="20210219221426-gq382nq">这道题的特殊之处，在于要求的斜率不再是 <span data-subtype="math" data-content="\dfrac{y}{x}"></span>，而是 <span data-subtype="math" data-content="\dfrac{y+1}{x}"></span>，因此直接齐次化联立是不行的。<br />
+此时，我们可以<strong data-type="NodeStrong">平移坐标系</strong>，使椭圆方程变化，而新的坐标系中，要求的斜率再次成为 <span data-subtype="math" data-content="\dfrac{y}{x}"></span>，进而使用普通的齐次化联立方法求解。</p>
+<p data-type="NodeParagraph" data-n-id="20210219221638-udlyhtf">平以后，椭圆方程为 <span data-subtype="math" data-content="\dfrac{x^2}{2} + (y-1)^2 = 1"></span>，即 <span data-subtype="math" data-content="\dfrac{x^2}{2} + y^2 - 2y = 0"></span>.<br />
+此处的椭圆方程平移后消去了常数项，较为特殊。如果没有消掉常数项，需要对常数项也进行齐次化。</p>
+<div data-content="\begin{aligned}
+&amp; \dfrac{x^2}{2} + y^2 - 2y(mx+ny) = 0 \\
+\iff &amp; \dfrac{x^2}{2} + y^2 - 2mxy - 2ny^2\\
+\iff &amp; \dfrac{x^2}{2} + (1 - 2n)y^2 - 2mxy = 0\\
+\iff &amp; (1-2n)\dfrac{y^2}{x^2} - 2m\dfrac{y}{x} + \dfrac{1}{2} = 0\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210219220829-zf650gp">注意说明直线不过原点，且平移后的 <span data-subtype="math" data-content="x"></span> 不能为零。<br />
+平移前的直线恒过定点 <span data-subtype="math" data-content="(1,1)"></span>，平移后恒过 <span data-subtype="math" data-content="(1,2)"></span>，代入得 <span data-subtype="math" data-content="m = 1 - 2n"></span>.<br />
+由韦达定理，<span data-subtype="math" data-content="k_{AP} + k_{AQ} = \dfrac{2m}{1 - 2n}"></span>，代入 <span data-subtype="math" data-content="m = 1-2n"></span> 即证毕。</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210219223738-73206yt">齐次化联立其实只是一个技巧，并且这个技巧，胡乱使用很多时候反而会<strong data-type="NodeStrong">加大计算量</strong>，得不偿失。</p>
+<p data-type="NodeParagraph" data-n-id="20210219223755-bwx6qmk">如果要平移坐标系，那么就要仔细考虑到底要不要使用齐次化联立了。<br />
+如果不用平移坐标系，倒是可以先尝试一下。</p>
+<p data-type="NodeParagraph" data-n-id="20210328174714-xxsxgpx"></p>
+</main><div class="oceanpress-backLink"><h2>链接到此文档的相关文档</h2>
+<oceanpress-embedded-block src="../../Math.html#20210829150231-fn55y2e" title="../../Math.html#20210829150231-fn55y2e">
+    <p data-type="NodeParagraph" data-n-id="20210829150231-fn55y2e"><oceanpress-block-ref src="../../Math/%e8%a7%a3%e6%9e%90%e5%87%a0%e4%bd%95/%e5%9c%86%e9%94%a5%e6%9b%b2%e7%ba%bf%e9%bd%90%e6%ac%a1%e5%8c%96%e8%81%94%e7%ab%8b.html#20210219212856-1zm8cbo" title="圆锥曲线齐次化联立"><a href="../../Math/%e8%a7%a3%e6%9e%90%e5%87%a0%e4%bd%95/%e5%9c%86%e9%94%a5%e6%9b%b2%e7%ba%bf%e9%bd%90%e6%ac%a1%e5%8c%96%e8%81%94%e7%ab%8b.html#20210219212856-1zm8cbo">圆锥曲线齐次化联立</a></oceanpress-block-ref ></p>
+</oceanpress-embedded-block>
+</div>
+</main>

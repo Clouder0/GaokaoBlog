@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="en" style="width:100%;height:100%;margin:0;padding:0;border:0;">
+<head>
+    <meta charset="utf-8">
+    <script src="static/vue.js"></script>
+    <script src="static/element-ui/index.js"></script>
+    <script src="static/axios.min.js"></script>
+    <script src="static/vue-clipboard.min.js"></script>
+    <script src="static/vue-router.js"></script>
+    <script src="static/httpVueLoader.js"></script>
+    <script src="static/jszip.min.js"></script>
+    <script src="src/siYuanApi.js"></script>
+    <link rel="stylesheet" href="static/element-ui/theme-chalk/index.css">
+    <style>.el-table,
+        .el-table__expanded-cell {
+            background-color: transparent !important;
+        }         
+        .el-table th,
+        .el-table tr,
+        .el-table td {
+            background-color: transparent !important;
+        } 
+        .fullwidth>.el-input {
+            width:"100%"
+        }
+    </style>
+       
+</head>
+<body>
+    <div id=app>
+    <div id="root">
+                <el-row>
+                    <el-col :span="6">
+                        <div style="font-size: smaller;" v-if="需要重新设定路径">无法获取跨域获取数据,请重新插入挂件</div>
+                        <div style="font-size: smaller;" v-if="!需要重新设定路径">文档id:{{当前文档id}}</div>
+                        <div style="font-size: smaller;" v-if="!需要重新设定路径">最后一次编辑:{{当前文档属性["updated"]}}</div>
+                    </el-col>
+                    <el-col :span="6">
+                        <span>显示基础属性</span>
+                        <el-checkbox size=mini v-model="显示基础属性"></el-checkbox>
+                    </el-col>
+                    <el-col :span="6">
+                        <span>显示自定义属性</span>
+                        <el-checkbox size=mini v-model="显示自定义属性"></el-checkbox>
+                    </el-col>
+                      <el-col :span="6">
+                    <span >显示原始自定义属性</span>
+                        <el-checkbox size=mini  v-model="显示原始自定义属性"></el-checkbox>
+                    </el-col> 
+                    <el-col :span="6">
+                        <span v-if="!显示文档管理页面">显示源属性名</span>
+                            <el-checkbox v-if="!显示文档管理页面" size=mini v-model="显示源属性名"></el-checkbox>
+                    </el-col> 
+                    <el-col :span="6">
+                            <el-switch  size=mini v-model="显示文档管理页面" active-text="显示文档管理页面"></el-switch>
+                    </el-col> 
+                </el-row>
+                <el-divider></el-divider>
+                
+                
+                <div v-if = "!显示文档管理页面">
+                    <el-form 
+                    :model="当前文档属性" 
+                    ref="当前文档属性" 
+                    label-width="100px" 
+                    label-positon=left>
+                        <el-form-item label="书签:" v-if="显示基础属性">
+                            <el-select
+                                size="mini"
+                                v-model="当前文档属性.bookmark"
+                                @change="设定文档属性('bookmark',当前文档属性.bookmark)"
+                                @input="设定文档属性('bookmark',当前文档属性.bookmark)"
+
+                                clearable
+                                >
+                                <el-option
+                                v-for="item in 书签列表"
+                                :label="item"
+                                :value="item"
+                                ></el-option>
+                            </el-select>
+                        </el-form-item>
+                        <el-form-item label="命名:"  v-if="显示基础属性">
+                            <el-input v-model="当前文档属性.name"
+                            @change="设定文档属性('name',当前文档属性.name)"
+                            @input="设定文档属性('name',当前文档属性.name)"
+    
+                            size="mini"
+                            style="border:none"
+                            >
+                            </el-input>
+                        </el-form-item>
+                        <el-form-item label="别名:"  v-if="显示基础属性">
+                            <el-input v-model="当前文档属性.alias"
+                            @change="设定文档属性('alias',当前文档属性.alias)"
+                            @input="设定文档属性('alias',当前文档属性.alias)"
+
+                            size="mini"
+                            >
+                            </el-input>
+                        </el-form-item>
+                        <el-form-item label="备注:"  v-if="显示基础属性">
+                            <el-input v-model="当前文档属性.memo"
+                            @change="设定文档属性('memo',当前文档属性.memo)" 
+                            @input="设定文档属性('memo',当前文档属性.memo)"
+
+                            size="mini"
+                            type=textarea
+                            >
+                            </el-input>
+                        </el-form-item>
+                       
+                           
+                     
+                    </el-form>  
+                    <!-- 
+                    <el-form
+                    label-width="100px" 
+                    :label-positon="'left'"
+                    v-if="显示原始自定义属性">
+                        <el-form-item 
+                        v-for="(i,item) in 当前文档属性" 
+                        v-if="item.slice(0,7)=='custom-'"
+                        >
+                        <div slot="label">
+                            <span  >{{item.slice(7)+':'}}</span>
+                        </div>
+                            <el-row :gutter="24" style="height : 100%">
+                                <el-col :span="22" style="min-height : 100%!important">
+                                <el-input 
+                                v-model="当前文档属性[item]"
+                                size="mini"
+                                type=textarea
+                                @change="设定文档属性(item,当前文档属性[item])" 
+                                style="height : 100%"
+                                ></el-input>
+                                </el-col>
+                                <el-col :span="1" style="border-left:solid 1px  #DCDFE6;"></el-col>
+                                <el-col :span="1">
+                                    <el-tooltip class="item" effect="dark" content="'删除'" placement="top-end">
+                                        <div @click="删除自定义属性(item)" style="font-size:x-large;">-</div>
+                                    </el-tooltip>
+                                </el-col>
+                            </el-row>
+                        </el-form-item>
+                    -->
+                    </el-form>
+                    <el-form
+                    label-width="100px" 
+                    :label-positon="'left'"
+                    v-if="显示自定义属性"
+                    >
+                        
+                        <el-form-item 
+                        v-for="(i,item) in 当前文档解析属性" 
+                        v-if="item.slice(0,7)=='custom-'"
+                        >
+                        <div slot="label">
+                            <span>{{当前文档解析属性[item]['label']||item.slice(7)}}</span>
+                            <span v-if="显示源属性名" style="font-size: xx-small;" >{{' ('+item.slice(7)+')'}}</span>
+                        </div>
+                        <el-row :gutter="24" style="height : 100%">
+                            <el-col :span="22" style="min-height : 100%!important">
+                                <custom-attr-shower
+                                :属性类型="属性类型"
+                                :属性名="item"
+                                v-model="当前文档属性[item]"
+                                :显示原始自定义属性="显示原始自定义属性"
+                                :思源伺服地址="hosturl"
+                                :apitoken="apitoken"
+                                @hide=设定文档属性(item,当前文档属性[item])
+                                :主界面="主界面"
+                                >
+                                </custom-attr-shower>
+                        <!--
+                            <el-input 
+                            v-model="当前文档解析属性[item]['value']"
+                            size="mini"
+                            type=textarea
+                            @change="设定解析后属性(item)" 
+                            v-if = "当前文档解析属性[item]['type']=='string'||当前文档解析属性[item]['type']=='文本'"
+                            ></el-input>
+                            <el-popover
+                            placement="right"
+                            title="设置"
+                            width="400"
+                            trigger="hover"
+                            v-if = "当前文档解析属性[item]['type']=='image'||当前文档解析属性[item]['type']=='图片'"
+                            >
+                                <el-input 
+                                v-model="当前文档解析属性[item]['label']"
+                                size="mini"
+                                @change="设定解析后属性(item)" 
+                                >
+                                <template slot="prepend">标签</template>
+                                </el-input>
+                                <el-input 
+                                v-model="当前文档解析属性[item]['value']"
+                                size="mini"
+                                type=textarea
+                                @change="设定解析后属性(item)" 
+                                >
+                                <template slot="prepend">源</template>
+                                </el-input>
+        
+                                <el-image 
+                                slot="reference"
+                                v-model="当前文档解析属性[item]['value']"
+                                size="mini"
+                                :src="当前文档解析属性[item]['value']"
+                                ></el-image>
+                            </el-popover>
+                            <el-popover
+                            placement="right"
+                            title="设置"
+                            width="400"
+                            trigger="hover"
+                            v-if = "当前文档解析属性[item]['type']=='块链接'||当前文档解析属性[item]['type']=='block-link'"
+                            >
+                                <el-input 
+                                v-model="当前文档解析属性[item]['label']"
+                                size="mini"
+                                @change="设定解析后属性(item)" 
+                                >
+                                <template slot="prepend">标签</template>
+                                </el-input>
+                                <el-input 
+                                v-model="当前文档解析属性[item]['value']"
+                                size="mini"
+                                @change="设定解析后属性(item)" 
+                                >
+                                <template slot="prepend">源</template>
+                                </el-input>
+                                <el-link
+                                slot="reference"
+                                @click="窗口内打开(当前文档解析属性[item]['value'])"
+                                >{{当前文档解析属性[item]['anchor']}}</el-link>
+                            </el-popover>
+                            <el-popover
+                            placement="right"
+                            title="设置"
+                            width="400"
+                            trigger="hover"
+                            v-if = "当前文档解析属性[item]['type']=='超链接'||当前文档解析属性[item]['type']=='link'"
+                            >
+                            <el-input 
+                            v-model="当前文档解析属性[item]['label']"
+                            size="mini"
+                            @change="设定解析后属性(item)" 
+                            >
+                            <template slot="prepend">标签</template>
+                            </el-input>
+                            <el-input 
+                            v-model="当前文档解析属性[item]['value']"
+                            size="mini"
+                            @change="设定解析后属性(item)" 
+                            >
+                            <template slot="prepend">源</template>
+                            </el-input>
+                                <el-link 
+                                slot="reference"
+                                @click="打开链接(当前文档解析属性[item]['value'])">{{当前文档解析属性[item]['value']}}
+                                </el-link>
+                            </el-popover>
+                            -->
+                            </el-col>
+                            <el-col :span="1" style="border-left:solid 1px  #DCDFE6;"></el-col>
+                            
+
+                            <el-col :span="1" >
+                                <el-tooltip class="item" effect="dark" content="'删除'" placement="top-end">
+                                    <div @click="删除自定义属性(item)" style="font-size:x-large;">-</div>
+                                </el-tooltip>
+                            </el-col>
+                            </el-row>
+
+                        </el-form-item>
+                    </el-form> 
+                    <custom-attr-constructor
+                    v-model="新属性"
+                    :属性类型="属性类型"
+                    @hide="设定新属性(新属性)"
+                    :已有属性列表="当前文档属性"
+                    ></custom-attr-constructor>
+                   
+                </div>
+                
+                <el-tabs v-if="显示文档管理页面" v-model="当前活动面板">
+                    <el-tab-pane 
+                    v-for="(i,item) in sql列表对象"
+                    :label="item" 
+                    :name="item"
+                    >
+                    </el-tab-pane>
+                       <cc-block-attr-table
+                        :显示自定义属性="显示自定义属性"
+                        :书签列表="书签列表"
+                        :新属性="新属性"
+                        :属性类型="属性类型"
+                        :sql="sql"
+                        :显示基础属性="显示基础属性"
+                        :hosturl="hosturl"
+                        :apitoken="apitoken"
+                        :主界面="主界面"
+                        :显示原始自定义属性="显示原始自定义属性"
+                        >
+                    </cc-block-attr-table>
+                </el-tabs>
+            </div>
+    </div>
+</body>
+<script>
+    
+    Vue.use(httpVueLoader);
+  //  Vue.use(VueRouter);
+    var vm = new Vue({
+        el: "#app",
+        components:{
+            "custom-attr-shower":"url:components/custom-attr-shower.vue",
+            "custom-attr-constructor":"url:components/custom-attr-constructor.vue",
+            "cc-block-attr-table":"url:components/cc-block-attr-table.vue"
+        },
+        mounted: async function(){
+            let that = this
+            that.hosturl = window.location.host
+
+            that.获取主界面()
+            that.获取挂件自身元素()
+            await that.获取文档id()
+            await that.获取文档信息()
+            await that.获取文档属性()
+            await that.获取书签列表()
+            await that.主界面增加文档属性监听器()
+            that.显示原始自定义属性= true
+            that.显示原始自定义属性=false
+        },
+        watch:{
+            当前活动面板(当前活动面板名){
+                let that = this
+                that.sql=that.解析模板sql(that.sql列表对象[当前活动面板名])
+            }
+            
+        },
+        data(){
+            return{
+                显示自定义属性:true,
+                sql列表对象:{
+                            "查看本文档":"select * from blocks where id ='.action{.id}'",
+                            "查看同名文档":"select * from blocks where content ='.action{.content}'",
+                            "查看子文档":"select * from blocks where path like '.action{.aspath}%' and type='d' and not id ='.action{.id}'"
+                            },
+                当前活动面板:"查看本文档",
+                显示文档管理页面:false,
+                新属性:{"type":"原始文本","name":"newattr","label":"newattr","value":"default"},
+                当前文档解析属性:{},
+                显示原始自定义属性:false,
+                错误提示:false,
+                需要重新设定路径:false,
+                显示基础属性:true,
+                hosturl:{},
+                主界面:{},
+                文档属性对象数组:{},
+                挂件自身id:"",
+                当前文档id:"",
+                apitoken:"",
+                挂件自身元素:{},
+                挂件自身属性:{},
+                当前文档属性:{},
+                文档头图元素:{},
+                文档标题元素:{},
+                文案属性元素:{},
+                书签列表:[],
+                当前属性模板信息:{},
+                当前模板对象:{},
+                模板属性数组:{},
+                文档被引用数:0,
+                属性类型:["图片","文本","块链接",'超链接','原始文本'],
+                临时块属性数组:{},
+                临时块属性:{},
+                显示源属性名:false,
+                临时链接锚文本:"",
+                当前文档信息:{},
+                同名文档列表:[],
+                子文档列表:"",
+                同名文档属性名列表:[],
+                sql:""
+            }
+        },
+        methods:{
+            解析模板sql(sql){
+                let tempsql = sql.slice(0)
+                let 块信息=this.当前文档信息
+                tempsql = tempsql.replace(/\.action\{\.id\}/g,块信息["id"])
+                tempsql = tempsql.replace(/\.action\{\.content\}/g,this.当前文档信息["content"])
+                tempsql = tempsql.replace(/\.action\{\.alias\}/g,this.当前文档信息["alias"])
+                tempsql = tempsql.replace(/\.action\{\.name\}/g,this.当前文档信息["name"])
+                tempsql = tempsql.replace(/\.action\{\.updated\}/g,this.当前文档信息["updated"])
+                tempsql = tempsql.replace(/\.action\{\.hpath\}/g,this.当前文档信息["hpath"])
+                tempsql = tempsql.replace(/\.action\{\.path\}/g,this.当前文档信息["path"])
+                tempsql = tempsql.replace(/\.action\{\.aspath\}/g,this.当前文档信息["path"].slice(0, this.当前文档信息["path"].length - 3))
+                console.log("tempsql",tempsql)
+                return tempsql
+            },
+           
+           
+            删除自定义属性:async function (属性名){
+                let that = this
+                that.当前文档属性[属性名] = ""
+                await that.设定文档属性(属性名,that.当前文档属性[属性名])
+                delete that.当前文档属性[属性名]
+                delete that.当前文档解析属性[属性名]
+                await that.获取文档属性()
+
+            },
+            校验属性名(属性名){
+                属性名=属性名.replace(/[^\a-\z\A-\Z0-9]/g,"")
+                this.新属性['name']=属性名
+              //  console.log(属性名)
+            },
+            设定新属性:async function (新属性){
+                let that =this
+              //  console.log(新属性)
+                let 真实新属性名 = "custom-"+新属性["name"]
+                if (that.当前文档属性[真实新属性名] ){
+                    新属性["name"]=新属性["name"]+"new"
+                    that.设定新属性(新属性)
+                }
+                else {
+                let 新属性对象 = {"value":新属性["value"],"label":新属性["label"],"type":新属性["type"]}
+                let 新属性文本 = JSON.stringify(新属性对象)
+                that.$set(that.当前文档属性,真实新属性名,新属性文本)
+                await that.设定文档属性(真实新属性名,新属性文本)
+                await that.获取文档属性()
+                }
+            },
+            设定解析后属性(item){
+                let that =this
+                if(!that.显示原始自定义属性){
+                    that.当前文档属性[item]=JSON.stringify( that.当前文档解析属性[item])
+                    that.设定文档属性(item,that.当前文档属性[item])}
+            },
+            主界面增加文档属性监听器(){
+                let that = this
+                that.主界面.addEventListener("moseup",that.文档属性监听器)
+                window.addEventListener("focus",that.文档属性监听器)
+            },
+            文档属性监听器(){
+                let that = this
+               
+                that.获取文档属性()
+                
+            },
+            打开链接(link){
+                let that = this
+                that.获取主界面()
+                let 虚拟链接 =  that.主界面.createElement("span")
+                虚拟链接.setAttribute("data-type","a")
+                虚拟链接.setAttribute("data-href",link)
+                let 临时目标 = that.主界面.querySelector(".protyle-wysiwyg div[data-node-id] div[contenteditable]")
+              //  console.log(临时目标)
+                临时目标.appendChild(虚拟链接)
+                let 点击事件 =  that.主界面.createEvent('MouseEvents')
+                点击事件.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                虚拟链接.dispatchEvent(点击事件);
+                虚拟链接.remove()
+            },
+            窗口内打开:async function(id){
+                let that = this
+                id = id.replace("((","").replace("))","")
+                that.获取主界面()
+                let 虚拟链接 =  that.主界面.createElement("span")
+                虚拟链接.setAttribute("data-type","block-ref")
+                虚拟链接.setAttribute("data-id",id)
+                let 临时目标 = that.主界面.querySelector(".protyle-wysiwyg div[data-node-id] div[contenteditable]")
+              //  console.log(临时目标)
+                临时目标.appendChild(虚拟链接)
+                let 点击事件 =  that.主界面.createEvent('MouseEvents')
+                点击事件.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+                虚拟链接.dispatchEvent(点击事件);
+                虚拟链接.remove()
+            },
+            获取书签列表:async function(){
+                let that = this
+                await axios({
+                    method:"post",
+                    url:'http://'+that.hosturl + '/api/attr/getBookmarkLabels',
+                    headers:{'Authorization': 'Token '+ that.apitoken },
+                    data:({})
+                    }).then(
+                        result=>{
+                           /// console.log(result.data)
+                            that.书签列表 = result.data["data"]
+                        }
+                    )
+
+            },
+            解析思源块链接:async function (链接id){
+                let that = this
+                that.临时链接锚文本 = await 获取思源块链接锚文本(that.hosturl,that.apitoken,链接id)
+               // console.log("临时链接锚文本",that.临时链接锚文本)
+                return that.临时链接锚文本
+            },
+            设定文档属性:async function(属性名,属性值){
+                let that = this
+                
+                await that.设定块属性(that.当前文档id,属性名,属性值)
+                that.获取主界面()
+                that.设定文档属性元素()
+                that.解析文档属性()
+            },
+            设定文档属性元素:async function(){
+                let that = this
+                that.获取主界面()
+                let 临时书签元素 = document.createElement('div')
+                if (that.当前文档属性.bookmark!=""&&that.当前文档属性.bookmark){
+                    临时书签元素.innerHTML = `<div class="protyle-attr--bookmark">${that.当前文档属性.bookmark}</div>`}
+                let 临时命名元素 = document.createElement('div')
+                if (that.当前文档属性.name!=""&&that.当前文档属性.name){
+                临时命名元素.innerHTML = `<div class="protyle-attr--name"><svg><use xlink:href="#iconN"></use></svg>${that.当前文档属性.name}</div>`}
+                let 临时别名元素 = document.createElement('div')
+                if (that.当前文档属性.alias!=""&&that.当前文档属性.alias){
+                    临时别名元素.innerHTML = `<div class="protyle-attr--alias"><svg><use xlink:href="#iconA"></use></svg>${that.当前文档属性.alias}</div>`}
+                let 临时备注元素 = document.createElement('div')
+                if (that.当前文档属性.memo!=""&&that.当前文档属性.memo){
+                临时备注元素.innerHTML =`<div class="protyle-attr--memo b3-tooltips b3-tooltips__nw" aria-label="${that.当前文档属性.memo}"><svg><use xlink:href="#iconM"></use></svg></div>`
+                }
+                let 临时反引元素 = document.createElement('div')
+
+                if (that.文档被引用数!=0&&that.文档被引用数){
+                    临时备注元素.innerHTML =`<div class="protyle-attr--refcount popover__block" data-id="${that.当前文档id}" style="">${that.文档被引用数}</div>`
+                }
+                that.文档属性元素.innerHTML = 临时书签元素.innerHTML+ 临时命名元素.innerHTML+临时别名元素.innerHTML+临时备注元素.innerHTML+临时反引元素.innerHTML
+            },
+            设定块属性:async function(id,属性名,属性值){
+                let datas = ({
+                  })
+                datas["id"] = id
+                datas["attrs"] = {}
+                let 真实属性名 = 属性名.slice(0)
+                if (属性名 !='name'&&属性名!='alias'&&属性名!='memo'&&属性名!='bookmark'){
+                    if(属性名.slice(0,7)!="custom-"){ 真实属性名= "custom-"+属性名}
+                }
+                datas["attrs"][真实属性名]=属性值
+              //  let jsondatas = JSON.stringify(datas)
+              let jsondatas = datas
+                //console.log(datas)
+                await axios({
+                method:'POST',
+                headers:{'Authorization': 'Token' + this.apitoken},
+                url:'http://'+this.hosturl + '/api/attr/setBlockAttrs',
+                data:(jsondatas)
+                })
+
+            },
+            获取挂件自身元素(){
+                let that =this
+                that.挂件自身元素 = self.frameElement.parentElement.parentElement
+                挂件iframe = self.frameElement
+                if(that.挂件自身元素){
+                    that.挂件自身id = that.挂件自身元素.getAttribute("data-node-id")
+                    挂件iframe.setAttribute("style",挂件iframe.getAttribute("style")+'border-left:none;border-right:none;')
+                    }
+                else{return null}
+            },
+            获取文档id:async function(){
+                let that = this 
+                that.挂件自身属性 =  await 以sql向思源请求块数据(that.hosturl,that.apitoken,`select * from blocks where id = '${that.挂件自身id}'`,"挂件自身属性")
+              //  console.log(that.挂件自身属性)
+                that.当前文档id = that.挂件自身属性[0]["root_id"]
+            },
+            获取文档属性:async function(){
+                let that =this
+                that.当前文档属性 = await that.通过id获取属性(that.当前文档id)
+                that.当前文档解析属性 = await that.通过id获取属性(that.当前文档id)
+                that.解析文档属性()
+                
+               // console.log("当前文档属性",that.当前文档属性)
+              ///  console.log("当前文档解析属性",that.当前文档解析属性)
+            },
+            解析文档属性:async function(){
+                let that = this
+                for (item in that.当前文档属性){
+                   /// console.log(item)
+                     let 原始属性值 = that.当前文档属性[item]
+                   //  console.log(原始属性值)
+
+                     原始属性值 = that.html转义(原始属性值)
+                     that.当前文档属性[item] = 原始属性值
+                     let 解析属性值 = null
+                   ///  console.log(原始属性值)
+
+                     try {
+                      //   console.log(原始属性值)
+                         解析属性值 = JSON.parse(原始属性值)
+                     //    console.log(解析属性值)
+                         if (解析属性值.label==""||!解析属性值.label){解析属性值.label=item.slice(7,0)}
+                         if (解析属性值.label&&解析属性值.value&&解析属性值.type){解析属性值={'label':解析属性值.label,'value':解析属性值.value,'type':解析属性值.type}}
+                         else if (解析属性值.label&&解析属性值.value){解析属性值={'label':解析属性值.label,'value':解析属性值.value,'type':"string"}}
+                         else if (解析属性值.label&&解析属性值.type){解析属性值={'label':解析属性值.label,'value':"",'type':解析属性值.type}}
+                         else{解析属性值={'label':item.slice(7,0),'value':原始属性值,'type':'string'}}
+                        }
+                     catch(e){解析属性值= {'label':item.slice(7,0),'value':原始属性值,'type':'string'}}
+                     if (解析属性值.type=="块链接"||解析属性值.type=="block-link"){
+                         解析属性值.anchor = await this.解析思源块链接(解析属性值.value)
+                     }
+                     that.当前文档解析属性[item] = 解析属性值
+                }
+            },
+            html转义(原始字符串){
+                var 临时元素 = document.createElement("div"); 
+                临时元素.innerHTML = 原始字符串; 
+                var output = 临时元素.innerText || 临时元素.textContent; 
+                临时元素 = null; 
+              ///  console.log(output)
+                return output; 
+            },
+            获取文档信息:async function(){
+               let that = this
+               let 临时块信息数组=  await 以sql向思源请求块数据(that.hosturl,that.apitoken,`select * from blocks where id = '${that.当前文档id}' `)
+               that.当前文档信息 = 临时块信息数组[0]
+             //  console.log(that.当前文档信息)
+            },
+            
+            获取主界面(){
+                let that = this
+                try{
+                that.主界面 = window.parent.document}
+                catch(e){this.需要重新设定路径=true}
+                if(that.当前文档id!=""){
+                that.文档头图元素 =  that.主界面.querySelector(`div.protyle-background[data-node-id='${that.当前文档id}']`)
+                that.文档标题元素 = that.主界面.querySelector(`.protyle-background[data-node-id='${that.当前文档id}']+.protyle-title`)
+                that.文档属性元素 =  that.文档标题元素.querySelector(".protyle-attr")}
+            },
+            
+
+            通过id获取属性:async function(id){
+                let that = this 
+                let obj ={}
+                await axios({
+                    method:"post",
+                    url:'http://'+that.hosturl + '/api/block/getDocInfo',
+                    headers:{'Authorization': 'Token '+ that.apitoken },
+                    data:({"id":`${id}`})
+                    }).then(
+                        result=>{
+                          //  console.log(result.data)
+                            obj = result.data["data"]['ial']
+                            that.文档被引用数 = result.data["data"]['refCount']
+                        }
+                    )
+                return obj
+            },
+        }
+        })
+
+
+</script>
+<style>
+    .el-form-item{
+        margin-bottom: 5px;
+        border-bottom: solid 1px #DCDFE6;
+    }
+    .noborder input,.el-form-item .el-textarea,.el-form-item .el-textarea__inner,.el-form-item .el-input__inner{
+        background-color: rgba(128, 128, 128, 0);
+        border:none
+    }
+    .el-form-item__label{
+        word-wrap: break-word;
+        text-align: left;
+    }
+</style>
+</html>

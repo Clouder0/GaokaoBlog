@@ -1,0 +1,69 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数学指对同构</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main custom-yuque-id="55818070" title="数学指对同构" updated="20210227104021" data-type="NodeDocument" data-n-id="20210227101745-4228kq7" type="doc" updated="2147483647" data-n-id="20210227101745-4228kq7"><h1 custom-yuque-id="55818070" title="数学指对同构" updated="20210227104021" data-type="NodeDocument" data-n-id="20210227101745-4228kq7" type="doc" updated="2147483647" data-n-id="20210227101745-4228kq7">数学指对同构</h1>
+<h1 id="指对同构" updated="20210227102031" data-type="NodeHeading" data-n-id="20210227101745-kigwulp">指对同构<a id="vditorAnchor-指对同构" class="vditor-anchor" href="#指对同构"><img src="./../../assets/icon/alink.png" /></a></h1>
+<p updated="20210227102418" data-type="NodeParagraph" data-n-id="20210227102031-2coazf5">指对同构的核心，就是通过分离指数与对数，构造同构式。</p>
+<p updated="20210227102436" data-type="NodeParagraph" data-n-id="20210227102418-2qjgqc3">举一个简单的例子：</p>
+<div data-content="\begin{aligned}
+&amp; ae^x + \ln a - \ln x &gt; 0 \\
+\iff &amp; ae^x &gt; \ln \dfrac{x}{a} \\
+\iff &amp; e^x &gt; \dfrac{1}{a}\ln \dfrac{x}{a} \\
+\iff &amp; xe^x &gt; \dfrac{x}{a} \ln \dfrac{x}{a} \\
+\iff &amp; xe^x &gt; \ln \dfrac{x}{a} e^{\ln \frac{x}{a}}\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p updated="20210227102728" data-type="NodeParagraph" data-n-id="20210227102650-7o8wbw7">看到指数与对数同时出现在不等式中，在高中范围内通过求导直接解决比较麻烦，而如果能构造出同构式，利用单调性就可以很快地解决这种问题。</p>
+<h2 id="例题" updated="20210227103755" data-type="NodeHeading" data-n-id="20210227102624-fgyxl4a">例题<a id="vditorAnchor-例题" class="vditor-anchor" href="#例题"><img src="./../../assets/icon/alink.png" /></a></h2>
+<h2 id="学习资料" updated="20210227103814" data-type="NodeHeading" data-n-id="20210227103809-fdl5s3o">学习资料<a id="vditorAnchor-学习资料" class="vditor-anchor" href="#学习资料"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210227104021" data-type="NodeParagraph" data-n-id="20210227104005-z816ska">B 站教师系列。
+https://www.bilibili.com/video/BV18i4y1L7d1
+https://www.bilibili.com/video/BV1d54y1z7Fw
+https://www.bilibili.com/video/BV13a411w7Nm
+https://www.bilibili.com/video/BV1St4y1a7H4
+https://www.bilibili.com/video/BV1bD4y1X7Ls
+https://www.bilibili.com/video/BV1sU4y1s7A5
+https://www.bilibili.com/video/BV1Up4y1W76N</p>
+<p updated="20210227104021" data-type="NodeParagraph" data-n-id="20210227104023-u4l381x"></p>
+</main><div class="oceanpress-backLink"><h2>链接到此文档的相关文档</h2>
+<oceanpress-embedded-block src="../../Math.html#20210829150231-extaq1v" title="../../Math.html#20210829150231-extaq1v">
+    <p data-type="NodeParagraph" data-n-id="20210829150231-extaq1v"><oceanpress-block-ref src="../../Math/%e5%af%bc%e6%95%b0/%e6%95%b0%e5%ad%a6%e6%8c%87%e5%af%b9%e5%90%8c%e6%9e%84.html#20210227101745-4228kq7" title="数学指对同构"><a href="../../Math/%e5%af%bc%e6%95%b0/%e6%95%b0%e5%ad%a6%e6%8c%87%e5%af%b9%e5%90%8c%e6%9e%84.html#20210227101745-4228kq7">数学指对同构</a></oceanpress-block-ref ></p>
+</oceanpress-embedded-block>
+
+<oceanpress-embedded-block src="../../Math/%e6%95%b0%e5%ad%a6%e9%a2%98%e7%9b%ae%e6%b1%87%e7%bc%96.html#20210725160306-20ew3sj" title="../../Math/数学题目汇编.html#20210725160306-20ew3sj">
+    <p updated="20210227102000" data-type="NodeParagraph" data-n-id="20210725160306-20ew3sj">本题的核心在于双变量化单变量，将 <span data-subtype="math" data-content="x"></span> 和 <span data-subtype="math" data-content="a"></span> 统一为 <span data-subtype="math" data-content="\dfrac{x}{a}"></span> 后构造函数求解。
+同时，将不等式两边分理出 <span data-subtype="math" data-content="e^x"></span> 与 <span data-subtype="math" data-content="\ln x"></span>，然后构造函数的方法，叫做<oceanpress-block-ref src="../../Math/%e5%af%bc%e6%95%b0/%e6%95%b0%e5%ad%a6%e6%8c%87%e5%af%b9%e5%90%8c%e6%9e%84.html#20210227101745-4228kq7" title="指对同构"><a href="../../Math/%e5%af%bc%e6%95%b0/%e6%95%b0%e5%ad%a6%e6%8c%87%e5%af%b9%e5%90%8c%e6%9e%84.html#20210227101745-4228kq7">指对同构</a></oceanpress-block-ref >。</p>
+</oceanpress-embedded-block>
+</div>
+</main>

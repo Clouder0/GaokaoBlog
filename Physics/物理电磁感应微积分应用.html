@@ -1,0 +1,107 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物理电磁感应微积分应用</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main title="物理电磁感应微积分应用" updated="20210710212749" data-type="NodeDocument" data-n-id="20210426215911-gp12j4u" type="doc" updated="2147483647" data-n-id="20210426215911-gp12j4u"><h1 title="物理电磁感应微积分应用" updated="20210710212749" data-type="NodeDocument" data-n-id="20210426215911-gp12j4u" type="doc" updated="2147483647" data-n-id="20210426215911-gp12j4u">物理电磁感应微积分应用</h1>
+<h1 id="物理电磁感应积分" updated="20210427094652" data-type="NodeHeading" data-n-id="20210426215911-dhdkio1">物理电磁感应积分<a id="vditorAnchor-物理电磁感应积分" class="vditor-anchor" href="#物理电磁感应积分"><img src="./../assets/icon/alink.png" /></a></h1>
+<p updated="20210427094723" data-type="NodeParagraph" data-n-id="20210426215943-ya8mvl0">导体以 <span data-subtype="math" data-content="v_0"></span> 的速度进入磁感应强度为 <span data-subtype="math" data-content="B"></span> 的磁场区域，经过 <span data-subtype="math" data-content="s"></span> 路程后出磁场，导体质量为 <span data-subtype="math" data-content="m"></span>，长度为 <span data-subtype="math" data-content="L"></span>，电阻为 <span data-subtype="math" data-content="R"></span>，求任意时刻路程、速度。</p>
+<p updated="20210427094733" data-type="NodeParagraph" data-n-id="20210427094724-334rq0b">首先列出关于物体状态的式子：</p>
+<div data-content="\begin{aligned}
+F = -ma = \dfrac{B^2L^2}{R} v \\
+\iff -m\dfrac{\mathrm{d}v}{\mathrm{d}t} = \dfrac{B^2L^2}{R}v \\
+\iff \dfrac{\mathrm{d}v}{v} = -\dfrac{B^2L^2}{mR}\mathrm{d}t \\
+\iff \int \dfrac{\mathrm{d}v}{v} = \int -\dfrac{B^2L^2}{mR}\mathrm{d}t \\
+\implies \ln v = -\dfrac{B^2L^2t}{mR} + C
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p updated="20210501190043" data-type="NodeParagraph" data-n-id="20210426220947-xivnzo5">另 <span data-subtype="math" data-content="t = 0"></span>，解得 <span data-subtype="math" data-content="C = \ln v_0"></span>.</p>
+<div data-content="\begin{aligned}
+\ln v = -\dfrac{B^2L^2t}{mR} + \ln v_0 \\
+\iff \ln \dfrac{v}{v_0} = -\dfrac{B^2L^2t}{mR}\\
+\iff \ln \dfrac{v_0}{v} = \dfrac{B^2L^2t}{mR}\\
+\implies \dfrac{v_0}{v} = e^{(B^2L^2t)/(mR)}\\
+\iff v = \dfrac{v_0}{e^{(B^2L^2t)/(mR)}}
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p updated="20210426221327" data-type="NodeParagraph" data-n-id="20210426221310-7i67exx">这样就得到了 <span data-subtype="math" data-content="v"></span> 关于 <span data-subtype="math" data-content="t"></span> 的式子，接下来对该式积分得到关于 <span data-subtype="math" data-content="x"></span> 的式子：</p>
+<div data-content="\begin{aligned}
+\int v\mathrm{d}t = \int \dfrac{v_0}{e^{(B^2L^2t)/(mR)}} \mathrm{d}t\\
+\implies x = v_0 \int e^{-(B^2L^2t)/(mR)} \mathrm{d}t\\
+\iff x = v_0 \dfrac{e^{-(B^2L^2t)/(mR)} - 1}{-\dfrac{B^2L^2}{mR}}\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p updated="20210427094750" data-type="NodeParagraph" data-n-id="20210426221508-jeepylg">还可以求任意路程的速度，将 <span data-subtype="math" data-content="x = d"></span> 带入：</p>
+<div data-content="\begin{aligned}
+&amp; -\dfrac{B^2L^2d}{mR} = v_0(e^{-(B^2L^2t)/(mR)} - 1)\\
+&amp; v = \dfrac{v_0}{e^{(B^2L^2t)/(mR)}} = v_0e^{-(B^2L^2t)/(mR)}\\
+\implies &amp; v = v_0 - \dfrac{B^2L^2}{R} \times \dfrac{d}{m}\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p updated="20210427094557" data-type="NodeParagraph" data-n-id="20210426221535-tmk2bwo">最终的形式相当简洁。</p>
+<p updated="20210427094816" data-type="NodeParagraph" data-n-id="20210427094613-de6ngkg">综上所述，在导体棒于磁场中只受安培力的运动中，我们有：</p>
+<div data-content="\begin{aligned}
+&amp; \text{let } k = -\dfrac{B^2L^2}{mR}\\
+&amp; v = v_0e^{kt}\\
+&amp; x = \dfrac{v_0(e^{kt} - 1)}{k}\\
+&amp; v = v_0 + kd\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<hr />
+<p updated="20210501184221" data-type="NodeParagraph" data-n-id="20210501184208-v8xclum">此外，还可以通过动量定理来计算任意路程的速度。</p>
+<div data-content="\begin{aligned}
+&amp; Q = \dfrac{\Delta \phi}{R} = \int I \mathrm{d}t\\
+&amp; F = BLI \\
+\implies &amp; \int F\mathrm{d}t = BL \times \int I\mathrm{d}t \\
+&amp; \Delta p = BLQ = \dfrac{B^2L^2}{R} d \\
+\implies &amp; v = v_0 - \dfrac{B^2L^2}{mR} \times d
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<h2 id="背诵内容" updated="20210710212057" data-type="NodeHeading" data-n-id="20210501184517-vwxwti4">背诵内容<a id="vditorAnchor-背诵内容" class="vditor-anchor" href="#背诵内容"><img src="./../assets/icon/alink.png" /></a></h2>
+<p updated="20210710212705" data-type="NodeParagraph" data-n-id="20210710212057-pr6x353">电磁感应中，无外力作用，任意位移速度？
+​<span data-subtype="math" data-content="v = v_0 - \dfrac{B^2L^2}{mR} \times d"></span>
+可以通过动量定理计算。</p>
+<p updated="20210710212617" data-type="NodeParagraph" data-n-id="20210710212138-rcmmd1h">电磁感应中，无外力作用，任意时间速度？
+令 <span data-subtype="math" data-content="k = -\dfrac{B^2L^2}{mR}"></span>
+​<span data-subtype="math" data-content="v = v_0e^{kt}"></span>
+可以通过积分证明。</p>
+<p updated="20210710212633" data-type="NodeParagraph" data-n-id="20210710212300-j0m1uhm">电磁感应中，无外力作用，任意时间位移？
+令 <span data-subtype="math" data-content="k = -\dfrac{B^2L^2}{mR}"></span>
+​<span data-subtype="math" data-content="x = v_0 \times \dfrac{e^{kt} - 1}{k}"></span>
+</p>
+<p updated="20210710212740" data-type="NodeParagraph" data-n-id="20210710212706-e27qro2">电磁感应中，无外力作用，三个积分获得的结论？
+<span data-subtype="math" data-content="\begin{aligned}&amp; \text{let } k = -\dfrac{B^2L^2}{mR}\\ &amp; v = v_0e^{kt}\\ &amp; x = \dfrac{v_0(e^{kt} - 1)}{k}\\ &amp; v = v_0 + kd\\ \end{aligned}"></span></p>
+<p updated="20210710212749" data-type="NodeParagraph" data-n-id="20210710212749-pun8udu"></p>
+</main><div class="oceanpress-backLink"><h2>链接到此文档的相关文档</h2>
+<oceanpress-embedded-block src="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e9%97%ae%e9%a2%98%e4%b8%ad%e5%8a%a8%e6%9d%86%e4%b8%8e%e7%94%b5%e5%ae%b9%e7%9a%84%e7%9b%b8%e4%ba%92%e8%bd%ac%e5%8c%96.html#20210710192017-ttibcxp" title="../Physics/物理电磁感应问题中动杆与电容的相互转化.html#20210710192017-ttibcxp">
+    <p updated="20210619171637" data-type="NodeParagraph" data-n-id="20210710192017-ttibcxp">对于动杆：<span data-subtype="math" data-content="m \mathrm{d}v = BLI\mathrm{d}t"></span>，积分得 <span data-subtype="math" data-content="m\Delta v = BL\Delta Q"></span>.
+而对于动杆电动势，原电动势为 <span data-subtype="math" data-content="BLv"></span>，新电动势为 <span data-subtype="math" data-content="BL(v-\Delta v)"></span>，不难有：
+​<span data-subtype="math" data-content="\Delta E = \dfrac{B^2L^2}{m} \Delta Q"></span>
+这一点在 <oceanpress-block-ref src="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e5%be%ae%e7%a7%af%e5%88%86%e5%ba%94%e7%94%a8.html#20210426215911-gp12j4u" title="物理电磁感应微积分应用"><a href="../Physics/%e7%89%a9%e7%90%86%e7%94%b5%e7%a3%81%e6%84%9f%e5%ba%94%e5%be%ae%e7%a7%af%e5%88%86%e5%ba%94%e7%94%a8.html#20210426215911-gp12j4u">物理电磁感应微积分应用</a></oceanpress-block-ref > 中有所提及。</p>
+</oceanpress-embedded-block>
+</div>
+</main>

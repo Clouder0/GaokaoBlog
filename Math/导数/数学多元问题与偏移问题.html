@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数学多元问题与偏移问题</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main title="数学多元问题与偏移问题" updated="20210710195108" custom-yuque-id="53593018" data-type="NodeDocument" data-n-id="20210106200625-sx1to93" type="doc" updated="2147483647" data-n-id="20210106200625-sx1to93"><h1 title="数学多元问题与偏移问题" updated="20210710195108" custom-yuque-id="53593018" data-type="NodeDocument" data-n-id="20210106200625-sx1to93" type="doc" updated="2147483647" data-n-id="20210106200625-sx1to93">数学多元问题与偏移问题</h1>
+<p data-type="NodeParagraph" data-n-id="20210106200637-fv01osd">多元问题与偏移问题是常见的导数大题知识点。</p>
+<h1 id="多元问题" data-type="NodeHeading" data-n-id="20210106200626-rrs6z9f">多元问题<a id="vditorAnchor-多元问题" class="vditor-anchor" href="#多元问题"><img src="./../../assets/icon/alink.png" /></a></h1>
+<p data-type="NodeParagraph" data-n-id="20210106200635-dagsv3d">多元问题有两种常见的解法：</p>
+<ul data-type="NodeList" data-n-id="20210106200730-oa8wlt5">
+<li data-type="NodeListItem" data-n-id="20210106200733-t961uv2"><span class="ListItemDot"></span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-scknesi">隔离法。将不等式两边配凑出相同形式，构造新函数进行研究。</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106200753-gq1a1uy"><span class="ListItemDot"></span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-eds3ohv">合一法。将双变量转化为单变量，构造新函数进行研究。</p>
+</li>
+</ul>
+<p data-type="NodeParagraph" data-n-id="20210106200809-k3ts4d1">隔离法较为基础，不再赘述，主要看<strong data-type="NodeStrong">合一法</strong>。</p>
+<h2 id="合一法" data-type="NodeHeading" data-n-id="20210106200835-2mgj86f">合一法<a id="vditorAnchor-合一法" class="vditor-anchor" href="#合一法"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210106200839-dxj03ev">合一法又有三种形式：</p>
+<ul data-type="NodeList" data-n-id="20210106200855-0w25uvk">
+<li data-type="NodeListItem" data-n-id="20210106200859-nhcbfws"><span class="ListItemDot"></span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-0ety8qy">对数，令 <span data-subtype="math" data-content="t = \dfrac{x_1}{x_2}"></span></p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106200904-rlwt806"><span class="ListItemDot"></span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-mrgd3xg">指数，令 <span data-subtype="math" data-content="t = x_1 - x_2"></span></p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106200906-0ej5es6"><span class="ListItemDot"></span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-6rrfbje">韦达代换，利用韦达定理。</p>
+</li>
+</ul>
+<h3 id="对数" data-type="NodeHeading" data-n-id="20210106200945-bd9opzy">对数<a id="vditorAnchor-对数" class="vditor-anchor" href="#对数"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p data-type="NodeParagraph" data-n-id="20210106200948-07i7hyg">由于对数的优秀性质，可以将减法转化为除法，从而建立双变量间的联系，因此常常设 <span data-subtype="math" data-content="t = \dfrac{x_1}{x_2}"></span>  进行研究。<br />
+随后，通过题目信息获取等式，通过 <span data-subtype="math" data-content="x_1 = t \times x_2"></span> 消元后，得到 <span data-subtype="math" data-content="x_2"></span> 关于 <span data-subtype="math" data-content="t"></span>  的等式，进而代回得到 <span data-subtype="math" data-content="x_1"></span> ，解决问题。</p>
+<p data-type="NodeParagraph" data-n-id="20210106203740-phzhjqu">解题分三步走：</p>
+<ol data-type="NodeList" data-n-id="20210106203752-cxwgj3u">
+<li data-type="NodeListItem" data-n-id="20210106203755-f9tiwth"><span class="ListItemDot">1.</span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-jpr3krm">设出 <span data-subtype="math" data-content="t = \dfrac{x_1}{x_2}"></span> .</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106203804-5hus2yx"><span class="ListItemDot">2.</span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-zsrrcmz">获取题目中的等式，利用 <span data-subtype="math" data-content="t"></span> 消去一元，获取 <span data-subtype="math" data-content="x_2"></span> 关于 <span data-subtype="math" data-content="t"></span>  的等式。</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106203841-2j09dzt"><span class="ListItemDot">3.</span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-0lhozph">将 <span data-subtype="math" data-content="x_1,x_2"></span> 关于 <span data-subtype="math" data-content="t"></span>  的等式代回目标不等式中，获取关于 <span data-subtype="math" data-content="t"></span>  的单元不等式，构造函数求解。</p>
+</li>
+</ol>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106201253-7ch8gkg">例题：</p>
+<p data-type="NodeParagraph" data-n-id="20210106201256-xst6w7g">2016 年天津高考一模<strong data-type="NodeStrong">文科</strong>五校联考第 20 题 14 分<br />
+已知函数 <span data-subtype="math" data-content="f(x) = \dfrac{\ln x}{x} - a(a \in \mathbb{R})"></span> .<br />
+设若 <span data-subtype="math" data-content="f(x)"></span>  有两个零点为 <span data-subtype="math" data-content="m,n"></span> ，求证： <span data-subtype="math" data-content="mn &gt; e^2"></span> .</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106202638-6h6toc9">令 <span data-subtype="math" data-content="t = \dfrac{n}{m}"></span> ，不妨设 <span data-subtype="math" data-content="n &gt; m"></span> ，此时 <span data-subtype="math" data-content="t &gt; 1"></span> .</p>
+<div data-content="\begin{aligned}
+&amp; f(n) = f(m) = 0 \\
+\implies &amp; \dfrac{\ln n}{n} = \dfrac{\ln m}{ m} =  a \\
+\implies &amp; \dfrac{\ln n}{n} - \dfrac{\ln m}{m} = 0 \\
+\iff &amp; \dfrac{m\ln n - n\ln m}{nm} = 0 \\
+&amp; \\
+&amp; t = \dfrac{n}{m} \implies n = mt \\
+&amp; \dfrac{m\ln n - n\ln m}{nm} = 0 \\
+\iff &amp; \dfrac{m\ln (mt) - mt\ln m}{mt^2} = 0 \\
+\iff &amp; m(\ln m + \ln t) - mt \ln m = 0\\
+\iff &amp; (t - 1)\ln m = \ln t \\
+\iff &amp; \ln m = \dfrac{\ln t}{t - 1} \\
+&amp; n = mt \implies \ln n = \ln m + \ln t = \dfrac{t\ln t}{t - 1} \\
+&amp; \\
+&amp; \ln m = \dfrac{\ln t}{t - 1},\ln n = \dfrac{t\ln t}{t - 1} \\
+&amp; mn &gt; e^2 \\
+\iff &amp; \ln m + \ln n &gt; 2\\ 
+\iff &amp; \dfrac{(t+1)\ln t}{t - 1} &gt; 2 \\
+\iff &amp; (t+1)\ln t - 2(t-1) &gt; 0(t &gt; 1)
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210106202723-sjof4md">通过合一法代换，我们成功将双变量的不等式转化为了关于 <span data-subtype="math" data-content="t"></span>  的单变量不等式。<br />
+接下来只需要构造函数正常证明即可，不再赘述。（此处有一口诀：对数单身狗，指数好基友。）</p>
+<h3 id="指数" data-type="NodeHeading" data-n-id="20210106204028-hsaupbr">指数<a id="vditorAnchor-指数" class="vditor-anchor" href="#指数"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p data-type="NodeParagraph" data-n-id="20210106204047-y9outfx">指数是设 <span data-subtype="math" data-content="t = x_1 - x_2"></span> ，利用了相除的性质。与对数类似，请读者举一反三，不再赘述。</p>
+<h3 id="韦达代换" data-type="NodeHeading" data-n-id="20210106204143-sjj7cf1">韦达代换<a id="vditorAnchor-韦达代换" class="vditor-anchor" href="#韦达代换"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p data-type="NodeParagraph" data-n-id="20210106204155-ra4jlm2">韦达代换指的是，通过题目条件得出的一元二次方程，利用韦达定理将双变量统一为单变量求解。</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106204405-t2k1uta">例题：<br />
+2017 年山东烟台高三二模<strong data-type="NodeStrong">文科</strong>第 21 题 14 分<br />
+已知函数 <span data-subtype="math" data-content="g(x) = a\ln x + \dfrac{1}{2}x^2 - ax(a \in \mathbb{R})"></span> ，若 <span data-subtype="math" data-content="g(x)"></span>  有两个极值点 <span data-subtype="math" data-content="x_1,x_2"></span> ，且不等式 <span data-subtype="math" data-content="g(x_1) + g(x_2) &lt; k(x_1 + x_2)"></span> 恒成立，求 <span data-subtype="math" data-content="k"></span>  的范围。</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106204607-60axg8h">本题的核心思路是通过韦达定理，对 <span data-subtype="math" data-content="x_1 + x_2"></span> 与 <span data-subtype="math" data-content="x_1x_2"></span> 进行代换。</p>
+<div data-content="\begin{aligned}
+&amp; g'(x) = \dfrac{a}{x} + x - a \\
+&amp; g'(x) = 0 \iff \dfrac{a}{x} + x = a \iff x^2 - ax + a = 0 \\
+&amp; x^2 - ax + a = 0 \\
+\implies &amp; x_1 + x_2 = a,x_1 \times x_2 = a \\
+&amp; \\
+&amp; g(x_1) + g(x_2) &lt; k(x_1 + x_2) \\
+\iff &amp; a\ln(x_1 \times x_2) + \dfrac{1}{2}(x_1^2+x_2^2) - (a+k)(x_1+x_2) &lt; 0 \\
+\iff &amp; a\ln a + \dfrac{1}{2}(a^2 - 2a) - (a+k)a &lt; 0 \\
+\iff &amp; a\ln a- a - \dfrac{1}{2}a^2 - ak &lt; 0 \\
+\iff &amp; \dfrac{1}{2}a^2 + (k+1)a - a\ln a &gt; 0
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210106214022-9dc1co0">目标不等式转化为关于 <span data-subtype="math" data-content="a"></span>  的不等式，后按常规套路求解即可，不再赘述。</p>
+<h1 id="偏移问题" data-type="NodeHeading" data-n-id="20210106220754-clzvm3p">偏移问题<a id="vditorAnchor-偏移问题" class="vditor-anchor" href="#偏移问题"><img src="./../../assets/icon/alink.png" /></a></h1>
+<h2 id="极值点偏移" data-type="NodeHeading" data-n-id="20210106220757-f9qoqbw">极值点偏移<a id="vditorAnchor-极值点偏移" class="vditor-anchor" href="#极值点偏移"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210106214730-mjqwhqs">极值点偏移是解决偏移问题的一种常用手段。</p>
+<p data-type="NodeParagraph" data-n-id="20210106214747-zejkrne">形式上，函数 <span data-subtype="math" data-content="f(x)"></span> 存在极值点 <span data-subtype="math" data-content="x_0"></span> ，目标不等式为 <span data-subtype="math" data-content="x_1 + x_2 &lt; 2x_0"></span> 或 <span data-subtype="math" data-content="x_1 + x_2 &gt; 2x_0"></span> 时，可以考虑使用极值点偏移。</p>
+<p data-type="NodeParagraph" data-n-id="20210106214913-ji6sngw">解题步骤：</p>
+<ol data-type="NodeList" data-n-id="20210106214944-04jaylt">
+<li data-type="NodeListItem" data-n-id="20210106214947-p0bewz8"><span class="ListItemDot">1.</span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-7cosoxd">分析 <span data-subtype="math" data-content="f(x)"></span>  单调性。</p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106214953-kdguf0e"><span class="ListItemDot">2.</span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-t5c2ai2"><span data-subtype="math" data-content="x_1 + x_2 &gt; 2x_0 \implies x_1 &gt; 2x_0 - x_2 \implies f(x_1) &gt; f(2x_0 - x_2) \implies f(x_2) &gt; f(2x_0 - x_2)"></span></p>
+</li>
+<li data-type="NodeListItem" data-n-id="20210106215036-4c6ukv4"><span class="ListItemDot">3.</span>
+<p data-type="NodeParagraph" data-n-id="20210211121826-84k4hgr">求解。</p>
+</li>
+</ol>
+<p data-type="NodeParagraph" data-n-id="20210106215055-0q4nmng">核心在于，将<strong data-type="NodeStrong">极值点两侧两点</strong>，通过对称的方法，<strong data-type="NodeStrong">置于极值点同侧</strong>的单调区间上，再利用单调性求解。<br />
+利用到的核心转换是 <span data-subtype="math" data-content="f(x_1) = f(x_2) = k"></span> ，其中 <span data-subtype="math" data-content="k"></span>  常常是 $0$ ，但也可以是其他常数。</p>
+<p data-type="NodeParagraph" data-n-id="20210106215330-7hd91af">如果函数的极值点并不恰好是欲证明的不等式中的 <span data-subtype="math" data-content="x_0"></span> ，可以考虑构造新的函数使其极值点为 <span data-subtype="math" data-content="x_0"></span> .</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106215234-38rpu77">例题：<br />
+已知函数 <span data-subtype="math" data-content="f(x) = e^x - ax"></span> 有两个不同的零点 <span data-subtype="math" data-content="x_1,x_2"></span> ，其极值点为 <span data-subtype="math" data-content="x_0"></span> .<br />
+求证： <span data-subtype="math" data-content="x_1 + x_2 &lt; 2x_0"></span> .<br />
+求证： <span data-subtype="math" data-content="x_1 + x_2 &gt; 2"></span> .<br />
+求证： <span data-subtype="math" data-content="x_1 \times x_2 &lt; 1"></span> .</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106215440-y5eggcq">不妨设 <span data-subtype="math" data-content="x_1 &lt; x_0 &lt; x_2"></span> .</p>
+<p data-type="NodeParagraph" data-n-id="20210106215939-sg59y8j">对于第一问 <span data-subtype="math" data-content="x_1 + x_2 &lt; 2x_0"></span> ：</p>
+<div data-content="\begin{aligned}
+&amp; f'(x) = e^x - a \\
+\implies &amp; \forall x \in (-\inf,\ln a),f'(x) &lt; 0,\forall x \in (\ln a,+\inf),f'(x) &gt; 0 \text{ while } x_0 = \ln a\\
+&amp; x_1 + x_2 &lt; 2x_0 \\
+\iff &amp; x_1 &lt; 2x_0 - x_2 \\
+\because &amp; x_1 &lt; x_0,2x_0 - x_2 &lt; x_0 \\
+\therefore &amp; x_1 &lt; 2x_0 - x_2 \iff f(x_1) &gt; f(2x_0 - x_2) \iff f(x_2) &gt; f(2x_0 - x_2)\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210106215858-hik1huq">接着按套路求解即可。</p>
+<p data-type="NodeParagraph" data-n-id="20210106215933-b2u9gu1">对于第二问 <span data-subtype="math" data-content="x_1 + x_2 &gt; 2"></span> ：构造极值点为 $1$ 的函数。</p>
+<div data-content="\begin{aligned}
+&amp; f(x_1) = f(x_2) = 0 \\
+\iff &amp; e^x - ax = 0 \iff e^x = ax \iff \dfrac{e^x}{x} = a \\
+&amp; g(x) = \dfrac{e^x}{x},g'(x) = \dfrac{e^x(x - 1)}{x^2} \\
+&amp; \forall x \in (-\inf,1),g'(x) &lt; 0),\forall x \in (1,+\inf),g'(x) &gt; 0 \\
+\implies &amp; g(x)_{\min} = g(1)
+&amp; \\
+&amp; x_1 + x_2 &gt; 2 \\
+\iff &amp; x_1 &gt; 2 - x_2 \iff f(x_1) &lt; f(2 - x_2) \iff f(x_2) &lt; f(2-x_2) \\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210106220522-d4xvoxb">接着按套路求解即可。</p>
+<p data-type="NodeParagraph" data-n-id="20210106220616-kwjartj">对于第三问 <span data-subtype="math" data-content="x_1 \times x_2 &lt; 1"></span> ，对于乘积形式的偏移问题有两种做法。<br />
+第一种就是转化为 <span data-subtype="math" data-content="x_1 &lt; \dfrac{1}{x_2}"></span> 然后按照第二问求解。<br />
+第二种是转化为 <span data-subtype="math" data-content="\ln x_1 + \ln x_2 &lt; 0"></span> 求解。<br />
+大同小异，<strong data-type="NodeStrong">读者自证不难</strong>。</p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210106220734-ebz8ssw">事实上，极值点偏移灵活使用，可以解决非常多的问题。例如文中的合一法例题 <span data-subtype="math" data-content="mn &gt; e^2"></span> 就可以通过极值点偏移求解。</p>
+<p data-type="NodeParagraph" data-n-id="20210106220959-okhxsh6">本文仅抛砖引玉，更多的花样还须读者在题目中学习。</p>
+<p data-type="NodeParagraph" data-n-id="20210211121826-1bgsy64"></p>
+</main><div class="oceanpress-backLink"><h2>链接到此文档的相关文档</h2>
+<oceanpress-embedded-block src="../../Math.html#20210829150231-pb3moej" title="../../Math.html#20210829150231-pb3moej">
+    <p data-type="NodeParagraph" data-n-id="20210829150231-pb3moej"><oceanpress-block-ref src="../../Math/%e5%af%bc%e6%95%b0/%e6%95%b0%e5%ad%a6%e5%a4%9a%e5%85%83%e9%97%ae%e9%a2%98%e4%b8%8e%e5%81%8f%e7%a7%bb%e9%97%ae%e9%a2%98.html#20210106200625-sx1to93" title="数学多元问题与偏移问题"><a href="../../Math/%e5%af%bc%e6%95%b0/%e6%95%b0%e5%ad%a6%e5%a4%9a%e5%85%83%e9%97%ae%e9%a2%98%e4%b8%8e%e5%81%8f%e7%a7%bb%e9%97%ae%e9%a2%98.html#20210106200625-sx1to93">数学多元问题与偏移问题</a></oceanpress-block-ref ></p>
+</oceanpress-embedded-block>
+</div>
+</main>

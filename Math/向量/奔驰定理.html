@@ -1,0 +1,139 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>奔驰定理</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main custom-yuque-id="53593044" title="奔驰定理" updated="20210912220737" data-type="NodeDocument" data-n-id="20210910181246-01zdtf1" updated="2147483647" data-n-id="20210910181246-01zdtf1"><h1 custom-yuque-id="53593044" title="奔驰定理" updated="20210912220737" data-type="NodeDocument" data-n-id="20210910181246-01zdtf1" updated="2147483647" data-n-id="20210910181246-01zdtf1">奔驰定理</h1>
+<p updated="20210911215513" data-type="NodeParagraph" data-n-id="20210911121612-m87e0ml">事实上，奔驰定理和重心坐标有一定的关系。可以阅读<a href="https://wangjiezhe.com/posts/2021-03-12-Barycentric-coordinate-system/">奔驰定理与重心坐标</a>一文以详细了解。<em data-type="NodeTag">#TODO#</em></p>
+<p updated="20210911111544" data-type="NodeParagraph" data-n-id="20210911110805-ve4mab4"><span class="img"><img src="../../assets/image-20210911111404-7qpg78o.png" alt="image.png" data-type="NodeImage" /></span>奔驰定理：<span data-subtype="math" data-content="S_{AOB} \cdot \overrightarrow{OC} + S_{AOC} \cdot \overrightarrow{OB} + S_{BOC} \cdot \overrightarrow{OA}  = 0"></span>
+记点 <span data-subtype="math" data-content="A"></span> 所对的小三角形面积为 <span data-subtype="math" data-content="S_A"></span>，则可写作：
+<span data-subtype="math" data-content="S_A \cdot \overrightarrow{OA} + S_B \cdot \overrightarrow{OB} + S_C \cdot \overrightarrow{OC} = 0"></span></p>
+<h2 id="证明" updated="20210911111739" data-type="NodeHeading" data-n-id="20210911111544-apmm3rf">证明<a id="vditorAnchor-证明" class="vditor-anchor" href="#证明"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210911111930" data-type="NodeParagraph" data-n-id="20210911111733-ogojcqs"><span class="img"><img src="../../assets/image-20210911111930-etbded9.png" alt="image.png" data-type="NodeImage" /></span></p>
+<p updated="20210911113055" data-type="NodeParagraph" data-n-id="20210911111931-4wavk7g">延长 <span data-subtype="math" data-content="CO"></span> 交 <span data-subtype="math" data-content="AB"></span> 于点 <span data-subtype="math" data-content="M"></span>，记大三角形面积为 <span data-subtype="math" data-content="S"></span> </p>
+<p updated="20210911112152" data-type="NodeParagraph" data-n-id="20210911111950-1bg57vv">容易表示出：<span data-subtype="math" data-content="\overrightarrow{CO} = \dfrac{|CO|}{|CM|} \times \overrightarrow{CM} "></span>，<span data-subtype="math" data-content="\overrightarrow{CM} = \dfrac{|BM|}{|AB|} \times \overrightarrow{CA} +  \dfrac{|AM|}{|AB|} \times \overrightarrow{CB} "></span></p>
+<p updated="20210911112245" data-type="NodeParagraph" data-n-id="20210911112156-mjt54er">整理得到<span data-subtype="math" data-content="\overrightarrow{CO} = \dfrac{|CO||BM|}{|CM||AB|} \times \overrightarrow{CA} + \dfrac{|CO||AM|}{|CM||AB|} \times \overrightarrow{CB}"></span></p>
+<p updated="20210911113101" data-type="NodeParagraph" data-n-id="20210911112405-zzbdvrg">考虑到 <span data-subtype="math" data-content="\dfrac{|CO|}{|CM|} = \dfrac{S_A + S_B}{S}"></span>，<span data-subtype="math" data-content="\dfrac{|BM|}{|AB|} = \dfrac{S_A}{S_A + S_B}"></span>，<span data-subtype="math" data-content="\dfrac{}{}"></span><span data-subtype="math" data-content="\dfrac{|AM|}{|AB|} = \dfrac{S_B}{S_A + S_B}"></span></p>
+<p updated="20210911113136" data-type="NodeParagraph" data-n-id="20210911112710-t3b5s47">则 <span data-subtype="math" data-content="\overrightarrow{CO} = \dfrac{S_A}{S} \times \overrightarrow{CA} + \dfrac{S_B}{S} \times  \times \overrightarrow{CB}"></span>
+同理有<span data-subtype="math" data-content="\overrightarrow{BO} = \dfrac{S_C}{S} \times \overrightarrow{BC} + \dfrac{S_A}{S} \times  \times \overrightarrow{BA}"></span>
+<span data-subtype="math" data-content="\overrightarrow{AO} = \dfrac{S_C}{S} \times \overrightarrow{AC} + \dfrac{S_B}{S} \times  \times \overrightarrow{AB}"></span>
+</p>
+<p updated="20210911113450" data-type="NodeParagraph" data-n-id="20210911112905-ublwlmw"><span data-subtype="math" data-content="\begin{aligned}&amp; S_A \times \overrightarrow{AO} + S_B \times \overrightarrow{BO} + S_C \times \overrightarrow{CO} \\= &amp; \dfrac{S_AS_C}{S} \times \overrightarrow{AC} + \dfrac{S_AS_B}{S} \times \overrightarrow{AB} + \dfrac{S_BS_C}{S} \times \overrightarrow{BC} + \dfrac{S_AS_B}{S} \times \overrightarrow{AB} + \dfrac{S_AS_C}{S} \times \overrightarrow{CA} + \dfrac{S_BS_C}{S} \times \overrightarrow{CB}\\ = &amp; \dfrac{S_AS_B}{S}(\overrightarrow{AB} + \overrightarrow{BA}) +  \dfrac{S_BS_C}{S}(\overrightarrow{BC} + \overrightarrow{CB}) +  \dfrac{S_AS_C}{S}(\overrightarrow{AC} + \overrightarrow{CA})\\= &amp;0\end{aligned}"></span>
+</p>
+<h2 id="三角心五心向量性质" updated="20210911113515" data-type="NodeHeading" data-n-id="20210911113452-x6o8vuq">三角心五心向量性质<a id="vditorAnchor-三角心五心向量性质" class="vditor-anchor" href="#三角心五心向量性质"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210911113531" data-type="NodeParagraph" data-n-id="20210911113515-swjcc38">利用奔驰定理，可以将向量与三角形结合起来。</p>
+<h3 id="重心" updated="20210911113535" data-type="NodeHeading" data-n-id="20210911113531-lpjks9l">重心<a id="vditorAnchor-重心" class="vditor-anchor" href="#重心"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210911113703" data-type="NodeParagraph" data-n-id="20210911113535-cyiqi2k"><span class="img"><img src="../../assets/image-20210911113703-96aefzo.png" alt="image.png" data-type="NodeImage" /></span></p>
+<p updated="20210911113750" data-type="NodeParagraph" data-n-id="20210911113703-8injwwa">重心时，由 <span data-subtype="math" data-content="S_A = S_B = S_C = \dfrac{1}{3}S"></span>，有<span data-subtype="math" data-content="\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = 0"></span></p>
+<p updated="20210911114511" data-type="NodeParagraph" data-n-id="20210911113750-pjvepvz"><span data-subtype="math" data-content="S_C = \dfrac{1}{3}S"></span> 的证明，只需证明 <span data-subtype="math" data-content="|CO| = 2|OM|"></span>
+<span data-subtype="math" data-content="\overrightarrow{CM} = \dfrac{1}{2}\overrightarrow{CA} + \dfrac{1}{2} \times \overrightarrow{CB}"></span>，<span data-subtype="math" data-content="\overrightarrow{CO} = \dfrac{x}{2}\overrightarrow{CA} + \dfrac{x}{2} \times \overrightarrow{CB}(x&lt;1)"></span>，<span data-subtype="math" data-content="\overrightarrow{CA} = \overrightarrow{CO} + \overrightarrow{OA}"></span>，<span data-subtype="math" data-content="\overrightarrow{OA} = \dfrac{y}{2}\times \overrightarrow{CA} + \dfrac{y}{2} \times (\overrightarrow{CA} - \overrightarrow{CB})"></span>，代入解得 <span data-subtype="math" data-content="x = y, \dfrac{x}{2} + y = 1 \implies x = y = \dfrac{2}{3}"></span>，证毕。
+思路：基底法，连续运用中线性质和共线设比例来表示 <span data-subtype="math" data-content="\overrightarrow{AO}"></span> 与 <span data-subtype="math" data-content="\overrightarrow{CO}"></span>，然后用这两个向量表示基底向量，反解出比例。</p>
+<h3 id="外心" updated="20210911114523" data-type="NodeHeading" data-n-id="20210911114444-pag46b7">外心<a id="vditorAnchor-外心" class="vditor-anchor" href="#外心"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210911114708" data-type="NodeParagraph" data-n-id="20210911114523-p4uw1fs"><span class="img"><img src="../../assets/image-20210911114708-9ig5xv4.png" alt="image.png" data-type="NodeImage" /></span></p>
+<p updated="20210911114737" data-type="NodeParagraph" data-n-id="20210911114714-c7sst73">考虑到圆周角与圆心角的关系，有：<span data-subtype="math" data-content="\angle AOB = 2C, \angle AOC = 2B, \angle BOC = 2A"></span>
+</p>
+<p updated="20210911114800" data-type="NodeParagraph" data-n-id="20210911114739-p7ralc0">根据三角形面积公式，<span data-subtype="math" data-content="S_A = \dfrac{1}{2}R^2 \times \sin 2A"></span>，则可以得到：</p>
+<p updated="20210911114828" data-type="NodeParagraph" data-n-id="20210911114800-hoj4gse"><span data-subtype="math" data-content="\sin 2A \times \overrightarrow{OA} + \sin 2B \times \overrightarrow{OB} + \sin 2C \times \overrightarrow{OC} = 0"></span>
+</p>
+<p updated="20210911120616" data-type="NodeParagraph" data-n-id="20210911114829-4qwnnfq">如果已知 <span data-subtype="math" data-content="\sin 2A,\sin 2B,\sin 2C"></span> 的比例，则可以反解出对应的角度。</p>
+<p updated="20210911120509" data-type="NodeParagraph" data-n-id="20210911115406-7pfoqw4"><span data-subtype="math" data-content="\begin{aligned}&amp; (\sin 2A \times \overrightarrow{OA})^2 =  (\sin 2B \times \overrightarrow{OB} + \sin 2C \times \overrightarrow{OC})^2 \\\iff &amp; \sin^2 2A  \times R^2 = \sin^2 2B \times R^2 + \sin ^2 2C \times R^2 + 2 \sin 2B \sin 2C \times R^2 \cos 2A\\\implies &amp;  \sin^2 2A = \sin^2 2B + \sin^2 2C + 2\sin 2B \sin 2C \cos 2A\\\end{aligned}"></span>
+则有 <span data-subtype="math" data-content="\cos 2A = \dfrac{\sin^2 2A - \sin^2 2B - \sin^2 2C}{2 \sin 2B \sin 2C}"></span> </p>
+<p updated="20210911120550" data-type="NodeParagraph" data-n-id="20210911120512-86636xs">考虑到 <span data-subtype="math" data-content="\dfrac{S_A}{\sin 2A} = \dfrac{S_B}{\sin 2B} = \dfrac{S_C}{\sin 2C}"></span>，还可以写成另一个形式：
+<span data-subtype="math" data-content="\cos 2A = \dfrac{S_A^2 - S_B^2 - S_C^2}{2S_BS_C}"></span>
+</p>
+<h3 id="内心" updated="20210911120649" data-type="NodeHeading" data-n-id="20210911120247-lkowuo1">内心<a id="vditorAnchor-内心" class="vditor-anchor" href="#内心"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210911120854" data-type="NodeParagraph" data-n-id="20210911120649-61x6x4w"><span class="img"><img src="../../assets/image-20210911120854-1z3nw5b.png" alt="image.png" data-type="NodeImage" /></span></p>
+<p updated="20210911120924" data-type="NodeParagraph" data-n-id="20210911120855-bu3yj90">对于内心，由于 <span data-subtype="math" data-content="S_A = a \times d"></span>，而 <span data-subtype="math" data-content="d"></span> 相等，因此 <span data-subtype="math" data-content="S_A:S_B:S_C = a:b:c"></span></p>
+<p updated="20210911121012" data-type="NodeParagraph" data-n-id="20210911120924-isgq6zv">则有：<span data-subtype="math" data-content="a \times \overrightarrow{OA} + b \times \overrightarrow{OB} + c \times \overrightarrow{OC} = 0"></span>
+由正弦定理有 <span data-subtype="math" data-content="\sin A \times \overrightarrow{OA} + \sin B \times \overrightarrow{OB} + \sin C \times \overrightarrow{OC} = 0"></span> </p>
+<h3 id="垂心" id="20210911122151-unoqhpp" data-type="NodeHeading" data-n-id="20210911122151-unoqhpp">垂心<a id="vditorAnchor-垂心" class="vditor-anchor" href="#垂心"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210911122215" data-type="NodeParagraph" data-n-id="20210911122200-gsiirwv"><span class="img"><img src="../../assets/image-20210911122215-7dyjfqd.png" alt="image.png" data-type="NodeImage" /></span></p>
+<p updated="20210911122602" data-type="NodeParagraph" data-n-id="20210911122216-739wd3c">垂心有一个性质：<span data-subtype="math" data-content="\overrightarrow{OA} \cdot \overrightarrow{OB} = \overrightarrow{OA} \cdot \overrightarrow{OC} = \overrightarrow{OB} \cdot \overrightarrow{OC}"></span>
+利用投影的概念很容易理解。</p>
+<p updated="20210911133340" data-type="NodeParagraph" data-n-id="20210911122602-1yi8ha2"><span data-subtype="math" data-content="\tan A \times \overrightarrow{OA} + \tan B \times \overrightarrow{OB} + \tan C \times \overrightarrow{OC} = 0"></span></p>
+<p updated="20210911133349" data-type="NodeParagraph" data-n-id="20210911133344-v7olqsd">证明以后补上。<em data-type="NodeTag">#TODO#</em></p>
+<hr />
+<p updated="20210911133426" data-type="NodeParagraph" data-n-id="20210911133359-3x79lvb">需要注意，当 <span data-subtype="math" data-content="P"></span> 在三角形外是不符合的。需要将面积重新定义才能得到正确的结果。（似乎是用叉乘之类的？）</p>
+<h2 id="背诵内容" custom-ankilink="deck_name=&quot;Math&quot;" id="20210911133426-k21wr4m" data-type="NodeHeading" data-n-id="20210911133426-k21wr4m">背诵内容<a id="vditorAnchor-背诵内容" class="vditor-anchor" href="#背诵内容"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210911133523" data-type="NodeParagraph" data-n-id="20210911133500-xxui026">奔驰定理？
+<span data-subtype="math" data-content="S_A \cdot \overrightarrow{OA} + S_B \cdot \overrightarrow{OB} + S_C \cdot \overrightarrow{OC} = 0"></span></p>
+<p updated="20210911133601" data-type="NodeParagraph" data-n-id="20210911133524-fm3y9j8">奔驰定理的证明？
+利用定比分点表示 <span data-subtype="math" data-content="\overrightarrow{OA}"></span> 
+用面积比来代替边之比。</p>
+<p updated="20210911133713" data-type="NodeParagraph" data-n-id="20210911133602-su828lb">重心的向量性质？
+​<span data-subtype="math" data-content="\overrightarrow{OA} + \overrightarrow{OB} + \overrightarrow{OC} = 0"></span>
+​<span data-subtype="math" data-content="\overrightarrow{AO} = 2 \overrightarrow{OM}"></span>，即 <span data-subtype="math" data-content="O"></span> 为任意中线的三等分点靠近边的那个点。</p>
+<p updated="20210911133755" data-type="NodeParagraph" data-n-id="20210911133713-3vgttou">外心的向量性质？
+<span data-subtype="math" data-content="\sin 2A \times \overrightarrow{OA} + \sin 2B \times \overrightarrow{OB} + \sin 2C \times \overrightarrow{OC} = 0"></span>
+圆心角面积公式，结合奔驰定理得到。</p>
+<p updated="20210911133856" data-type="NodeParagraph" data-n-id="20210911133516-9jw877n">已知外心连接出的三个小三角形面积比例，求任意三角形中的角？
+<span data-subtype="math" data-content="\cos 2A = \dfrac{S_A^2 - S_B^2 - S_C^2}{2S_BS_C}"></span>
+</p>
+<p updated="20210911134022" data-type="NodeParagraph" data-n-id="20210911133858-y3eyj26">已知 <span data-subtype="math" data-content="\sin 2A : \sin 2B : \sin 2C"></span>，求 <span data-subtype="math" data-content="A,B,C"></span>？
+结合奔驰定理。
+构造外接圆圆心，则<span data-subtype="math" data-content="S_A : S_B : S_C = \sin 2A : \sin 2B : \sin 2C"></span>
+<span data-subtype="math" data-content="\cos 2A = \dfrac{S_A^2 - S_B^2 - S_C^2}{2S_BS_C}"></span>
+</p>
+<p updated="20210911134053" data-type="NodeParagraph" data-n-id="20210911134023-cgm5o9j">内心的向量性质？
+<span data-subtype="math" data-content="a \times \overrightarrow{OA} + b \times \overrightarrow{OB} + c \times \overrightarrow{OC} = 0"></span>
+<span data-subtype="math" data-content="\sin A \times \overrightarrow{OA} + \sin B \times \overrightarrow{OB} + \sin C \times \overrightarrow{OC} = 0"></span></p>
+<p updated="20210911134130" data-type="NodeParagraph" data-n-id="20210911134053-qjj4p01">垂心的向量性质？
+邻边向量积相等：<span data-subtype="math" data-content="\overrightarrow{OA} \cdot \overrightarrow{OB} = \overrightarrow{OA} \cdot \overrightarrow{OC} = \overrightarrow{OB} \cdot \overrightarrow{OC}"></span>
+奔驰定理：<span data-subtype="math" data-content="\tan A \times \overrightarrow{OA} + \tan B \times \overrightarrow{OB} + \tan C \times \overrightarrow{OC} = 0"></span>
+</p>
+<h2 id="例题" updated="20210912220725" data-type="NodeHeading" data-n-id="20210911134131-rv7hpwe">例题<a id="vditorAnchor-例题" class="vditor-anchor" href="#例题"><img src="./../../assets/icon/alink.png" /></a></h2>
+
+<oceanpress-embedded-block src="../../Math/%e6%95%b0%e5%ad%a6%e9%a2%98%e7%9b%ae%e6%b1%87%e7%bc%96.html#20210912214846-7qceanj" title="../../Math/数学题目汇编.html#20210912214846-7qceanj">
+    <h2 id="三角形二倍角正弦比求角度" updated="20210912214903" data-type="NodeHeading" data-n-id="20210912214846-7qceanj">三角形二倍角正弦比求角度<a id="vditorAnchor-三角形二倍角正弦比求角度" class="vditor-anchor" href="#三角形二倍角正弦比求角度"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210912214931" data-type="NodeParagraph" data-n-id="20210912214903-4zmv48q">在 <span data-subtype="math" data-content="\Delta ABC"></span> 中，已知 <span data-subtype="math" data-content="\sin 2A : \sin 2B : \sin 2C = 4 : 5 :6"></span>，求 <span data-subtype="math" data-content="\sin A"></span>、<span data-subtype="math" data-content="\sin B"></span> 与 <span data-subtype="math" data-content="\sin C"></span> </p>
+<hr />
+<p updated="20210912215425" data-type="NodeParagraph" data-n-id="20210912214932-1i2ennm">考虑到<oceanpress-block-ref src="../../Math/%e5%90%91%e9%87%8f/%e5%a5%94%e9%a9%b0%e5%ae%9a%e7%90%86.html#20210911114444-pag46b7" title="奔驰定理的与外心相关的推论"><a href="../../Math/%e5%90%91%e9%87%8f/%e5%a5%94%e9%a9%b0%e5%ae%9a%e7%90%86.html#20210911114444-pag46b7">奔驰定理的与外心相关的推论</a></oceanpress-block-ref >，可以写出：<span data-subtype="math" data-content="4\overrightarrow{OA} + 5\overrightarrow{OB} + 6\overrightarrow{OC} = 0"></span>，则 <span data-subtype="math" data-content="16(\overrightarrow{OA})^2 = 25(\overrightarrow{OB})^2 + 36(\overrightarrow{OC})^2 + 60\overrightarrow{OB} \cdot \overrightarrow{OC}"></span>，而 <span data-subtype="math" data-content="|\overrightarrow{OA}| = |\overrightarrow{OB}| = |\overrightarrow{OC}| = R"></span>，因此不难解出 <span data-subtype="math" data-content="\cos 2A = -\dfrac{3}{4}"></span>，由万能公式，<span data-subtype="math" data-content="\dfrac{1- \tan^2 A}{1+\tan^2A} = -\dfrac{3}{4}"></span>，不难解出 <span data-subtype="math" data-content="\tan^2 A = 7"></span>
+考虑到 <span data-subtype="math" data-content="\sin^2 + \cos^2 = (1+\dfrac{1}{\tan^2A})\sin^2A = 1"></span>，可以写出 <span data-subtype="math" data-content="\sin^2A = \dfrac{\tan^2}{\tan^2A + 1}"></span>，则 <span data-subtype="math" data-content="\sin A  =\dfrac{\sqrt{14}}{4}"></span> </p>
+<p updated="20210912215826" data-type="NodeParagraph" data-n-id="20210912215041-b7py1g2">同理解得 <span data-subtype="math" data-content="\sin B = \dfrac{5\sqrt{2}}{8}"></span> ，<span data-subtype="math" data-content="\sin C = \dfrac{3}{4}"></span></p>
+<blockquote updated="20210912220617" data-type="NodeBlockquote" data-n-id="20210912220610-vf6nmpy">
+<p updated="20210912220617" data-type="NodeParagraph" data-n-id="20210912220611-2d36tjg">比较套路化的做法，如果知道结论其实不难做。</p>
+</blockquote>
+<hr />
+<p updated="20210912215846" data-type="NodeParagraph" data-n-id="20210912215838-hl980l2">还有一个比较有技巧性的方法。</p>
+<p updated="20210912215939" data-type="NodeParagraph" data-n-id="20210912215846-n4p0j4n"><span data-subtype="math" data-content="\sin 2A = 2\sin A\cos A = 2\sin (B+C)\cos A = 2(\sin B \cos C + \sin C \cos B)\cos A"></span>，其余几个同理。</p>
+<p updated="20210912220112" data-type="NodeParagraph" data-n-id="20210912215939-euup4g3">则 <span data-subtype="math" data-content="\sin 2A : \sin 2B : \sin 2C = 2\sin B \cos A \cos C + 2\sin C \cos A \cos B : 2\sin A\cos B\cos C + 2\sin C \cos A \cos B : 2\sin A \cos B \cos C + 2\sin B \cos A \cos C"></span>
+同时除以 <span data-subtype="math" data-content="\cos A \cos B \cos C"></span> 得到：<span data-subtype="math" data-content="2\tan B + 2\tan C : 2 \tan A + 2\tan C : 2\tan A + 2\tan B = 4 : 5 : 6"></span></p>
+<p updated="20210912220210" data-type="NodeParagraph" data-n-id="20210912220112-cw8la1b">不妨设 <span data-subtype="math" data-content="\tan B + \tan C = 4x"></span>，则 <span data-subtype="math" data-content="\tan A + \tan C = 5x"></span>，<span data-subtype="math" data-content="\tan A + \tan B = 6x"></span>，则 <span data-subtype="math" data-content="\tan A + \tan B + \tan C = 7.5x"></span>，则 <span data-subtype="math" data-content="\tan A = 3.5x"></span>，<span data-subtype="math" data-content="\tan B = 2.5x"></span>，<span data-subtype="math" data-content="\tan C = 1.5x"></span></p>
+<p updated="20210912220607" data-type="NodeParagraph" data-n-id="20210912220211-pzu1dei">接下来，<span data-subtype="math" data-content="\tan C = -\dfrac{\tan A + \tan B}{1 - \tan A \tan B} \implies x = \dfrac{2\sqrt{7}}{7}"></span>，则 <span data-subtype="math" data-content="\tan A = \sqrt{7}"></span>，<span data-subtype="math" data-content="\tan B = \dfrac{5\sqrt{7}}{7}"></span>，<span data-subtype="math" data-content="\tan C = \dfrac{3\sqrt{7}}{7}"></span>，从而解得 <span data-subtype="math" data-content="\sin A = \dfrac{\sqrt{14}}{4}"></span>，<span data-subtype="math" data-content="\sin B = \dfrac{5\sqrt{2}}{8}"></span>，<span data-subtype="math" data-content="\sin C = \dfrac{3}{4}"></span></p>
+<blockquote updated="20210912220656" data-type="NodeBlockquote" data-n-id="20210912220607-6x5hfb8">
+<p updated="20210912220656" data-type="NodeParagraph" data-n-id="20210912220623-wi2cjpa">配凑比较需要灵性。</p>
+</blockquote>
+</oceanpress-embedded-block>
+<p updated="20210912220737" data-type="NodeParagraph" data-n-id="20210912220737-yaj5e5v"></p>
+</main><div class="oceanpress-backLink"></div>
+</main>

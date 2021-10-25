@@ -1,0 +1,124 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>物理碰撞问题</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main title="物理碰撞问题" updated="20210710212929" data-type="NodeDocument" data-n-id="20210215185102-85cpamh" type="doc" updated="2147483647" data-n-id="20210215185102-85cpamh"><h1 title="物理碰撞问题" updated="20210710212929" data-type="NodeDocument" data-n-id="20210215185102-85cpamh" type="doc" updated="2147483647" data-n-id="20210215185102-85cpamh">物理碰撞问题</h1>
+<h1 id="碰撞问题" data-type="NodeHeading" data-n-id="20210215185103-g01pe1y">碰撞问题<a id="vditorAnchor-碰撞问题" class="vditor-anchor" href="#碰撞问题"><img src="./../assets/icon/alink.png" /></a></h1>
+<p data-type="NodeParagraph" data-n-id="20210215185107-8x50voi">碰撞问题在高考物理中是非常常见的运动学题型，综合运用了动能、动量、牛顿定律内容，是难度大、灵活性强、综合性强的一类题型。</p>
+<p data-type="NodeParagraph" data-n-id="20210215185143-nudnrgc">类碰撞的思想在许多其他题型中有出现，可以与电磁感应等若干题型相结合。</p>
+<h2 id="模型简述" data-type="NodeHeading" data-n-id="20210215185202-bl28ojo">模型简述<a id="vditorAnchor-模型简述" class="vditor-anchor" href="#模型简述"><img src="./../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210215185213-3wm7fnf">两个物体，发生碰撞，产生能量交换。</p>
+<p data-type="NodeParagraph" data-n-id="20210215185236-dj1aflb">在这个过程中，我们认为力互相作用的时间极短，那么动量守恒。</p>
+<p data-type="NodeParagraph" data-n-id="20210215185259-948u9mi">但是在碰撞中，能量不一定守恒。</p>
+<p data-type="NodeParagraph" data-n-id="20210215185312-n1dawm1">如果能量守恒，我们称为完全弹性碰撞。<br />
+如果能量不守恒，且碰撞过程中损失的能量最多，我们称为完全非弹性碰撞。在这种碰撞中，两个物体最终共速。</p>
+<h2 id="完全弹性碰撞" data-type="NodeHeading" data-n-id="20210215190621-l2onlet">完全弹性碰撞<a id="vditorAnchor-完全弹性碰撞" class="vditor-anchor" href="#完全弹性碰撞"><img src="./../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210215185721-b6jpuf8">在高中学习中，所有的碰撞都遵循动量守恒定律。<br />
+我们设两个物体质量分别为 <span data-subtype="math" data-content="m_1,m_2"></span>，初始速度为 <span data-subtype="math" data-content="v_1,v_2"></span>，不妨令 <span data-subtype="math" data-content="v_1 &gt; v_2"></span>.</p>
+<div data-content="m_1v_1 + m_2v_2 = m_1v_1' + m_2v_2'" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215185837-iknccdr">如果能量守恒，发生完全弹性碰撞，那么还遵循能量守恒定律。</p>
+<div data-content="\dfrac{1}{2}m_1v_1^2 + \dfrac{1}{2}m_2v_2^2 = \dfrac{1}{2}m_1v_1'^2 + \dfrac{1}{2}m_2v_2'^2" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215185929-vdpg3im">很多时候，我们联立这两个式子，就能解出想要的结果</p>
+<div data-content="\begin{aligned}
+&amp; m_1(v_1-v_1') = m_2(v_2'-v_2) \\
+&amp; m_1(v_1+v_1')(v_1-v_1') = m_2(v_2'+v_2)(v_2'-v_2) \\
+\implies &amp; v_1 + v_1' = v_2 + v_2'\\
+\iff &amp; v_1 - v_2 = v_2' - v_1'\\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215190339-gswev6e">我们可以得到一个便于记忆的结论：<br />
+<strong data-type="NodeStrong">在完全弹性碰撞中，碰撞前后，两物体速度差相等。</strong></p>
+<p updated="20210710211727" data-type="NodeParagraph" data-n-id="20210215190411-dbsjreq">例如物体 <span data-subtype="math" data-content="1"></span> 原本速度为 <span data-subtype="math" data-content="5m/s "></span> ，物体 <span data-subtype="math" data-content="2"></span> 速度为 <span data-subtype="math" data-content=" 2m/s "></span>，在碰撞后，可能分别为 <span data-subtype="math" data-content="1m/s"></span> 和 <span data-subtype="math" data-content="4m/s "></span>，也可能为 <span data-subtype="math" data-content="0"></span> 和 <span data-subtype="math" data-content="3m/s"></span>.
+一种特殊情况是，两物体质量相等，那么它们会交换速度。</p>
+<h2 id="完全非弹性碰撞" data-type="NodeHeading" data-n-id="20210215190825-57uqu5z">完全非弹性碰撞<a id="vditorAnchor-完全非弹性碰撞" class="vditor-anchor" href="#完全非弹性碰撞"><img src="./../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210215190851-22f1d9b">完全非弹性碰撞后，两物体共速，在这种情况下，碰撞损失的能量<strong data-type="NodeStrong">最大</strong>。</p>
+<p data-type="NodeParagraph" data-n-id="20210215190915-4pmwvj6">我们在稍后会说明为什么这时损失能量是最大的。</p>
+<p data-type="NodeParagraph" data-n-id="20210215190941-6wlf4x2">设两个物体质量分别为 <span data-subtype="math" data-content="m_1,m_2"></span>，初始速度分别为 <span data-subtype="math" data-content="v_1,v_2"></span>，最终速度为 <span data-subtype="math" data-content="v"></span>.</p>
+<div data-content="m_1v_1 + m_2v_2 = m_1v + m_2v" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215191044-jk2bhcb">用这个式子，就可以直接解出最终速度 <span data-subtype="math" data-content="v"></span>，我们再计算损失的能量：</p>
+<div data-content="\Delta E = \dfrac{1}{2}(m_1+m_2)v^2 - \dfrac{1}{2}m_1v_1^2 - \dfrac{1}{2}m_2v_2^2" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215191151-hsr79ev">如果将上式的结果 <span data-subtype="math" data-content="v = \dfrac{m_1v_1 + m_2v_2}{m_1 + m_2}"></span> 代回：</p>
+<div data-content="\Delta E = \dfrac{1}{2}(m_1+m_2) \times \dfrac{(m_1v_1+m_2v_2)^2}{(m_1+m_2)^2} - \dfrac{1}{2}(m_1v_1^2 + m_2v_2^2)" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215191343-cvfvqu6">化简一下，可以得到：</p>
+<div data-content="\Delta E = \dfrac{1}{2} \times \dfrac{m_1m_2}{m_1+m_2} \times (v_1 - v_2)^2" data-subtype="math"><div spin="1"></div></div>
+<h2 id="质心系下的碰撞" data-type="NodeHeading" data-n-id="20210215191420-7l6a90n">质心系下的碰撞<a id="vditorAnchor-质心系下的碰撞" class="vditor-anchor" href="#质心系下的碰撞"><img src="./../assets/icon/alink.png" /></a></h2>
+<p data-type="NodeParagraph" data-n-id="20210215193817-u6mgnsr">有一种解决碰撞问题的方法，是将碰撞问题放在质心系下求解。</p>
+<p data-type="NodeParagraph" data-n-id="20210215193839-vistz0d">我们选定系统的质心作为参考系，算出相对质心的速度，再进行计算。</p>
+<p data-type="NodeParagraph" data-n-id="20210215193916-el28byx">首先计算质心速度 <span data-subtype="math" data-content="v = \dfrac{m_1v_1 + m_2v_2}{m_1 + m_2}"></span>.<br />
+随后计算出质心系下的速度，<span data-subtype="math" data-content="v_1' = v_1 - v"></span>，<span data-subtype="math" data-content="v_2' = v_2 - v"></span>.</p>
+<p data-type="NodeParagraph" data-n-id="20210215193954-smqtijf">聪明的读者一定发现了，在质心系下，碰撞仍然遵循动量守恒定律。<br />
+具体证明很简单，只要代回即可。</p>
+<p data-type="NodeParagraph" data-n-id="20210215194105-qp1858h">在质心系下，所有物体的动量和为零。<br />
+从质心系速度定义中，不难得到<span data-subtype="math" data-content="m_1v + m_2v = m_1v_1 + m_2v_2"></span>，而<span data-subtype="math" data-content="m_1(v_1 - v) + m_2(v_2 - v) = 0"></span> 就成立了。</p>
+<p data-type="NodeParagraph" data-n-id="20210215210530-02hz9uy">所有物体在实验室系下的动能和，等于质心在实验室系下的动能加上所有物体在质心系下的动能和。<br />
+形式地，<span data-subtype="math" data-content="m_1v_1'^2 + m_2v_2'^2 + (m_1+m_2)v^2 = m_1v_1^2 + m_2v_2^2"></span></p>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210215211238-d2ranl9">我们将完全弹性碰撞放在质心系下看。<br />
+记初始速度为 <span data-subtype="math" data-content="v_1,v_2"></span>，质心系下的速度为 <span data-subtype="math" data-content="u_1,u_2"></span>，末速度为 <span data-subtype="math" data-content="v_1',v_2'"></span>，质心系下的末速度为 <span data-subtype="math" data-content="u_1',u_2'"></span>.</p>
+<p data-type="NodeParagraph" data-n-id="20210215211250-m3w8vz9">由之前的<oceanpress-block-ref src="../Physics/%e7%89%a9%e7%90%86%e7%a2%b0%e6%92%9e%e9%97%ae%e9%a2%98.html#20210215190339-gswev6e" title="结论"><a href="../Physics/%e7%89%a9%e7%90%86%e7%a2%b0%e6%92%9e%e9%97%ae%e9%a2%98.html#20210215190339-gswev6e">结论</a></oceanpress-block-ref >，我们知道实验室系下，碰撞前后速度差不变，也就是说 <span data-subtype="math" data-content="v_1 - v_2 = v_2' - v_1'"></span>.<br />
+做一些变换，可以得到：<span data-subtype="math" data-content="(v_1 - v) - (v_2 - v) = (v_2' - v) - (v_1' - v)"></span>，相对速度大小不变，速度差不变，得到了 <span data-subtype="math" data-content="u_1 - u_2 = u_2' - u_1'"></span>.</p>
+<p data-type="NodeParagraph" data-n-id="20210215211547-du6vcu4">也就是说，在质心系下，碰撞前后的速度差也不变。</p>
+<div data-content="\begin{aligned}
+&amp; m_1u_1 + m_2u_2 = m_1u_1' + m_2u_2' = 0\\
+&amp; u_1 - u_2 = u_2' - u_1' \\
+\implies &amp; (m_1+m_2)u_1' + m_2u_1 - m_2u_2 = 0 \\ 
+\iff &amp; u_1' = \dfrac{m_2(u_2 - u_1)}{m_1+m_2} \\
+&amp; u_2' = u_1' + u_1 - u_2 = \dfrac{m_1(u_1 - u_2)}{m_1+m_2}
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215212307-l5w8x79">通过质心系下动量和为零的特性，我们简化了大量计算，得到了一个较为简单的式子。<br />
+这个式子背诵起来相对较为简单。</p>
+<div data-content="\begin{aligned}
+u_1' = \dfrac{m_2(u_2-u_1)}{m_1+m_2}\\
+u_2' = \dfrac{m_1(u_1-u_2)}{m_1+m_2}
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<hr />
+<p data-type="NodeParagraph" data-n-id="20210215212547-yhv03e3">我们将完全非弹性碰撞放在质心系下看。<br />
+根据质心系速度的定义，我们不难发现，质心系速度就是两物体发生完全非弹性碰撞后的最终速度。</p>
+<div data-content="v = \dfrac{m_1v_1+m_2v_2}{m_1+m_2}" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215212653-d5ttken">而物体在实验系下的动能和，等于质心动能加上物体在质心系下的动能和。<br />
+在完全非弹性碰撞后，物体在质心系下速度都为零，动能为零，则损失能量最大，系统动能等于质心动能。</p>
+<p data-type="NodeParagraph" data-n-id="20210215212756-hxzqrjd">动能改变量为：</p>
+<div data-content="\Delta E = \dfrac{1}{2} \times (m_1+m_2) \times \dfrac{(m_1v_1 + m_2v_2) ^ 2}{(m_1+m_2)^2} - \dfrac{1}{2} \times m_1v_1^2 - \dfrac{1}{2} \times m_2v_2^2" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215212819-9lbo589">等价于：</p>
+<div data-content="\Delta E = \dfrac{1}{2} m_1u_1^2 + \dfrac{1}{2}m_2u_2^2" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215212949-0lor5x7">碰撞后，根据动量守恒，物块可以放在质心系下研究，速度最多减小到零。</p>
+<div data-content="E_k = \dfrac{1}{2} \times \dfrac{m_1m_2}{m_1+m_2} \times (v_1 - v_2)^2" data-subtype="math"><div spin="1"></div></div>
+<p data-type="NodeParagraph" data-n-id="20210215213337-gm1r1po">此时能量损失最大，发生完全非弹性碰撞。</p>
+<h2 id="背诵内容" updated="20210710212837" data-type="NodeHeading" data-n-id="20210710211917-84tw7q7">背诵内容<a id="vditorAnchor-背诵内容" class="vditor-anchor" href="#背诵内容"><img src="./../assets/icon/alink.png" /></a></h2>
+<p updated="20210710212857" data-type="NodeParagraph" data-n-id="20210710212838-p1a1yss">完全弹性碰撞，计算速度方法？
+碰撞前后速度差一致，与动量守恒联立计算。</p>
+<p updated="20210710212927" data-type="NodeParagraph" data-n-id="20210710212857-2360eko">完全非弹性碰撞，损失能量？
+<span data-subtype="math" data-content="\Delta E = \dfrac{1}{2} \times \dfrac{m_1m_2}{m_1+m_2} \times (v_1-v_2)^2"></span></p>
+<p updated="20210710212929" data-type="NodeParagraph" data-n-id="20210710212929-wavu2j3"></p>
+</main><div class="oceanpress-backLink"></div>
+</main>

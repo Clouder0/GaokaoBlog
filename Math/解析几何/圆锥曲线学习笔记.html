@@ -1,0 +1,192 @@
+
+<!doctype html>
+<html lang="zh">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>圆锥曲线学习笔记</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vditor/dist/index.css" />
+    
+
+    
+
+    
+    <script src="./../../assets/front-end-lib/all_components.js"></script>
+    
+        
+        
+        
+
+
+    
+
+    <link rel="stylesheet" href="./../../assets/js_css/theme.css">
+    <link rel="stylesheet" href="./../../assets/js_css/github-markdown-css.css">
+</head>
+
+
+
+<main id="static_app_llej" class="markdown-body">
+    <main title="圆锥曲线学习笔记" updated="20211014121852" custom-yuque-id="53593034" data-type="NodeDocument" data-n-id="20210120185824-llkqr2q" type="doc" updated="2147483647" data-n-id="20210120185824-llkqr2q"><h1 title="圆锥曲线学习笔记" updated="20211014121852" custom-yuque-id="53593034" data-type="NodeDocument" data-n-id="20210120185824-llkqr2q" type="doc" updated="2147483647" data-n-id="20210120185824-llkqr2q">圆锥曲线学习笔记</h1>
+<h1 id="圆锥曲线" updated="20211014121852" data-type="NodeHeading" data-n-id="20210120185824-tvaylmb">圆锥曲线<a id="vditorAnchor-圆锥曲线" class="vditor-anchor" href="#圆锥曲线"><img src="./../../assets/icon/alink.png" /></a></h1>
+<p updated="20210219224427" data-type="NodeParagraph" data-n-id="20210219224427-9iudqku">所有圆锥曲线的大题，先整理再代入，不要着急将直线与圆锥曲线联立。</p>
+<h2 id="基础" updated="20210717180645" data-type="NodeHeading" data-n-id="20210604190822-udvodac">基础<a id="vditorAnchor-基础" class="vditor-anchor" href="#基础"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-twikhi1">椭圆的通径：过焦点与 <span data-subtype="math" data-content="y"></span> 轴平行的线段，<span data-subtype="math" data-content="|AB| = \dfrac{2b^2}{a}"></span></p>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-otymoma">椭圆焦点三角形面积公式：<span data-subtype="math" data-content="S = b^2 \tan \dfrac{\theta}{2}"></span></p>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-acf3sw1">双曲线焦点三角形面积公式：<span data-subtype="math" data-content="S = \dfrac{b^2}{\tan \dfrac{\theta}{2}}"></span></p>
+<h2 id="抛物线焦点弦" updated="20210604190822" data-type="NodeHeading" data-n-id="20210604190822-m8q9119">抛物线焦点弦<a id="vditorAnchor-抛物线焦点弦" class="vditor-anchor" href="#抛物线焦点弦"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-k6sjpow"><span class="img"><img src="https://b3logfile.com/siyuan/1609132319768/assets/image-20210509215846-di5xi84.png" alt="image.png" data-type="NodeImage" /></span>
+</p>
+<p updated="20210719192402" data-type="NodeParagraph" data-n-id="20210604190822-8k3y0ca">抛物线过焦点的弦的结论：
+​<span data-subtype="math" data-content="x_1x_2 = \dfrac{p^2}{4}"></span>
+​<span data-subtype="math" data-content="y_1y_2 = -p^2"></span>
+​<span data-subtype="math" data-content="y_1 + y_2 = 2pm"></span>，其中 <span data-subtype="math" data-content="m"></span> 于倒斜式 <span data-subtype="math" data-content="x = my + \dfrac{p}{2}"></span>
+​<span data-subtype="math" data-content="x_1 + x_2 = my_1 + my_2 + p = 2pm^2 + p"></span>
+设倒斜式，联立易证。<strong data-type="NodeStrong">这个在做小题时非常常用。</strong></p>
+<p updated="20210717180852" data-type="NodeParagraph" data-n-id="20210717180820-qtonz9m">抛物线弦长公式：<span data-subtype="math" data-content="|AB| = x_1 + x_2 + p = \dfrac{2p}{\sin ^2 \theta}"></span>
+通过焦半径公式可以简单证明。</p>
+<p updated="20210717181036" data-type="NodeParagraph" data-n-id="20210604190822-b7rxxdj">焦半径公式：<span data-subtype="math" data-content="|AF| = \dfrac{p}{1 - \cos \theta}"></span>，其中 <span data-subtype="math" data-content="\theta"></span> 为焦半径与 <span data-subtype="math" data-content="x"></span> 轴正方向的夹角。</p>
+<p updated="20210717181115" data-type="NodeParagraph" data-n-id="20210604190822-hsg3slz">焦半径倒数和为定值：<span data-subtype="math" data-content="\dfrac{1}{|AF|} + \dfrac{1}{|BF|} = \dfrac{2}{p}"></span></p>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-ra3rzm4">以某条焦半径(AF 或 BF) 为直径的圆与 y 轴相切。<br />证明：设中点 <span data-subtype="math" data-content="M(\dfrac{\dfrac{p}{2}+x}{2},\dfrac{y}{2})"></span>，由第一定义有 <span data-subtype="math" data-content="|AF| = x + \dfrac{p}{2}"></span>，显然证毕。</p>
+<p updated="20210604190907" data-type="NodeParagraph" data-n-id="20210604190822-rhwap3v">以 <span data-subtype="math" data-content="AB"></span> 为直径的圆与抛物线准线相切。
+设 <span data-subtype="math" data-content="A"></span> 垂直准线于 <span data-subtype="math" data-content="C"></span>，<span data-subtype="math" data-content="B"></span> 垂直准线于 <span data-subtype="math" data-content="D"></span>，则 <span data-subtype="math" data-content="\angle CFD = \dfrac{\pi}{2}"></span>
+A O D 三点共线。</p>
+<h2 id="第二定义" updated="20210604190822" data-type="NodeHeading" data-n-id="20210604190822-isbv7bb">第二定义<a id="vditorAnchor-第二定义" class="vditor-anchor" href="#第二定义"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210717181304" data-type="NodeParagraph" data-n-id="20210604190822-bhlqyle">圆锥曲线第二定义：点到焦点距离与到准线距离比为离心率。<br /><span data-subtype="math" data-content="|PF| = ed"></span><br />其中 <span data-subtype="math" data-content="d"></span> 为到准线距离，准线为 <span data-subtype="math" data-content="\dfrac{a^2}{c}"></span> 或 <span data-subtype="math" data-content="-\dfrac{a^2}{c}"></span></p>
+<h3 id="焦半径公式" updated="20210717181437" data-type="NodeHeading" data-n-id="20210717181433-o5obf1m">焦半径公式<a id="vditorAnchor-焦半径公式" class="vditor-anchor" href="#焦半径公式"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210717181515" data-type="NodeParagraph" data-n-id="20210717181454-894qii0">抛物线坐标表示焦半径：<span data-subtype="math" data-content="|PF| = x_0 + \dfrac{p}{2}"></span></p>
+<p updated="20210717181253" data-type="NodeParagraph" data-n-id="20210717181239-0jwkgb5">椭圆坐标表示焦半径：<span data-subtype="math" data-content="|PF| = a \pm ex_0"></span>
+</p>
+<p updated="20210717181349" data-type="NodeParagraph" data-n-id="20210604190822-0baxp41">双曲线坐标表示焦半径： <span data-subtype="math" data-content="|PF| = |ex_0| \pm a"></span>
+</p>
+<p updated="20210717181329" data-type="NodeParagraph" data-n-id="20210717181317-9y8znun">圆锥曲线焦半径角度表示：<span data-subtype="math" data-content="|PF| = \dfrac{e p}{1 \pm e \cos \theta}"></span>，其中 <span data-subtype="math" data-content="p"></span> 为焦准距，即 <span data-subtype="math" data-content="\dfrac{b^2}{c}"></span></p>
+<p updated="20210717181617" data-type="NodeParagraph" data-n-id="20210717181601-vehrmer">圆锥曲线极坐标方程：<span data-subtype="math" data-content="\rho = \dfrac{ep}{1 - e\cos \theta }"></span></p>
+<h2 id="第三定义" updated="20210717181351" data-type="NodeHeading" data-n-id="20210717181350-j0cbp9h">第三定义<a id="vditorAnchor-第三定义" class="vditor-anchor" href="#第三定义"><img src="./../../assets/icon/alink.png" /></a></h2>
+<h3 id="椭圆第三定义" updated="20210717181138" data-type="NodeHeading" data-n-id="20210717181134-i8g26yb">椭圆第三定义<a id="vditorAnchor-椭圆第三定义" class="vditor-anchor" href="#椭圆第三定义"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-9k8f8ty">圆锥曲线第三定义：任意中心弦两端点到曲线上一点的斜率乘积为定值。<br />椭圆：<span data-subtype="math" data-content="k_{AM} \times k_{BM} = -\dfrac{b^2}{a^2}"></span><br />证明：过原点作中位线，设出中点坐标，点差法表示斜率。</p>
+<h3 id="双曲线第三定义" updated="20210717180340" data-type="NodeHeading" data-n-id="20210717180322-kiozim1">双曲线第三定义<a id="vditorAnchor-双曲线第三定义" class="vditor-anchor" href="#双曲线第三定义"><img src="./../../assets/icon/alink.png" /></a></h3>
+<p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-sx17le3">双曲线：<span data-subtype="math" data-content="k_{AM} \times k_{BM} = \dfrac{b^2}{a^2}"></span></p>
+<div name="双曲线第三定义证明" updated="20210717180527" data-type="NodeSuperBlock" data-n-id="20210717180409-yu3psq6" data-sb-layout="row" data-sb-layout="row"><p updated="20210717180527" data-type="NodeParagraph" data-n-id="20210717180341-zw433w3">双曲线第三定义证明：
+取 <span data-subtype="math" data-content="A(x_0,y_0)"></span>，则 <span data-subtype="math" data-content="B(-x_0,-y_0)"></span>，且有 <span data-subtype="math" data-content="\dfrac{x_0^2}{a^2} - \dfrac{y_0^2}{b^2} = 1"></span>
+对于双曲线上任意一点 <span data-subtype="math" data-content="(x,y)"></span> 有 <span data-subtype="math" data-content="k_1 = \dfrac{y - y_0}{x - x_0}"></span>，<span data-subtype="math" data-content="k_2 = \dfrac{y+y_0}{x+x_0}"></span>，则 <span data-subtype="math" data-content="k_1k_2 = \dfrac{y^2 - y_0^2}{x^2 - x_0^2}"></span>
+考虑统一消去 <span data-subtype="math" data-content="x"></span>，由椭圆方程有 <span data-subtype="math" data-content="x^2 = a^2 + \dfrac{a^2}{b^2}y^2"></span>，则</p><div data-content="k_1k_2 = \dfrac{y^2 - y_0^2}{a^2 + \dfrac{a^2}{b^2}y^2 - (a^2 + \dfrac{a^2}{b^2}y_0^2)} = \dfrac{y^2 - y_0^2}{\dfrac{a^2}{b^2}(y^2 - y_0^2)} = \dfrac{b^2}{a^2}" data-subtype="math"><div spin="1"></div></div></div>
+<p name="中线长公式" updated="20210717180442" data-type="NodeParagraph" data-n-id="20210717180442-2a24djf">中线长公式：<span data-subtype="math" data-content="AM^2 = \dfrac{AB^2 + AC^2 - 2 \times (\dfrac{BC}{2})^2}{2}"></span><br />证明：互补角余弦值相加为零</p>
+<hr />
+<h2 id="其他结论" updated="20210717181147" data-type="NodeHeading" data-n-id="20210717181145-bxz7ok9">其他结论<a id="vditorAnchor-其他结论" class="vditor-anchor" href="#其他结论"><img src="./../../assets/icon/alink.png" /></a></h2>
+<div updated="20210717180923" data-type="NodeSuperBlock" data-n-id="20210717180923-btqsffm" data-sb-layout="row"><p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-i2zgefl"><span class="img"><img src="https://b3logfile.com/siyuan/1609132319768/assets/image-20210509214257-2eiczhk.png" alt="image.png" data-type="NodeImage" /></span>
+</p><p updated="20210604190822" data-type="NodeParagraph" data-n-id="20210604190822-a6xfmdq"><span data-subtype="math" data-content="\tan \beta = \sin \alpha = \dfrac{y_A}{|AF|}"></span>
+且 <span data-subtype="math" data-content="\angle ACF = \angle BCF"></span>
+</p></div>
+<p updated="20210604191032" data-type="NodeParagraph" data-n-id="20210604190924-1ivf3pe">小结论：圆锥曲线的切线交两长轴顶点关于 <span data-subtype="math" data-content="x"></span> 轴的垂线于点 <span data-subtype="math" data-content="M,N"></span>，则 <span data-subtype="math" data-content="F_1,F_2"></span> 在以 <span data-subtype="math" data-content="MN"></span> 为直径的圆上。
+证明：</p>
+<div data-content="\begin{aligned}
+&amp; \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1 \\
+MN: &amp; \dfrac{x_0}{a^2}x + \dfrac{y_0}{b^2}y = 1 \\
+&amp; x_1 = a,x_2 = -a\\
+&amp; y_1 = \dfrac{b^2}{y_0} \times (1 - \dfrac{x_0}{a})\\
+&amp; y_2 = \dfrac{b^2}{y_0} \times (1 + \dfrac{x_0}{a})\\
+&amp; M(a,\dfrac{b^2}{y_0} \times (1 - \dfrac{x_0}{a}))\\
+&amp; N(-a,\dfrac{b^2}{y_0} \times (1 + \dfrac{x_0}{a}))\\
+&amp; F_1(-c,0),F_2(c,0)\\
+&amp; \overrightarrow{F_1M} = (-a+c,\dfrac{b^2}{y_0} \times (1 - \dfrac{x_0}{a})\\
+&amp; \overrightarrow{F_1N} = (a+c,\dfrac{b^2}{y_0} \times (1 + \dfrac{x_0}{a})\\
+&amp; \overrightarrow{F_1M} \cdot \overrightarrow{F_1N} = c^2 - a^2 + \dfrac{b^2}{y_0} \times (1 - \dfrac{x_0^2}{a^2})\\
+= &amp; -b^2 + \dfrac{b^4}{y_0^2} \times \dfrac{y_0^2}{b^2}\\
+= &amp;0\\
+\implies &amp; MF_1 \perp NF_1 \\
+\text{同理，}&amp;MF_2 \perp NF_2 \\
+\end{aligned}" data-subtype="math"><div spin="1"></div></div>
+<h2 id="背诵内容" updated="20210710195132" data-type="NodeHeading" data-n-id="20210604191846-7dnyzdd">背诵内容<a id="vditorAnchor-背诵内容" class="vditor-anchor" href="#背诵内容"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210710195250" data-type="NodeParagraph" data-n-id="20210710195132-cao9gbi">椭圆焦半径公式：<span data-subtype="math" data-content="M(x_0,y_0)"></span> 在椭圆上，<span data-subtype="math" data-content="e"></span> 为离心率，表示 <span data-subtype="math" data-content="|MF_1|"></span> 与 <span data-subtype="math" data-content="|MF_2|"></span>
+​<span data-subtype="math" data-content="|MF_1| = a+ex_0"></span>
+​<span data-subtype="math" data-content="|MF_2| = a-ex_0"></span></p>
+<p updated="20210710204126" data-type="NodeParagraph" data-n-id="20210710195704-0wva4vp">抛物线焦半径公式：已知焦点弦与 <span data-subtype="math" data-content="x"></span> 轴夹角为 <span data-subtype="math" data-content="\theta"></span>，表示 <span data-subtype="math" data-content="|AF|"></span> 与 <span data-subtype="math" data-content="|BF|"></span>
+<span data-subtype="math" data-content="|AF| = \dfrac{p}{1 - \cos \theta}"></span>，<span data-subtype="math" data-content="A"></span> 为上方的点。
+<span data-subtype="math" data-content="|BF| = \dfrac{p}{1 + \cos \theta}"></span>，<span data-subtype="math" data-content="B"></span> 为下方的点。
+实质上，<span data-subtype="math" data-content="\theta"></span> 为与 <span data-subtype="math" data-content="x"></span> 轴夹角，<span data-subtype="math" data-content="\cos \theta"></span> 自带正负性即可无需分类。</p>
+<p updated="20210710195332" data-type="NodeParagraph" data-n-id="20210710195250-owft3ti">双曲线焦点三角形面积公式？
+​<span data-subtype="math" data-content="S = \dfrac{b^2}{\tan \dfrac{\angle F_1PF_2}{2}}"></span>
+</p>
+<p updated="20210710195426" data-type="NodeParagraph" data-n-id="20210710195333-gzclq3i">抛物线中，<span data-subtype="math" data-content="\dfrac{1}{AF} + \dfrac{1}{BF} = ?"></span>
+​<span data-subtype="math" data-content="\dfrac{1}{AF} + \dfrac{1}{BF} = \dfrac{2}{p}"></span>
+</p>
+<p updated="20210710195501" data-type="NodeParagraph" data-n-id="20210710195414-ny9m6lk">抛物线中，焦点弦两点 <span data-subtype="math" data-content="A(x_1,y_1)"></span>，<span data-subtype="math" data-content="B(x_2,y_2)"></span>，<span data-subtype="math" data-content="x_1x_2 = ?"></span>
+​<span data-subtype="math" data-content="x_1 x_2 = \dfrac{p^2}{4}"></span></p>
+<p updated="20210710195652" data-type="NodeParagraph" data-n-id="20210710195641-dlnfyw8">抛物线中，焦点弦两点 <span data-subtype="math" data-content="A(x_1,y_1)"></span>，<span data-subtype="math" data-content="B(x_2,y_2)"></span>，<span data-subtype="math" data-content="y_1 y_2= ?"></span>
+​<span data-subtype="math" data-content="y_1 y_2 = -p^2"></span></p>
+<p updated="20210719192453" data-type="NodeParagraph" data-n-id="20210719192416-1x7qzjq">抛物线中，焦点弦两点 <span data-subtype="math" data-content="A(x_1,y_1)"></span>，<span data-subtype="math" data-content="B(x_2,y_2)"></span>，<span data-subtype="math" data-content="x_1 + x_2 = ?"></span>
+​<span data-subtype="math" data-content="x_1 + x_2 = 2pm^2 + p"></span>，有<span data-subtype="math" data-content="x = my + \dfrac{p}{2}"></span>
+</p>
+<p updated="20210719192513" data-type="NodeParagraph" data-n-id="20210719192419-558id6e">抛物线中，焦点弦两点 <span data-subtype="math" data-content="A(x_1,y_1)"></span>，<span data-subtype="math" data-content="B(x_2,y_2)"></span>，<span data-subtype="math" data-content="y_1 + y_2= ?"></span>
+<span data-subtype="math" data-content="y_1 + y_2 = 2pm"></span>，其中 <span data-subtype="math" data-content="m"></span> 于倒斜式 <span data-subtype="math" data-content="x = my + \dfrac{p}{2}"></span></p>
+<p updated="20210710195538" data-type="NodeParagraph" data-n-id="20210710195502-0ii17sx">椭圆通径是什么？长度？
+过焦点与 <span data-subtype="math" data-content="y"></span> 轴平行的线段。
+通径长：<span data-subtype="math" data-content="\dfrac{2b^2}{a}"></span></p>
+<p updated="20210710195812" data-type="NodeParagraph" data-n-id="20210710195539-i60eg2c">椭圆焦点三角形面积公式？
+​<span data-subtype="math" data-content="S = b^2 \tan \dfrac{\angle F_1 P F_2}{2}"></span></p>
+<p updated="20210710195825" data-type="NodeParagraph" data-n-id="20210710195813-0s931lm">抛物线焦点弦长公式？
+​<span data-subtype="math" data-content="|AB| = x_1 + x_2 + p = \dfrac{2p}{\sin ^2 \theta}"></span></p>
+<p updated="20210710195929" data-type="NodeParagraph" data-n-id="20210710195827-hnv4jh3">判断：抛物线中以某条焦半径(<span data-subtype="math" data-content="AF"></span> 或 <span data-subtype="math" data-content="BF"></span> 为直径的圆与 <span data-subtype="math" data-content="y"></span> 轴相切。
+正确。
+证明：设中点 <span data-subtype="math" data-content="M(\dfrac{\dfrac{p}{2}+x}{2},\dfrac{y}{2})"></span>，由第一定义有 <span data-subtype="math" data-content="|AF| = x + \dfrac{p}{2}"></span>，显然证毕。</p>
+<p updated="20210710195950" data-type="NodeParagraph" data-n-id="20210710195931-ro1tc5n">判断：抛物线中以焦点弦 <span data-subtype="math" data-content="AB"></span> 为直径的圆与抛物线准线相切。
+正确。</p>
+<p updated="20210710203050" data-type="NodeParagraph" data-n-id="20210710200021-lkiimyl">抛物线中，焦点弦两点 <span data-subtype="math" data-content="AB"></span> 作准线的垂线，垂直于 <span data-subtype="math" data-content="CD"></span> 两点，则 <span data-subtype="math" data-content="\angle CFD"></span> 是多少？AOD 三点的关系？
+​<span data-subtype="math" data-content="90^{\circ}"></span>
+共线。</p>
+<p updated="20210710203316" data-type="NodeParagraph" data-n-id="20210710203203-r9mrfz9"><span class="img"><img src="https://b3logfile.com/siyuan/1609132319768/assets/image-20210509214257-2eiczhk.png" alt="image.png" data-type="NodeImage" /></span>上图中，<span data-subtype="math" data-content="\tan \beta"></span> 表示？<span data-subtype="math" data-content="\angle ACF"></span> 与 <span data-subtype="math" data-content="\angle BCF"></span> 关系？
+​<span data-subtype="math" data-content="\tan \beta = \sin \alpha = \dfrac{y_A}{|AF|}"></span>
+​<span data-subtype="math" data-content="\angle ACF = \angle BCF"></span></p>
+<p updated="20210710203429" data-type="NodeParagraph" data-n-id="20210710203318-fl5bajv">抛物线中，焦点弦两交点与 <span data-subtype="math" data-content="(-\dfrac{p}{2},0)"></span> 的连线的斜率的性质？
+​<span data-subtype="math" data-content="k_{AC} + k_{BC} = 0"></span></p>
+<p updated="20210710203550" data-type="NodeParagraph" data-n-id="20210710203518-9v879z5">圆锥曲线第二定义？
+点到焦点距离，与点到准线距离比为离心率。
+​<span data-subtype="math" data-content="|PF| = ed"></span></p>
+<p updated="20210710203606" data-type="NodeParagraph" data-n-id="20210710203551-ucr208r">圆锥曲线准线？
+​<span data-subtype="math" data-content="\pm \dfrac{a^2}{c}"></span></p>
+<p updated="20210710203640" data-type="NodeParagraph" data-n-id="20210710203607-g31kcwe">椭圆焦半径公式，<span data-subtype="math" data-content="x_0"></span> 表示？
+​<span data-subtype="math" data-content="|PF| = a \pm ex_0"></span></p>
+<p updated="20210806222816" data-type="NodeParagraph" data-n-id="20210710203641-jw39uo3"><span class="img"><img src="http://lanqi.org/wp-content/uploads/2015/12/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7-2015-12-07-%E4%B8%8A%E5%8D%889.44.04.png" alt="屏幕快照 2015-12-07 上午 9.44.04" data-type="NodeImage" /></span>椭圆焦半径公式，<span data-subtype="math" data-content="\theta"></span> 表示？
+​<span data-subtype="math" data-content="|PF| = \dfrac{ep}{1 - e\cos \theta}"></span>
+​<span data-subtype="math" data-content="|PF'| = \dfrac{ep}{1+e\cos \varphi}"></span>
+其中 <span data-subtype="math" data-content="p"></span> 为焦准距，即 <span data-subtype="math" data-content="\dfrac{b^2}{c}"></span>
+</p>
+<p updated="20210710203805" data-type="NodeParagraph" data-n-id="20210710203721-17oaolh">圆锥曲线焦准距？
+​<span data-subtype="math" data-content="p = \dfrac{b^2}{c}"></span> </p>
+<p updated="20210710205015" data-type="NodeParagraph" data-n-id="20210710203806-1pnrmt9">双曲线焦半径公式，<span data-subtype="math" data-content="x_0"></span> 表示？
+​<span data-subtype="math" data-content="|ex_0| \pm a"></span></p>
+<p updated="20210710205749" data-type="NodeParagraph" data-n-id="20210710205730-6kij63u">圆锥曲线统一极坐标方程？
+​<span data-subtype="math" data-content="\rho = \dfrac{ep}{1 - e \cos \theta}"></span>
+</p>
+<p updated="20210710211120" data-type="NodeParagraph" data-n-id="20210710210627-dch5vsp">圆锥曲线第三定义？
+任意中心弦两端点到曲线上一点的斜率乘积为定值。</p>
+<p updated="20210710211152" data-type="NodeParagraph" data-n-id="20210710211121-6cwhxwu">椭圆第三定义？
+​<span data-subtype="math" data-content="k_{AM} \times k_{BM} = \dfrac{-b^2}{a^2}"></span>，可以通过伸缩变换简单证明。</p>
+<p updated="20210710211221" data-type="NodeParagraph" data-n-id="20210710211152-ft9v318">双曲线第三定义？
+​<span data-subtype="math" data-content="k_{AM} \times k_{BM} = \dfrac{b^2}{a^2}"></span></p>
+<p updated="20210710211314" data-type="NodeParagraph" data-n-id="20210710211223-yti1gea">中线长公式？
+​<span data-subtype="math" data-content="AM^2 = \dfrac{AB^2 + AC^2 - 2 \times (\dfrac{BC}{2})^2}{2}"></span>
+证明：互补角余弦值相加为零。</p>
+<p updated="20210710211434" data-type="NodeParagraph" data-n-id="20210710211314-obqm712">判断：圆锥曲线的切线交两长轴顶点关于 <span data-subtype="math" data-content="x"></span> 轴的垂线于点 <span data-subtype="math" data-content="M,N"></span>，则 <span data-subtype="math" data-content="F_1,F_2"></span> 在以 <span data-subtype="math" data-content="MN"></span> 为直径的圆上。
+正确。</p>
+<h2 id="背诵内容-同步-" id="20210713134607-yg9qhoy" updated="20210806221028" data-type="NodeHeading" data-n-id="20210713134607-yg9qhoy">背诵内容（同步）<a id="vditorAnchor-背诵内容-同步-" class="vditor-anchor" href="#背诵内容-同步-"><img src="./../../assets/icon/alink.png" /></a></h2>
+<p updated="20210806221138" data-type="NodeParagraph" data-n-id="20210806221040-lamzekl">抛物线焦点三角形面积公式角度表示？以 <span data-subtype="math" data-content="\alpha"></span> 与 <span data-subtype="math" data-content="p"></span> 表示 <span data-subtype="math" data-content="S_{\Delta AOB}"></span>
+<span data-subtype="math" data-content="S_{\Delta AOB} = \dfrac{p^2}{2 \sin \alpha}"></span></p>
+<p updated="20210806222943" data-type="NodeParagraph" data-n-id="20210806221116-smslrbw">椭圆焦半径公式，用 <span data-subtype="math" data-content="a,b,c"></span> 表示，需要讨论左右焦点。左右焦点 <span data-subtype="math" data-content="F_1,F_2"></span>
+<span data-subtype="math" data-content="|PF_1| = \dfrac{b^2}{a - c \cos \theta}"></span>
+<span data-subtype="math" data-content="|PF_2| = \dfrac{b^2}{a + c\cos \varphi}"></span></p>
+<p updated="20210819223334" data-type="NodeParagraph" data-n-id="20210806222845-2omni3h">椭圆焦点弦长公式？
+​<span data-subtype="math" data-content="|MN| = \dfrac{2ep}{1-e^2\cos^2\theta}"></span>
+</p>
+</main><div class="oceanpress-backLink"><h2>链接到此文档的相关文档</h2>
+<oceanpress-embedded-block src="../../Math.html#20210829150231-wioux9k" title="../../Math.html#20210829150231-wioux9k">
+    <p data-type="NodeParagraph" data-n-id="20210829150231-wioux9k"><oceanpress-block-ref src="../../Math/%e8%a7%a3%e6%9e%90%e5%87%a0%e4%bd%95/%e5%9c%86%e9%94%a5%e6%9b%b2%e7%ba%bf%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0.html#20210120185824-llkqr2q" title="圆锥曲线学习笔记"><a href="../../Math/%e8%a7%a3%e6%9e%90%e5%87%a0%e4%bd%95/%e5%9c%86%e9%94%a5%e6%9b%b2%e7%ba%bf%e5%ad%a6%e4%b9%a0%e7%ac%94%e8%ae%b0.html#20210120185824-llkqr2q">圆锥曲线学习笔记</a></oceanpress-block-ref ></p>
+</oceanpress-embedded-block>
+</div>
+</main>
