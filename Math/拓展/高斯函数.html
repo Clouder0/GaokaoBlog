@@ -123,7 +123,7 @@
 </ul>
 <h3 id="思想方法" updated="20210824133820" data-type="NodeHeading" data-n-id="20210824133813-7jynq1q">思想方法<a id="vditorAnchor-思想方法" class="vditor-anchor" href="#思想方法"><img src="./../../assets/icon/alink.png" /></a></h3>
 <p updated="20210824133845" data-type="NodeParagraph" data-n-id="20210824133820-0r2d1d2">与高斯函数相关的求解类问题，例如解方程等，一般考虑先求出 <span data-subtype="math" data-content="[x]"></span> 的范围，然后枚举代回求解。</p>
-<h2 id="例题" updated="20210824133312" data-type="NodeHeading" data-n-id="20210824133308-cgh13s3">例题<a id="vditorAnchor-例题" class="vditor-anchor" href="#例题"><img src="./../../assets/icon/alink.png" /></a></h2>
+<h2 id="例题" id="20210824133308-cgh13s3" data-type="NodeHeading" data-n-id="20210824133308-cgh13s3">例题<a id="vditorAnchor-例题" class="vditor-anchor" href="#例题"><img src="./../../assets/icon/alink.png" /></a></h2>
 <h3 id="1" updated="20210821153600" data-type="NodeHeading" data-n-id="20210821152845-nal93s8">1<a id="vditorAnchor-1" class="vditor-anchor" href="#1"><img src="./../../assets/icon/alink.png" /></a></h3>
 <p updated="20210821153636" data-type="NodeParagraph" data-n-id="20210821153601-x0qq69j">计算 <span data-subtype="math" data-content="S = \sum \limits _{n=1}^{502}[\dfrac{305n}{503}]"></span>
 </p>
@@ -146,7 +146,7 @@
 <p updated="20210821160712" data-type="NodeParagraph" data-n-id="20210821160359-059oy88">而事实上，<span data-subtype="math" data-content="[2x] = [x] + [x+\dfrac{1}{2}]"></span>，可以考虑 <span data-subtype="math" data-content="x = n + p, n \in \mathbf{Z}, p \in [0,1)"></span>，有 <span data-subtype="math" data-content="[2n+2p] = n + [n+p+\dfrac{1}{2}]"></span>，若 <span data-subtype="math" data-content="p\ge\dfrac{1}{2}"></span> 则进位成立，若 <span data-subtype="math" data-content="p &lt; \dfrac{1}{2}"></span> 则去尾成立。</p>
 <p updated="20210821160739" data-type="NodeParagraph" data-n-id="20210821160714-iwc8s3z">可以利用这个做裂项。</p>
 <p updated="20210821160903" data-type="NodeParagraph" data-n-id="20210821160739-08zz3i2"><span data-subtype="math" data-content="[\dfrac{n}{2^{k+1}} + \dfrac{1}{2}] = [\dfrac{n}{2^k}] - [\dfrac{n}{2^{k+1}}]"></span>，求和即得 <span data-subtype="math" data-content="n - [\dfrac{n}{2^{k+1}}]"></span>，当 <span data-subtype="math" data-content="k"></span> 足够大时后者即为 <span data-subtype="math" data-content="0"></span>，因此原式即为 <span data-subtype="math" data-content="n"></span> </p>
-<h3 id="3" id="20210821163547-xertrzr" data-type="NodeHeading" data-n-id="20210821163547-xertrzr">3<a id="vditorAnchor-3" class="vditor-anchor" href="#3"><img src="./../../assets/icon/alink.png" /></a></h3>
+<h3 id="3" updated="20210824133351" data-type="NodeHeading" data-n-id="20210821163547-xertrzr">3<a id="vditorAnchor-3" class="vditor-anchor" href="#3"><img src="./../../assets/icon/alink.png" /></a></h3>
 <p updated="20210821163629" data-type="NodeParagraph" data-n-id="20210821163549-od6litm"><span data-subtype="math" data-content="a,b \in \mathbf{N}^+,(a,b) = 1"></span>，证明 <span data-subtype="math" data-content="[\dfrac{b}{a}] + [\dfrac{2b}{a}] + \ldots + [\dfrac{(a-1)b}{a}] = \dfrac{1}{2}(a-1)(b-1)"></span>
 </p>
 <p updated="20210821163713" data-type="NodeParagraph" data-n-id="20210821163629-y4vqr6r">可以发现一定是一奇一偶。</p>
@@ -181,7 +181,7 @@
 <p updated="20210821171702" data-type="NodeParagraph" data-n-id="20210821171352-9a1kstm">因此 <span data-subtype="math" data-content="4x^2 - 40[x] + 51 = 0 \implies 4[x]^2 - 40[x] + 51 \le 0"></span>
 ​<span data-subtype="math" data-content="4([x]+1)^2 - 40[x] + 51 &gt; 0"></span>，可以求出 <span data-subtype="math" data-content="[x]"></span> 的范围是 <span data-subtype="math" data-content="[\dfrac{3}{2},\dfrac{5}{2}) \cup (\dfrac{11}{2},\dfrac{17}{2}]"></span>
 所以 <span data-subtype="math" data-content="[x] = 2,6,7,8"></span>，代入求解 <span data-subtype="math" data-content="x"></span> 即可。 还要再验证一下。</p>
-<h3 id="7" id="20210821171738-bq4x6u0" data-type="NodeHeading" data-n-id="20210821171738-bq4x6u0">7<a id="vditorAnchor-7" class="vditor-anchor" href="#7"><img src="./../../assets/icon/alink.png" /></a></h3>
+<h3 id="7" updated="20210824133437" data-type="NodeHeading" data-n-id="20210821171738-bq4x6u0">7<a id="vditorAnchor-7" class="vditor-anchor" href="#7"><img src="./../../assets/icon/alink.png" /></a></h3>
 <p updated="20210821171822" data-type="NodeParagraph" data-n-id="20210821171811-7ujzyx2">求 <span data-subtype="math" data-content="x^{[x]} = \dfrac{9}{2}"></span> 的实数根。</p>
 <p updated="20210821171858" data-type="NodeParagraph" data-n-id="20210821171835-n6nqfik">可以直接整数分段讨论。显然单调递增。</p>
 <p updated="20210821171842" data-type="NodeParagraph" data-n-id="20210821171823-25fem2l"> <span data-subtype="math" data-content="x \ge 3"></span> 时不成立。</p>
@@ -191,7 +191,7 @@
 </p>
 <hr />
 <p updated="20210824134739" data-type="NodeParagraph" data-n-id="20210824134722-x0fdm0d">接下来的例题来自《更高更妙的数学二轮复习》，难度较低。</p>
-<h3 id="8" id="20210821171643-dc4mjdo" data-type="NodeHeading" data-n-id="20210821171643-dc4mjdo">8<a id="vditorAnchor-8" class="vditor-anchor" href="#8"><img src="./../../assets/icon/alink.png" /></a></h3>
+<h3 id="8" updated="20210824133526" data-type="NodeHeading" data-n-id="20210821171643-dc4mjdo">8<a id="vditorAnchor-8" class="vditor-anchor" href="#8"><img src="./../../assets/icon/alink.png" /></a></h3>
 <p updated="20210824133629" data-type="NodeParagraph" data-n-id="20210824133529-r9n5be0">设集合 <span data-subtype="math" data-content="\mathbf{A} = \{x|\dfrac{1}{2012} &lt; 8^x &lt; 2012\}"></span> 和 <span data-subtype="math" data-content="\mathbf{B} = \{x | \log _2(x^2 - [x]) = 2\}"></span>，其中 <span data-subtype="math" data-content="[x]"></span> 表示不大于 <span data-subtype="math" data-content="x"></span> 的最大整数，求 <span data-subtype="math" data-content="\mathbf{A} \cap \mathbf{B}"></span> </p>
 <p updated="20210824133725" data-type="NodeParagraph" data-n-id="20210824133707-kjpctnk"><span data-subtype="math" data-content="\log _2(x^2 - [x]) = 2 \implies x^2 = [x] + 4"></span>
 </p>
@@ -238,7 +238,7 @@ D <span data-subtype="math" data-content="y=[\dfrac{x+5}{10}]"></span></p>
 <p updated="20210824173551" data-type="NodeParagraph" data-n-id="20210824135302-5xclz7t"><span data-subtype="math" data-content="a_n &lt; \dfrac{1}{5} \iff \dfrac{1}{a_n} &gt; 5"></span>，只需证 <span data-subtype="math" data-content="\dfrac{1}{b} + \dfrac{1}{2}[\log _2 n] &gt; 5"></span>，当 <span data-subtype="math" data-content="b \to +\infty"></span> 时，即要求 <span data-subtype="math" data-content="[\log _2 n] \ge 10"></span>，当 <span data-subtype="math" data-content="n \ge 2^{10} = 1024"></span> 时成立，故 <span data-subtype="math" data-content="n &gt; 1023"></span> 即 <span data-subtype="math" data-content="N = 1023"></span> </p>
 <p updated="20210824173913" data-type="NodeParagraph" data-n-id="20210824135248-an4sa4n">这里一个有意思的点是 <span data-subtype="math" data-content="n=1024"></span> 能不能取到，考虑 <span data-subtype="math" data-content="\dfrac{1}{a_n} \ge \dfrac{1}{b} + 5 &gt; 5 \implies a_n &lt; \dfrac{1}{5}"></span>，因此 <span data-subtype="math" data-content="n=1024"></span> 应当是可取的。</p>
 <p updated="20210824174008" data-type="NodeParagraph" data-n-id="20210824173925-suynxxz">不过这毕竟只是一个充分条件，因为没有确定 <span data-subtype="math" data-content="a_n"></span> 下界的不等式。</p>
-<h2 id="背诵内容-Anki-同步-" updated="20210824174209" custom-ankilink="deck_name=&quot;Math&quot;" data-type="NodeHeading" data-n-id="20210824174204-iftddh7">背诵内容(Anki 同步)<a id="vditorAnchor-背诵内容-Anki-同步-" class="vditor-anchor" href="#背诵内容-Anki-同步-"><img src="./../../assets/icon/alink.png" /></a></h2>
+<h2 id="背诵内容-Anki-同步-" id="20210824174204-iftddh7" updated="20210824174209" data-type="NodeHeading" data-n-id="20210824174204-iftddh7">背诵内容(Anki 同步)<a id="vditorAnchor-背诵内容-Anki-同步-" class="vditor-anchor" href="#背诵内容-Anki-同步-"><img src="./../../assets/icon/alink.png" /></a></h2>
 <p updated="20210824174258" data-type="NodeParagraph" data-n-id="20210824174240-nasd41m"><span data-subtype="math" data-content="[x + y]"></span> 与 <span data-subtype="math" data-content="[x] + [y]"></span> 关系？
 <span data-subtype="math" data-content="[x+y] \ge [x] + [y]"></span></p>
 <p updated="20210824174336" data-type="NodeParagraph" data-n-id="20210824174259-q1dq12m"><span data-subtype="math" data-content="\{x + y\}"></span> 与 <span data-subtype="math" data-content="\{x\} + \{y\}"></span> 关系？
